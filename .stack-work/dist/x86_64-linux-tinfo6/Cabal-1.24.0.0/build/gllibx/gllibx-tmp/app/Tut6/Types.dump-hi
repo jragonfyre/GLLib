@@ -1,0 +1,99 @@
+
+==================== FINAL INTERFACE ====================
+2018-07-09 20:56:55.552241477 UTC
+
+interface main@main:Tut6.Types 8001
+  interface hash: 4abec1b67639622faeed00d47d27dc93
+  ABI hash: 70deb94b18b41cef8d8990998ae2ba54
+  export-list hash: 16a60c2ff6a67fe1e02a8635389206f8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 2f739a7d1afac59bd62673c76c06d364
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Tut6.Types.ProgramInfo{Tut6.Types.ProgInfo fragmentShader geometryShader vertexShader}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+bcdbb9a7b651f2d1e69f5a8ee1167a5b
+  $tc'ProgInfo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14474139427356774655##
+                   3285244968844881942##
+                   Tut6.Types.$trModule
+                   Tut6.Types.$tc'ProgInfo1) -}
+f67d0dd082740f15fcc577970a53726a
+  $tc'ProgInfo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ProgInfo"#) -}
+0bdd30bda64e8e2b28953a56c07b1f13
+  $tcProgramInfo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10520943328912377930##
+                   5769135320941955192##
+                   Tut6.Types.$trModule
+                   Tut6.Types.$tcProgramInfo1) -}
+751263d2d3e3cadffb1458a1a056a1c3
+  $tcProgramInfo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "ProgramInfo"#) -}
+1648ef6e7f07efa746424912432b3351
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Tut6.Types.$trModule2
+                   Tut6.Types.$trModule1) -}
+030acbeca37c4bb3daa5ab696ed83a1d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Tut6.Types"#) -}
+8161ebaca8f6608ad3e978f2a21c4b46
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+8674f37b9b498b629f9c4eedaba63491
+  data ProgramInfo
+    = ProgInfo {vertexShader :: GHC.Base.String,
+                geometryShader :: GHC.Base.Maybe GHC.Base.String,
+                fragmentShader :: GHC.Base.String}
+e80f7f25c8f550f506cbb6aae2ce2343
+  fragmentShader :: Tut6.Types.ProgramInfo -> GHC.Base.String
+  RecSel Left Tut6.Types.ProgramInfo
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tut6.Types.ProgramInfo) ->
+                 case ds of wild { Tut6.Types.ProgInfo ds1 ds2 ds3 -> ds3 }) -}
+f8da23d0a9c8d095c5b1aba431e1a036
+  geometryShader ::
+    Tut6.Types.ProgramInfo -> GHC.Base.Maybe GHC.Base.String
+  RecSel Left Tut6.Types.ProgramInfo
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tut6.Types.ProgramInfo) ->
+                 case ds of wild { Tut6.Types.ProgInfo ds1 ds2 ds3 -> ds2 }) -}
+e33904e448b84fec01756c0e237645d5
+  vertexShader :: Tut6.Types.ProgramInfo -> GHC.Base.String
+  RecSel Left Tut6.Types.ProgramInfo
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Tut6.Types.ProgramInfo) ->
+                 case ds of wild { Tut6.Types.ProgInfo ds1 ds2 ds3 -> ds1 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

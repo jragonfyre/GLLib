@@ -1,0 +1,2360 @@
+
+==================== FINAL INTERFACE ====================
+2018-07-09 20:56:58.669905514 UTC
+
+interface main@main:Tut6.Tutorial 8001
+  interface hash: 449273beb31b5090656abae3ed5d2c0e
+  ABI hash: 4797aad6d5bfa7dfd728cf78e51d6ed6
+  export-list hash: 36cc1359d769e434608235e8dbe8b81a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 741499b43e0dfd74f9a5d15ab3836a94
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Tut6.Tutorial.assignLight
+  Tut6.Tutorial.bindBufferToAttrib
+  Tut6.Tutorial.bindModel
+  Tut6.Tutorial.bindVertsModel
+  Tut6.Tutorial.buildMatrix
+  Tut6.Tutorial.buildShader
+  Tut6.Tutorial.camPos
+  Tut6.Tutorial.cameraPosition
+  Tut6.Tutorial.cubeMapTargets
+  Tut6.Tutorial.drawStuff
+  Tut6.Tutorial.fillNewBuffer
+  Tut6.Tutorial.framebufferTexture
+  Tut6.Tutorial.freeModel
+  Tut6.Tutorial.freeResources
+  Tut6.Tutorial.hasPos
+  Tut6.Tutorial.initialize
+  Tut6.Tutorial.initializeGL
+  Tut6.Tutorial.inputLoop
+  Tut6.Tutorial.lightColor
+  Tut6.Tutorial.lightPosition
+  Tut6.Tutorial.lightType
+  Tut6.Tutorial.main
+  Tut6.Tutorial.makePoints
+  Tut6.Tutorial.makeProgram
+  Tut6.Tutorial.marshalFramebufferObjectAttachment
+  Tut6.Tutorial.marshalFramebufferTarget
+  Tut6.Tutorial.maxColorAttachments
+  Tut6.Tutorial.screenHeight
+  Tut6.Tutorial.screenWidth
+  Tut6.Tutorial.setupShadowMap
+  Tut6.Tutorial.shadowHeight
+  Tut6.Tutorial.shadowWidth
+  Tut6.Tutorial.GLModelData{Tut6.Tutorial.GLModData colorBuffObj normalBuffObj vertArrObj vertBuffObj}
+  Tut6.Tutorial.GLObjs{Tut6.Tutorial.GLObjs cameraPos colorAttrib cubeModel cubeTexture farPlane light0 light1 mMat mMatrix mat mat0 mat1 mat2 mat3 mat4 mat5 normalAttrib numLights program shadFarPlane shadLL shadModel shadTestFarPlane shadTestLL shadTestModel shadTestVertAttrib shadVertAttrib shadowBuff shadowMap shadowProg shadowTestProg specPow squareModel vertAttrib vpMat vpMatRaw vpMatrix}
+  Tut6.Tutorial.LightData{Tut6.Tutorial.LData lcolor lpos ltype}
+  Tut6.Tutorial.LightInfo{Tut6.Tutorial.AmbientSrc Tut6.Tutorial.PointSrc}
+module dependencies: Tut6.Init Tut6.Shaders Tut6.Types
+package dependencies: GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-2oLi8d8Om6j90ytPw2you1
+                      GLURaw-2.0.0.3@GLURaw-2.0.0.3-4meYWmf1nmHBiZ45qGDNMo
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-HHHIolNI8Pm5H3OGkgSUrO
+                      OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-HKWm6hq2lRHL6jgi8DHARb
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-CJpWsiXJdd89SnV9dZtTwc
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-2GG6GK5a2OkK8NpUgT7p3p
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-21JkkJmr6h52cZo1o8cauA ghc-prim-0.5.0.0
+                      gllib-0.1.0.0@gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT
+                      half-0.2.2.3@half-0.2.2.3-BFHx0LiJemg6baNXrjGThF
+                      integer-gmp-1.0.0.1 stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
+                      text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
+orphans: GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-2oLi8d8Om6j90ytPw2you1:Graphics.UI.GLFW.Types
+         base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+family instance modules: GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-2oLi8d8Om6j90ytPw2you1:Graphics.UI.GLFW.Types
+                         base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Functor.Identity base-4.9.0.0:Data.List.NonEmpty
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Semigroup
+                         base-4.9.0.0:Data.Type.Equality base-4.9.0.0:Data.Version
+                         base-4.9.0.0:Data.Void base-4.9.0.0:GHC.Exts
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
+import  -/  GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-2oLi8d8Om6j90ytPw2you1:Graphics.UI.GLFW 6ac2201006b35863349bc30823e648bc
+import  -/  GLFW-b-1.4.8.1@GLFW-b-1.4.8.1-2oLi8d8Om6j90ytPw2you1:Graphics.UI.GLFW.Types d8749363af75e3c232e7ed9996707ab5
+import  -/  ObjectName-1.1.0.1@ObjectName-1.1.0.1-HHHIolNI8Pm5H3OGkgSUrO:Data.ObjectName c21473d722636cc4045db2d38e6276f0
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL fdd814f68c05cafec30a53ebdc6c23a0
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.BufferMode 92377756f250395e714c3fa4de30162c
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.BufferObjects bc6d09785c1fbe5a9bf263117c5dac85
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.ByteString e742a32cbcc06a5b98ef3fb14f8dd169
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Capability 5f40c88a96a47def370e025674fd6ce9
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.ComparisonFunction 65c40c6e51335e104e8e51ff1bde94e3
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.CoordTrans c859a5995aee333e9a4d3c771cdb60c9
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.DataType 5a654209a4f51f402f2d4483fa63483a
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Framebuffer 4b512362c6b83d7fc12b0538a76cbcec
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject add6a81636947c67927c7a247b60ea3b
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment 8485d49107273541e9916081b4556b34
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjects 4e47a09b0ed3e840239813a8ee89806b
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget b4025d1928daab4e1dcfcab7af5caffe
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.PerFragment 6a30e7c870d635e6a8d27a7ba63c139a
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.PixelData 5672b4ddfe8e4d7444a0f33d50ea2eda
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.PixelFormat 738b26fbf971c9d877f39ca69ec7c977
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.PixelRectangles.ColorTable 4264ff4157395436c0501279b81fa441
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.PrimitiveMode 65b737471bbf464eb482aadeab3a9694
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib c310997ec6dc18f24fa4578d0abeb214
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.ReadCopyPixels f354efecfe5f096ff14fc802e05a8520
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Shaders.Attribs 23231f6f2b79e90e9518f2a6883f1158
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Shaders.Program 6ec267a82bea82117c3c1d7ef657591b
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Shaders.ProgramObjects d8ea01074969562a1849fb9244910fed
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Shaders.Shader 88a166f127538f0c089dcb0d3ec4b439
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects 7f6f54cc665de6894e8a59f4345360a2
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Shaders.Uniform 26d8386d534e259534cb0efab1df70f0
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Tensor 2a0c527f91cbe9b09c1fdc09f0e8dd54
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.Filter 96d5aad595f5dfb740a24596a73e49b7
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.Objects 6b3adcde279d2e90b690fbca5ca12254
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.Parameters c7ccf875ff1730e7770fcaf324d54648
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.PixelInternalFormat 58d51a5e03ccbb0b2258260c458bd8b6
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.Specification 24ea213895efd25b2fd0ecd326c3ad6c
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.TextureObject 2b1bcb58951fb04d63a010a198162173
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget 2204b1d7f50b924bb8afefb6116f7ca0
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.Texturing.TextureUnit c1d2e6464d04570bc1f808c21e253f1e
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.VertexArrayObjects 186101dded60876204c1dfd279466c03
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.VertexArrays d00c6ff1a297cd3a469b734ee78fdbac
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.VertexAttributes 01bfc9015e5078beb8a1cfd20eabd572
+import  -/  OpenGL-3.0.1.0@OpenGL-3.0.1.0-BDhnYdrGgNz16iL8mzBKvu:Graphics.Rendering.OpenGL.GL.VertexSpec 82a92c989bbbdc7f8303ecebc06eb7c7
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-HKWm6hq2lRHL6jgi8DHARb:Graphics.GL f4f2d1b8fd12629fedb8cf2c992155d7
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-HKWm6hq2lRHL6jgi8DHARb:Graphics.GL.Functions.F08 a9c1a034455476302fbaf3ad278346d4
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-HKWm6hq2lRHL6jgi8DHARb:Graphics.GL.Tokens fd467b5c90650d877aa754770cd36e8a
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-HKWm6hq2lRHL6jgi8DHARb:Graphics.GL.Types 834176c3666f97bc1b334546d4e155d7
+import  -/  StateVar-1.1.0.4@StateVar-1.1.0.4-CJpWsiXJdd89SnV9dZtTwc:Data.StateVar e570f5bfc9cb5f22e74f678b56bc21cb
+import  -/  base-4.9.0.0:Control.Monad 7767aebfd53f0b584cef2fe66ad3986c
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.IORef 4b625b2df7d0ef688ec068837f79c7b0
+import  -/  base-4.9.0.0:Data.Maybe 5f2ba364cbe65c060bc5436bc0b9d049
+import  -/  base-4.9.0.0:Foreign.Marshal.Array 43a46484957a3ede9757d75cc9fd3d79
+import  -/  base-4.9.0.0:Foreign.Storable 7c7196a8b99a2e3a00193a9f2e52451f
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.Float 469226b1bc53433e95d0167dec5d0312
+import  -/  base-4.9.0.0:GHC.IORef c27b760cf1b1851f9cf1a1693e335fa5
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Ptr ff0b178d1c5e49188cd75624bd5d9cc8
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.Exit 4df7be78e54bbe200276120bd44e7e2a
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  base-4.9.0.0:Unsafe.Coerce 04e2cc33f45c897c8f9bc8758fbe5bc2
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  gllib-0.1.0.0@gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:Geometry b10b54794538e570add23a3b49ea9804
+import  -/  gllib-0.1.0.0@gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:Lib 533a1ef4f8279095bf5a0d50303a5c81
+import  -/  gllib-0.1.0.0@gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:LinAlg 2fda7d8c21b2891c403a8ca2bc84537e
+import  -/  gllib-0.1.0.0@gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:Matrices a485fdec4145390b71522b8e02c97a5f
+import  -/  gllib-0.1.0.0@gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:Model c8897eb9dec5caf14a1d1d526b76c564
+import  -/  Tut6.Init e02b62d454492ba0fa9bc4bec5659ca0
+  exports: 1e51e1ca10f94a1b3ad5308e659c77d6
+import  -/  Tut6.Shaders 5d1566887cce773a884c76ae392dd2ee
+  exports: b84b9226829ed2b23093d35aac9a240f
+  progInfo2 3846a9914ae066ff381caf37c99d3fdd
+  shadTestShader e1fa121fd465fd4881468a5f5b94d1ec
+  shadowProgInfo 78d94ae267b87334551ac4c09f2d9961
+import  -/  Tut6.Types 70deb94b18b41cef8d8990998ae2ba54
+  exports: 16a60c2ff6a67fe1e02a8635389206f8
+  ProgInfo ea94e974b56cf5b937e15e0b68c70205
+  ProgramInfo 8674f37b9b498b629f9c4eedaba63491
+  fragmentShader e80f7f25c8f550f506cbb6aae2ce2343
+  geometryShader f8da23d0a9c8d095c5b1aba431e1a036
+  vertexShader e33904e448b84fec01756c0e237645d5
+27fc2d80d890fa24235df763905bbfd9
+  $tc'AmbientSrc :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8222902936473654832##
+                   12828334103960017922##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tc'AmbientSrc1) -}
+664eddc65668a8465fea7073b2357116
+  $tc'AmbientSrc1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'AmbientSrc"#) -}
+afbaab115475f3aa7f7a36fe1174d667
+  $tc'GLModData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6953518700878725950##
+                   3588762766372119713##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tc'GLModData1) -}
+72a1b768fa52c9e93d0a741e7bd29c78
+  $tc'GLModData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'GLModData"#) -}
+a1f06610d28f959a39348a9a3f299e4e
+  $tc'GLObjs :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   59886306691286821##
+                   9831697566476283902##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tc'GLObjs1) -}
+2c3c51a88a8fc1c39df66fc597e978a0
+  $tc'GLObjs1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'GLObjs"#) -}
+5f95aa56d073a85db8d093db13a3c08a
+  $tc'LData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15135787152127338218##
+                   4257019809727385856##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tc'LData1) -}
+7f095c166fa465762cd3b15bde037be1
+  $tc'LData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'LData"#) -}
+2c5b52709710d37d1f6e6418cc1eb063
+  $tc'PointSrc :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6896381724005118857##
+                   275113720587639199##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tc'PointSrc1) -}
+90a53e751e9b1612fc418ec9d041a861
+  $tc'PointSrc1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'PointSrc"#) -}
+4a0bb7f654aa58e29af5ac15c3362f4c
+  $tcGLModelData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9636109216726054061##
+                   11338205098797789315##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tcGLModelData1) -}
+cbc839c945c50b0ba45074eae1fb6480
+  $tcGLModelData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "GLModelData"#) -}
+2459f6916671bceddb19f3ecca4d1403
+  $tcGLObjs :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15744553557107473694##
+                   8779016789695713737##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tcGLObjs1) -}
+c50bc42673a1a2b38a9239f6e9d58f1a
+  $tcGLObjs1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "GLObjs"#) -}
+8eb5e7bb53d66140ecfdd07dbcd7a3ec
+  $tcLightData :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3245845315465761791##
+                   10169347767782867767##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tcLightData1) -}
+9f9e608edc92b589071c032383399015
+  $tcLightData1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "LightData"#) -}
+284ea6776f7c4fd5168242ae700e818d
+  $tcLightInfo :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16698993134063754879##
+                   16716818837697613533##
+                   Tut6.Tutorial.$trModule
+                   Tut6.Tutorial.$tcLightInfo1) -}
+55f13c7f9bd14d798964f087aa9d3058
+  $tcLightInfo1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "LightInfo"#) -}
+e5ff80ed398c9facd73b575998e8f769
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Tut6.Tutorial.$trModule2
+                   Tut6.Tutorial.$trModule1) -}
+3f1627b2a75a38cdd87a9df991a8b419
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Tut6.Tutorial"#) -}
+b0f194f0936df345c30b55c97c9edda9
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+5dce788eaf0655aa0057dd50bac425b6
+  $wassignLight ::
+    Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Tut6.Tutorial.LightInfo
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <L,U(U)><L,U><L,U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww6 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation)
+                   (ww7 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation)
+                   (ww8 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation)
+                   (w :: Tut6.Tutorial.LightInfo)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.Rendering.OpenGL.GL.Shaders.Uniform.$w$cuniform3
+                        ww6 of ww9 { (#,#) ww10 ww11 ->
+                 case (ww11
+                         (case w of wild {
+                            Tut6.Tutorial.PointSrc ds2 ds3 -> Tut6.Tutorial.assignLight5
+                            Tut6.Tutorial.AmbientSrc ds2 -> Tut6.Tutorial.assignLight4 }))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        w1 of ds2 { (#,#) ipv ipv1 ->
+                 case Tut6.Tutorial.assignLight3
+                        ww8 of wild { Data.StateVar.StateVar ds3 s ->
+                 case (s (Tut6.Tutorial.lightColor w))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv of ds4 { (#,#) ipv2 ipv3 ->
+                 case w of wild1 {
+                   Tut6.Tutorial.PointSrc ds5 ds6
+                   -> case Tut6.Tutorial.assignLight2
+                             ww7 of wild2 { Data.StateVar.StateVar ds7 s1 ->
+                      (s1
+                         (case ds6 of wild3 { LinAlg.Point3 x y z ->
+                          case x of dt { GHC.Types.F# ipv4 ->
+                          case y of dt1 { GHC.Types.F# ipv5 ->
+                          case z of dt2 { GHC.Types.F# ipv6 ->
+                          Graphics.Rendering.OpenGL.GL.Tensor.Vertex3
+                            @ Graphics.GL.Types.GLfloat
+                            dt
+                            dt1
+                            dt2 } } } }))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv2 }
+                   Tut6.Tutorial.AmbientSrc ds5
+                   -> (# ipv2, GHC.Tuple.() #) } } } } }) -}
+40878617dbf3d4ce42d1ca32058899a9
+  $wbindModel ::
+    GHC.Prim.Word#
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 8,
+     Strictness: <S,U><L,U><L,U><L,U><L,U(U)><L,U(U)><L,U(U)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww6 :: GHC.Prim.Word#)
+                   (ww7 :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (ww8 :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (ww9 :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (w :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w1 :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w2 :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.GL.Functions.F01.ptr_glBindVertexArray of ds2 { GHC.Ptr.FunPtr ds3 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.Word#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds3
+                        ww6
+                        w3 of wild1 { Unit# ds6 ->
+                 case Tut6.Tutorial.bindBufferToAttrib1
+                        ww7
+                        w
+                        ds6 of ds5 { (#,#) ipv ipv1 ->
+                 case Tut6.Tutorial.bindBufferToAttrib1
+                        ww8
+                        w1
+                        ipv of ds7 { (#,#) ipv2 ipv3 ->
+                 Tut6.Tutorial.bindBufferToAttrib1 ww9 w2 ipv2 } } } }) -}
+003046a952ddfa0f8dce9166cf983fcb
+  $wbindVertsModel ::
+    GHC.Prim.Word#
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <S,U><L,U><L,U(U)><S,U>, Inline: [0],
+     Unfolding: (\ (ww6 :: GHC.Prim.Word#)
+                   (ww7 :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (w :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.GL.Functions.F01.ptr_glBindVertexArray of ds2 { GHC.Ptr.FunPtr ds3 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.Word#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds3
+                        ww6
+                        w1 of wild1 { Unit# ds6 ->
+                 Tut6.Tutorial.bindBufferToAttrib1 ww7 w ds6 } }) -}
+9fd0c959e5a00dedc7ac7c6cbcc0ef05
+  $wdrawStuff ::
+    GHC.Types.Int
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Program.Program
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Program.Program
+    -> Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject
+    -> Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Tut6.Tutorial.GLModelData
+    -> Tut6.Tutorial.GLModelData
+    -> Tut6.Tutorial.LightData
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 33,
+     Strictness: <L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,1*U(U)><L,U><L,U><L,U(U)><L,U(U)><L,U><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,1*U(U)><L,1*U(U)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U(U)><L,U(U)><L,U(U(U),U,U,U)><L,U(U(U),U,U,U)><L,1*U(U(U),U,U)><S,U>,
+     Inline: [0] -}
+b597742c2124a7f5339985d7ee68b9cd
+  $wfreeModel ::
+    Graphics.Rendering.OpenGL.GL.VertexArrayObjects.VertexArrayObject
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww6 :: Graphics.Rendering.OpenGL.GL.VertexArrayObjects.VertexArrayObject)
+                   (ww7 :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (ww8 :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (ww9 :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case (Graphics.Rendering.OpenGL.GL.BufferObjects.$fObjectNameBufferObject_$cdeleteObjectNames
+                         @ GHC.Types.IO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         (GHC.Types.:
+                            @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+                            ww7
+                            (GHC.Types.[]
+                               @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        w of ds2 { (#,#) ipv ipv1 ->
+                 case (Graphics.Rendering.OpenGL.GL.BufferObjects.$fObjectNameBufferObject_$cdeleteObjectNames
+                         @ GHC.Types.IO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         (GHC.Types.:
+                            @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+                            ww8
+                            (GHC.Types.[]
+                               @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv of ds3 { (#,#) ipv2 ipv3 ->
+                 case (Graphics.Rendering.OpenGL.GL.BufferObjects.$fObjectNameBufferObject_$cdeleteObjectNames
+                         @ GHC.Types.IO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         (GHC.Types.:
+                            @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+                            ww9
+                            (GHC.Types.[]
+                               @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv2 of ds4 { (#,#) ipv4 ipv5 ->
+                 (Graphics.Rendering.OpenGL.GL.VertexArrayObjects.$fObjectNameVertexArrayObject_$cdeleteObjectNames
+                    @ GHC.Types.IO
+                    Control.Monad.IO.Class.$fMonadIOIO
+                    (GHC.Types.:
+                       @ Graphics.Rendering.OpenGL.GL.VertexArrayObjects.VertexArrayObject
+                       ww6
+                       (GHC.Types.[]
+                          @ Graphics.Rendering.OpenGL.GL.VertexArrayObjects.VertexArrayObject)))
+                   `cast`
+                 (GHC.Types.N:IO[0] <()>_R)
+                   ipv4 } } }) -}
+03620bff9af9ae319b3bb5332c7109a0
+  $wmakePoints ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> [LinAlg.Point3 Graphics.GL.Types.GLfloat]
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,U><S,U><S,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww6 :: GHC.Prim.Int#)
+                   (ww7 :: GHC.Prim.Int#)
+                   (ww8 :: GHC.Prim.Int#)
+                   (ww9 :: GHC.Prim.Int#) ->
+                 let {
+                   y :: GHC.Prim.Int#
+                   = GHC.Prim.*# (GHC.Prim.*# (GHC.Prim.*# ww6 ww7) ww8) ww9
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># 1# y) of wild {
+                   GHC.Types.False
+                   -> let {
+                        bf :: GHC.Prim.Float# = GHC.Prim.int2Float# ww9
+                      } in
+                      let {
+                        rf :: GHC.Prim.Float# = GHC.Prim.int2Float# ww7
+                      } in
+                      let {
+                        af :: GHC.Prim.Float# = GHC.Prim.int2Float# ww8
+                      } in
+                      letrec {
+                        go1 :: GHC.Prim.Int# -> [LinAlg.Point3 Graphics.GL.Types.GLfloat]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x :: GHC.Prim.Int#) ->
+                          GHC.Types.:
+                            @ (LinAlg.Point3 Graphics.GL.Types.GLfloat)
+                            (LinAlg.Point3
+                               @ Graphics.GL.Types.GLfloat
+                               (case GHC.Prim.divideFloat#
+                                       (GHC.Prim.timesFloat# 6.2831855# (GHC.Prim.int2Float# x))
+                                       af of wild2 { DEFAULT ->
+                                case GHC.Prim.divideFloat# wild2 rf of wild1 { DEFAULT ->
+                                GHC.Types.F# (GHC.Prim.sinFloat# wild1) } })
+                               (case GHC.Prim.divideFloat#
+                                       (GHC.Prim.timesFloat# 6.2831855# (GHC.Prim.int2Float# x))
+                                       bf of wild2 { DEFAULT ->
+                                case GHC.Prim.divideFloat# wild2 rf of wild1 { DEFAULT ->
+                                GHC.Types.F# (GHC.Prim.cosFloat# wild1) } })
+                               Tut6.Tutorial.camPos2)
+                            (case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.==# x y) of wild1 {
+                               GHC.Types.False -> go1 (GHC.Prim.+# x 1#)
+                               GHC.Types.True
+                               -> GHC.Types.[] @ (LinAlg.Point3 Graphics.GL.Types.GLfloat) })
+                      } in
+                      go1 1#
+                   GHC.Types.True
+                   -> GHC.Types.[] @ (LinAlg.Point3 Graphics.GL.Types.GLfloat) }) -}
+49a0e88b8c7a53d08712833037abb209
+  $wmakeProgram ::
+    GHC.Base.String
+    -> GHC.Base.Maybe GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Graphics.Rendering.OpenGL.GL.Shaders.Program.Program #)
+  {- Arity: 4, Strictness: <L,1*U><L,1*U><L,1*U><S,U>, Inline: [0] -}
+381b4ded4ff0194f1c16e010dfae933a
+  data GLModelData
+    = GLModData {vertArrObj :: Graphics.Rendering.OpenGL.GL.VertexArrayObjects.VertexArrayObject,
+                 vertBuffObj :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject,
+                 colorBuffObj :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject,
+                 normalBuffObj :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject}
+8d518821cdb7260f1b1ccca2faaf8f2f
+  data GLObjs
+    = GLObjs {program :: Graphics.Rendering.OpenGL.GL.Shaders.Program.Program,
+              mMatrix :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              vpMatrix :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              numLights :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              specPow :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              cameraPos :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadowMap :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              farPlane :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              vertAttrib :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation,
+              colorAttrib :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation,
+              normalAttrib :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation,
+              shadowProg :: Graphics.Rendering.OpenGL.GL.Shaders.Program.Program,
+              shadowBuff :: Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject,
+              cubeTexture :: Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject,
+              mat0 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              mat1 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              mat2 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              mat3 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              mat4 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              mat5 :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadModel :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadLL :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadFarPlane :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadVertAttrib :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation,
+              shadowTestProg :: Graphics.Rendering.OpenGL.GL.Shaders.Program.Program,
+              mat :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadTestModel :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadTestLL :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadTestFarPlane :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+              shadTestVertAttrib :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation,
+              cubeModel :: Tut6.Tutorial.GLModelData,
+              squareModel :: Tut6.Tutorial.GLModelData,
+              light0 :: Tut6.Tutorial.LightData,
+              light1 :: Tut6.Tutorial.LightData,
+              mMat :: Graphics.Rendering.OpenGL.GL.CoordTrans.GLmatrix
+                        Graphics.GL.Types.GLfloat,
+              vpMat :: Graphics.Rendering.OpenGL.GL.CoordTrans.GLmatrix
+                         Graphics.GL.Types.GLfloat,
+              vpMatRaw :: LinAlg.Mat4 Graphics.GL.Types.GLfloat}
+24d7ac2bf3aaafac2fa48d9cd6626da6
+  data LightData
+    = LData {ltype :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+             lpos :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation,
+             lcolor :: Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation}
+0ef2f5d8a97fa178cac934b22d6c7518
+  data LightInfo
+    = PointSrc (Model.Color Graphics.GL.Types.GLfloat)
+               (Model.Position Graphics.GL.Types.GLfloat)
+    | AmbientSrc (Model.Color Graphics.GL.Types.GLfloat)
+392193f79474fdd8a0fc4ae4d759b83c
+  assignLight ::
+    Tut6.Tutorial.LightData
+    -> Tut6.Tutorial.LightInfo -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <S,1*U(U(U),U,U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.assignLight1
+                  `cast`
+                (<Tut6.Tutorial.LightData>_R
+                 ->_R <Tut6.Tutorial.LightInfo>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+39dd6b7ff97dbdf3b60dd2620490f81c
+  assignLight1 ::
+    Tut6.Tutorial.LightData
+    -> Tut6.Tutorial.LightInfo
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,1*U(U(U),U,U)><L,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Tut6.Tutorial.LightData)
+                   (w1 :: Tut6.Tutorial.LightInfo)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww6 { Tut6.Tutorial.LData ww7 ww8 ww9 ->
+                 Tut6.Tutorial.$wassignLight ww7 ww8 ww9 w1 w2 }) -}
+0280decf261496e7f4fa3638e8dcc237
+  assignLight2 ::
+    Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Data.StateVar.StateVar
+         (Graphics.Rendering.OpenGL.GL.Tensor.Vertex3 GHC.Types.Float)
+  {- Unfolding: (Graphics.Rendering.OpenGL.GL.Shaders.Uniform.$fUniformVertex3_$cuniform
+                   @ GHC.Types.Float
+                   Graphics.Rendering.OpenGL.GL.Shaders.Uniform.$fUniformComponentFloat) -}
+21a89bac88b2f02dc7530efd1be6157c
+  assignLight3 ::
+    Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+    -> Data.StateVar.StateVar
+         (Graphics.Rendering.OpenGL.GL.Tensor.Vector3 GHC.Types.Float)
+  {- Unfolding: (Graphics.Rendering.OpenGL.GL.Shaders.Uniform.$fUniformVector3_$cuniform
+                   @ GHC.Types.Float
+                   Graphics.Rendering.OpenGL.GL.Shaders.Uniform.$fUniformComponentFloat) -}
+85133bb66a8c3fd9b8db8e4f2f5321cb
+  assignLight4 :: GHC.Int.Int32
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Int.I32# 1#) -}
+7e7d737ca8d2c25b5c3103d0761929ac
+  assignLight5 :: GHC.Int.Int32
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Int.I32# 0#) -}
+c4d6b5ec31cf39e09b867bd1fd0363d9
+  bindBufferToAttrib ::
+    Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.bindBufferToAttrib1
+                  `cast`
+                (<Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+b53bee5e7cd5dcc3ae7ca3d3c177551a
+  bindBufferToAttrib1 ::
+    Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U><L,U(U)><S,U>,
+     Unfolding: (\ (buf :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   (loc :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.Rendering.OpenGL.GL.VertexArrays.$wvertexAttribArray
+                        loc of ww6 { (#,#) ww7 ww8 ->
+                 case (ww8 Graphics.Rendering.OpenGL.GL.Capability.Enabled)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        s of ds2 { (#,#) ipv ipv1 ->
+                 case Tut6.Tutorial.bindBufferToAttrib4 of wild { Data.StateVar.StateVar ds3 s1 ->
+                 case (s1
+                         (GHC.Base.Just
+                            @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+                            buf))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv of ds4 { (#,#) ipv2 ipv3 ->
+                 case Graphics.Rendering.OpenGL.GL.VertexArrays.$wvertexAttribPointer
+                        @ GHC.Prim.Any
+                        loc of ww9 { (#,#) ww10 ww11 ->
+                 (ww11 Tut6.Tutorial.bindBufferToAttrib2)
+                   `cast`
+                 (GHC.Types.N:IO[0] <()>_R)
+                   ipv2 } } } } }) -}
+45e03e4e6133dd4d301849b74457f05d
+  bindBufferToAttrib2 ::
+    (Graphics.Rendering.OpenGL.GL.VertexSpec.IntegerHandling,
+     Graphics.Rendering.OpenGL.GL.VertexArrays.VertexArrayDescriptor
+       GHC.Prim.Any)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Graphics.Rendering.OpenGL.GL.VertexSpec.ToFloat,
+                  Tut6.Tutorial.bindBufferToAttrib3)) -}
+4ec1932a526125c20f0784fe821a3fa2
+  bindBufferToAttrib3 ::
+    Graphics.Rendering.OpenGL.GL.VertexArrays.VertexArrayDescriptor
+      GHC.Prim.Any
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Graphics.Rendering.OpenGL.GL.VertexArrays.VertexArrayDescriptor
+                   @ GHC.Prim.Any
+                   3#
+                   Graphics.Rendering.OpenGL.GL.DataType.Float
+                   0#
+                   __NULL) -}
+ffd0affe2c572734a4d36f0c625216c0
+  bindBufferToAttrib4 ::
+    Data.StateVar.StateVar
+      (GHC.Base.Maybe
+         Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+  {- Unfolding: (case Graphics.Rendering.OpenGL.GL.BufferObjects.$wbindBuffer
+                        Graphics.Rendering.OpenGL.GL.BufferObjects.ArrayBuffer of ww6 { (#,#) ww7 ww8 ->
+                 Data.StateVar.StateVar
+                   @ (GHC.Base.Maybe
+                        Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject)
+                   ww7
+                   ww8 }) -}
+4ff8ab1f2ef7e0036c0c7cd836ff5aad
+  bindModel ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Types.IO ()
+  {- Arity: 5,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),U,U,U)><L,U(U)><L,U(U)><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.bindModel1
+                  `cast`
+                (<Tut6.Tutorial.GLModelData>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+548223d96f20f6b2b586a21969361e4d
+  bindModel1 ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),U,U,U)><L,U(U)><L,U(U)><L,U(U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ (w :: Tut6.Tutorial.GLModelData)
+                   (w1 :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w2 :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w3 :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww6 { Tut6.Tutorial.GLModData ww7 ww8 ww9 ww10 ->
+                 case ww7
+                        `cast`
+                      (Graphics.Rendering.OpenGL.GL.VertexArrayObjects.N:VertexArrayObject[0]) of ww11 { GHC.Word.W32# ww12 ->
+                 Tut6.Tutorial.$wbindModel ww12 ww8 ww9 ww10 w1 w2 w3 w4 } }) -}
+ea229b3b18e96ff5caa54fac97f57ece
+  bindVertsModel ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),U,A,A)><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.bindVertsModel1
+                  `cast`
+                (<Tut6.Tutorial.GLModelData>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+36e037408ec1559f3f0b603c59243be0
+  bindVertsModel1 ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),U,A,A)><L,U(U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Tut6.Tutorial.GLModelData)
+                   (w1 :: Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww6 { Tut6.Tutorial.GLModData ww7 ww8 ww9 ww10 ->
+                 case ww7
+                        `cast`
+                      (Graphics.Rendering.OpenGL.GL.VertexArrayObjects.N:VertexArrayObject[0]) of ww11 { GHC.Word.W32# ww12 ->
+                 Tut6.Tutorial.$wbindVertsModel ww12 ww8 w1 w2 } }) -}
+56df386cd460e8216646cd065d425658
+  buildMatrix ::
+    LinAlg.Mat4 Graphics.GL.Types.GLfloat
+    -> GHC.Types.IO
+         (Graphics.Rendering.OpenGL.GL.CoordTrans.GLmatrix
+            Graphics.GL.Types.GLfloat)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.buildMatrix1
+                  `cast`
+                (<LinAlg.Mat4 Graphics.GL.Types.GLfloat>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Graphics.Rendering.OpenGL.GL.CoordTrans.GLmatrix
+                                  Graphics.GL.Types.GLfloat>_R)) -}
+a5774a7ce63c458cc66e44ced95ee759
+  buildMatrix1 ::
+    LinAlg.Mat4 Graphics.GL.Types.GLfloat
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Graphics.Rendering.OpenGL.GL.CoordTrans.GLmatrix
+            Graphics.GL.Types.GLfloat #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: LinAlg.Mat4 Graphics.GL.Types.GLfloat)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Graphics.Rendering.OpenGL.GL.CoordTrans.$fMatrixGLmatrix34
+                   @ Graphics.GL.Types.GLfloat
+                   Graphics.Rendering.OpenGL.GL.MatrixComponent.$fMatrixComponentFloat
+                   Graphics.Rendering.OpenGL.GL.CoordTrans.ColumnMajor
+                   (Matrices.matrixToCMList
+                      @ Graphics.GL.Types.GLfloat
+                      GHC.Float.$fNumFloat
+                      x)
+                   eta) -}
+7c896d9cb5848dc641e194f3b7eb634d
+  buildShader ::
+    Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects.ShaderType
+    -> GHC.Base.String
+    -> GHC.Types.IO Graphics.Rendering.OpenGL.GL.Shaders.Shader.Shader
+  {- Arity: 3, Strictness: <S,1*U><L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.buildShader1
+                  `cast`
+                (<Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects.ShaderType>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Graphics.Rendering.OpenGL.GL.Shaders.Shader.Shader>_R)) -}
+110e923e7804fab74392b5af9b62b861
+  buildShader1 ::
+    Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects.ShaderType
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Graphics.Rendering.OpenGL.GL.Shaders.Shader.Shader #)
+  {- Arity: 3, Strictness: <S,1*U><L,1*U><S,U>,
+     Unfolding: (\ (sType :: Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects.ShaderType)
+                   (src :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects.createShader1
+                        sType
+                        eta of ds2 { (#,#) ipv ipv1 ->
+                 case Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects.$wshaderSourceBS
+                        ipv1 of ww6 { (#,#) ww7 ww8 ->
+                 case (ww8 (Graphics.Rendering.OpenGL.GL.ByteString.packUtf8 src))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv of ds3 { (#,#) ipv2 ipv3 ->
+                 case Graphics.GL.Functions.F04.ptr_glCompileShader of ds4 { GHC.Ptr.FunPtr ds5 ->
+                 case ipv1
+                        `cast`
+                      (Graphics.Rendering.OpenGL.GL.Shaders.Shader.N:Shader[0]) of ds6 { GHC.Word.W32# ds7 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.Word#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds5
+                        ds7
+                        ipv2 of wild { Unit# ds8 ->
+                 case GHC.Prim.newAlignedPinnedByteArray#
+                        @ GHC.Prim.RealWorld
+                        4#
+                        4#
+                        ds8 of ds9 { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.unsafeFreezeByteArray#
+                        @ GHC.Prim.RealWorld
+                        ipv5
+                        ipv4 of ds10 { (#,#) ipv6 ipv7 ->
+                 let {
+                   ptr :: GHC.Prim.Addr# = GHC.Prim.byteArrayContents# ipv7
+                 } in
+                 case GHC.Prim.writeInt32OffAddr#
+                        @ GHC.Prim.RealWorld
+                        ptr
+                        0#
+                        0#
+                        ipv6 of s2 { DEFAULT ->
+                 case Graphics.GL.Functions.F12.ptr_glGetShaderiv of ds11 { GHC.Ptr.FunPtr ds12 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.Word#
+                                         -> GHC.Prim.Word#
+                                         -> GHC.Prim.Addr#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds12
+                        ds7
+                        35713##
+                        ptr
+                        s2 of wild1 { Unit# ds13 ->
+                 case GHC.Prim.readInt32OffAddr#
+                        @ GHC.Prim.RealWorld
+                        ptr
+                        0#
+                        ds13 of ds14 { (#,#) ipv8 ipv9 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepUnlifted
+                        @ GHC.Prim.ByteArray#
+                        ipv7
+                        ipv8 of s4 { DEFAULT ->
+                 case ipv9 of wild2 {
+                   DEFAULT
+                   -> (# s4,
+                         ds6
+                           `cast`
+                         (Sym (Graphics.Rendering.OpenGL.GL.Shaders.Shader.N:Shader[0])) #)
+                   0#
+                   -> case Graphics.Rendering.OpenGL.GL.Shaders.ShaderObjects.$wshaderInfoLog
+                             ds7
+                             s4 of ds15 { (#,#) ipv10 ipv11 ->
+                      case GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.Prim.Any
+                             (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                                (GHC.IO.Exception.IOError
+                                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                                   GHC.IO.Exception.UserError
+                                   (GHC.Types.[] @ GHC.Types.Char)
+                                   (GHC.CString.unpackAppendCString#
+                                      "Shader failed to compile: "#
+                                      ipv11)
+                                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                                   (GHC.Base.Nothing @ GHC.IO.FilePath)))
+                             ipv10
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                Graphics.Rendering.OpenGL.GL.Shaders.Shader.Shader #)
+                      of {} } } } } } } } } } } } } } } }) -}
+ee7a1838806bbc75526b104dd3e8c589
+  camPos ::
+    Graphics.Rendering.OpenGL.GL.Tensor.Vector3
+      Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Graphics.Rendering.OpenGL.GL.Tensor.Vector3
+                   @ Graphics.GL.Types.GLfloat
+                   Tut6.Tutorial.camPos2
+                   Tut6.Tutorial.camPos2
+                   Tut6.Tutorial.camPos1) -}
+3e2bf91a81cdff7522aff3b38a26186b
+  camPos1 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 4.0#) -}
+954a1cad3f99f2ff6a66c10d74f682cd
+  camPos2 :: GHC.Types.Float
+  {- HasNoCafRefs, Unfolding: (GHC.Types.F# 0.0#) -}
+129f91b058857d165e633d862d6da28f
+  cameraPos ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLSLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds8 }) -}
+ec3d9e36d9577b50317bf69e04f7a002
+  cameraPosition :: LinAlg.Point3 Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (LinAlg.Point3
+                   @ Graphics.GL.Types.GLfloat
+                   Tut6.Tutorial.camPos2
+                   Tut6.Tutorial.camPos2
+                   Tut6.Tutorial.camPos1) -}
+6e59eedd9cc0852f80000510aa098d01
+  colorAttrib ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLSLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds12 }) -}
+2acc555ccd072b8bc560af1958beba17
+  colorBuffObj ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+  RecSel Left Tut6.Tutorial.GLModelData
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSL),1*U(A,A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLModelData) ->
+                 case ds2 of wild { Tut6.Tutorial.GLModData ds3 ds4 ds5 ds6 ->
+                 ds5 }) -}
+4b54e11c64aafdf1b77b003e3aafdf2e
+  cubeMapTargets ::
+    [Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace
+                   Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureCubeMapPositiveX
+                   Tut6.Tutorial.cubeMapTargets1) -}
+96537abfa2ae82bde79d81ea6a41aa0f
+  cubeMapTargets1 ::
+    [Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace
+                   Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureCubeMapNegativeX
+                   Tut6.Tutorial.cubeMapTargets2) -}
+2a1492729da1b56de0c9fe7b654fcead
+  cubeMapTargets2 ::
+    [Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace
+                   Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureCubeMapPositiveY
+                   Tut6.Tutorial.cubeMapTargets3) -}
+3370a2ac8ee2535d3d8d6389f991d894
+  cubeMapTargets3 ::
+    [Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace
+                   Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureCubeMapNegativeY
+                   Tut6.Tutorial.cubeMapTargets4) -}
+d39ce2f0005d7d88c5338ec0017f9d19
+  cubeMapTargets4 ::
+    [Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace
+                   Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureCubeMapPositiveZ
+                   Tut6.Tutorial.cubeMapTargets5) -}
+5aa1ff53d3bc7a59c6a7e8f71b5ce9b2
+  cubeMapTargets5 ::
+    [Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace
+                   Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureCubeMapNegativeZ
+                   (GHC.Types.[]
+                      @ Graphics.Rendering.OpenGL.GL.Texturing.TextureTarget.TextureTargetCubeMapFace)) -}
+3f73634f0739671aba9eda35a8aed7df
+  cubeModel :: Tut6.Tutorial.GLObjs -> Tut6.Tutorial.GLModelData
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U,U,U),A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds33 }) -}
+ec1fa5596009c35856324e8a91fc3e50
+  cubeTexture ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLSLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds16 }) -}
+d4cf32cc0e03a0b612eb3e592baefb72
+  drawStuff ::
+    GHC.Types.Int
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Tut6.Tutorial.GLObjs
+    -> GHC.Types.IO ()
+  {- Arity: 7,
+     Strictness: <L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><S,1*U(1*U(U),U,U,U(U),U(U),U,U(U),U(U),U(U),U(U),U(U),1*U(U),1*U(U),U,U,U,U,U,U,U,U,U,U(U),U(U),A,A,A,A,A,A,U(U(U),U,U,U),U(U(U),U,U,U),1*U(U(U),U,U),A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.drawStuff1
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <Graphics.GL.Types.GLfloat>_R
+                 ->_R <Graphics.GL.Types.GLfloat>_R
+                 ->_R <Graphics.GL.Types.GLfloat>_R
+                 ->_R <Graphics.GL.Types.GLfloat>_R
+                 ->_R <Tut6.Tutorial.GLObjs>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+56f5966f422b3afc4d538a7179d11e1c
+  drawStuff1 ::
+    GHC.Types.Int
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Tut6.Tutorial.GLObjs
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 7,
+     Strictness: <L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><S,1*U(1*U(U),U,U,U(U),U(U),U,U(U),U(U),U(U),U(U),U(U),1*U(U),1*U(U),U,U,U,U,U,U,U,U,U,U(U),U(U),A,A,A,A,A,A,U(U(U),U,U,U),U(U(U),U,U,U),1*U(U(U),U,U),A,A,A,A)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (7, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Graphics.GL.Types.GLfloat)
+                   (w2 :: Graphics.GL.Types.GLfloat)
+                   (w3 :: Graphics.GL.Types.GLfloat)
+                   (w4 :: Graphics.GL.Types.GLfloat)
+                   (w5 :: Tut6.Tutorial.GLObjs)
+                   (w6 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w5 of ww6 { Tut6.Tutorial.GLObjs ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ww21 ww22 ww23 ww24 ww25 ww26 ww27 ww28 ww29 ww30 ww31 ww32 ww33 ww34 ww35 ww36 ww37 ww38 ww39 ww40 ww41 ww42 ww43 ->
+                 Tut6.Tutorial.$wdrawStuff
+                   w
+                   w1
+                   w2
+                   w3
+                   w4
+                   ww7
+                   ww8
+                   ww9
+                   ww10
+                   ww11
+                   ww12
+                   ww13
+                   ww14
+                   ww15
+                   ww16
+                   ww17
+                   ww18
+                   ww19
+                   ww20
+                   ww21
+                   ww22
+                   ww23
+                   ww24
+                   ww25
+                   ww26
+                   ww27
+                   ww28
+                   ww29
+                   ww30
+                   ww37
+                   ww38
+                   ww39
+                   w6 }) -}
+04307414b5837ff929d1706d7004d63b
+  farPlane ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLSLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds10 }) -}
+e722ed79ebd8ce00731501781175b600
+  fillNewBuffer ::
+    [Graphics.GL.Types.GLfloat]
+    -> GHC.Types.IO
+         Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.fillNewBuffer1
+                  `cast`
+                (<[Graphics.GL.Types.GLfloat]>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject>_R)) -}
+559541705ed2c6bef88669f8a4a1c45b
+  fillNewBuffer1 ::
+    [Graphics.GL.Types.GLfloat]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (xs :: [Graphics.GL.Types.GLfloat])
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case (Graphics.Rendering.OpenGL.GL.BufferObjects.$fGeneratableObjectNameBufferObject_$cgenObjectNames
+                         @ GHC.Types.IO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         Graphics.Rendering.OpenGL.GL.BufferObjects.$fGeneratableObjectNameBufferObject2)
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <[Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject]>_R)
+                        s of ds2 { (#,#) ipv ipv1 ->
+                 case Tut6.Tutorial.bindBufferToAttrib4 of wild { Data.StateVar.StateVar ds3 s1 ->
+                 let {
+                   buf :: Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+                   = case ipv1 of wild1 {
+                       []
+                       -> GHC.List.badHead
+                            @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+                       : x ds4 -> x }
+                 } in
+                 case (s1
+                         (GHC.Base.Just
+                            @ Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+                            buf))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv of ds4 { (#,#) ipv2 ipv3 ->
+                 case GHC.List.$wlenAcc
+                        @ Graphics.GL.Types.GLfloat
+                        xs
+                        0# of ww6 { DEFAULT ->
+                 case GHC.Prim.newAlignedPinnedByteArray#
+                        @ GHC.Prim.RealWorld
+                        (GHC.Prim.*# ww6 4#)
+                        4#
+                        ipv2 of ds5 { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.unsafeFreezeByteArray#
+                        @ GHC.Prim.RealWorld
+                        ipv5
+                        ipv4 of ds6 { (#,#) ipv6 ipv7 ->
+                 let {
+                   ptr :: GHC.Prim.Addr# = GHC.Prim.byteArrayContents# ipv7
+                 } in
+                 let {
+                   ptr1 :: GHC.Ptr.Ptr Graphics.GL.Types.GLfloat {- Strictness: m -}
+                   = GHC.Ptr.Ptr @ Graphics.GL.Types.GLfloat ptr
+                 } in
+                 case Foreign.Marshal.Array.newArray2
+                        @ Graphics.GL.Types.GLfloat
+                        Foreign.Storable.$fStorableFloat
+                        ptr1
+                        xs
+                        ipv6 of ds7 { (#,#) ipv8 ipv9 ->
+                 case Tut6.Tutorial.fillNewBuffer2 of wild1 { Data.StateVar.StateVar ds8 s2 ->
+                 case (s2
+                         ((GHC.Int.I64# (GHC.Prim.*# ww6 4#))
+                            `cast`
+                          (Sym (Foreign.C.Types.N:CPtrdiff[0])),
+                          ptr1, Graphics.Rendering.OpenGL.GL.BufferObjects.StaticDraw))
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv8 of ds9 { (#,#) ipv10 ipv11 ->
+                 case GHC.Prim.touch#
+                        @ 'GHC.Types.PtrRepUnlifted
+                        @ GHC.Prim.ByteArray#
+                        ipv7
+                        ipv10 of s4 { DEFAULT ->
+                 (# s4, buf #) } } } } } } } } } }) -}
+08f282dd27dd54e7bcc8be5f63b5feb6
+  fillNewBuffer2 ::
+    Data.StateVar.StateVar
+      (Graphics.GL.Types.GLsizeiptr,
+       GHC.Ptr.Ptr Graphics.GL.Types.GLfloat,
+       Graphics.Rendering.OpenGL.GL.BufferObjects.BufferUsage)
+  {- Unfolding: (case Graphics.Rendering.OpenGL.GL.BufferObjects.$wbufferData
+                        @ Graphics.GL.Types.GLfloat
+                        Graphics.Rendering.OpenGL.GL.BufferObjects.ArrayBuffer of ww6 { (#,#) ww7 ww8 ->
+                 Data.StateVar.StateVar
+                   @ (Graphics.GL.Types.GLsizeiptr,
+                      GHC.Ptr.Ptr Graphics.GL.Types.GLfloat,
+                      Graphics.Rendering.OpenGL.GL.BufferObjects.BufferUsage)
+                   ww7
+                   ww8 }) -}
+7802c414b95e9d9bec869e07be2a03ce
+  framebufferTexture ::
+    Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.FramebufferTarget
+    -> Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.FramebufferObjectAttachment
+    -> Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject
+    -> Graphics.Rendering.OpenGL.GL.Texturing.Specification.Level
+    -> GHC.Types.IO ()
+  {- Arity: 5, Strictness: <L,1*U><S,1*U><L,1*U(U)><L,1*U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.framebufferTexture1
+                  `cast`
+                (<Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.FramebufferTarget>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.FramebufferObjectAttachment>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.Texturing.Specification.Level>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+0cd93a9a20ff0af9f135e561b49921a0
+  framebufferTexture1 ::
+    Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.FramebufferTarget
+    -> Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.FramebufferObjectAttachment
+    -> Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject
+    -> Graphics.Rendering.OpenGL.GL.Texturing.Specification.Level
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <L,1*U><S,1*U><L,1*U(U)><L,1*U(U)><S,U>,
+     Unfolding: (\ (fbt :: Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.FramebufferTarget)
+                   (fba :: Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.FramebufferObjectAttachment)
+                   (ds2 :: Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject)
+                   (l :: Graphics.Rendering.OpenGL.GL.Texturing.Specification.Level)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 let {
+                   $w$j :: GHC.Prim.Word#
+                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                   = \ (ww6 :: GHC.Prim.Word#)[OneShot] ->
+                     case Graphics.GL.Functions.F08.ptr_glFramebufferTexture of ds5 { GHC.Ptr.FunPtr ds6 ->
+                     let {
+                       $j :: GHC.Prim.Word#
+                             -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                         {- Arity: 1, Strictness: <S,U> -}
+                       = \ (ds8 :: GHC.Prim.Word#)[OneShot] ->
+                         case ds2
+                                `cast`
+                              (Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.N:TextureObject[0]) of ds11 { GHC.Word.W32# ds12 ->
+                         case l of ds13 { GHC.Int.I32# ds14 ->
+                         case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                                 -> GHC.Prim.Word#
+                                                 -> GHC.Prim.Word#
+                                                 -> GHC.Prim.Word#
+                                                 -> GHC.Prim.Int#
+                                                 -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                 -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                                ds6
+                                ds8
+                                ww6
+                                ds12
+                                ds14
+                                eta of wild { Unit# ds15 ->
+                         (# ds15, GHC.Tuple.() #) } } }
+                     } in
+                     case fbt of wild {
+                       Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.DrawFramebuffer
+                       -> $j 36009##
+                       Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.ReadFramebuffer
+                       -> $j 36008##
+                       Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.Framebuffer
+                       -> $j 36160## } }
+                 } in
+                 case fba of wild {
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.ColorAttachment dt
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.geWord# dt 16##) of wild1 {
+                        GHC.Types.False
+                        -> $w$j (GHC.Prim.narrow32Word# (GHC.Prim.plusWord# 36064## dt))
+                        GHC.Types.True -> (# eta, GHC.Tuple.() #) }
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.DepthAttachment
+                   -> $w$j 36096##
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.StencilAttachment
+                   -> $w$j 36128##
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.DepthStencilAttachment
+                   -> $w$j 33306## }) -}
+ccfd606a4ebb02cf506493571792cf15
+  freeModel :: Tut6.Tutorial.GLModelData -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.freeModel1
+                  `cast`
+                (<Tut6.Tutorial.GLModelData>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+75eef6ed749af8b34432a14851367bf2
+  freeModel1 ::
+    Tut6.Tutorial.GLModelData
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U(U,U,U,U)><S,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Tut6.Tutorial.GLModelData)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww6 { Tut6.Tutorial.GLModData ww7 ww8 ww9 ww10 ->
+                 Tut6.Tutorial.$wfreeModel ww7 ww8 ww9 ww10 w1 }) -}
+b47a4274db1a3cd77cf211f6691d7fd5
+  freeResources :: Tut6.Tutorial.GLObjs -> GHC.Types.IO ()
+  {- Arity: 2,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U,U,U),1*U(U,U,U,U),A,A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.freeResources1
+                  `cast`
+                (<Tut6.Tutorial.GLObjs>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+d5278bd02afcb27889cac72ff4f8d2ac
+  freeResources1 ::
+    Tut6.Tutorial.GLObjs
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U,U,U),1*U(U,U,U,U),A,A,A,A,A)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 case Tut6.Tutorial.freeModel1 ds33 eta of ds40 { (#,#) ipv ipv1 ->
+                 Tut6.Tutorial.freeModel1 ds34 ipv } }) -}
+9c92ff38f691e870b2473f02efeee6ee
+  hasPos :: Tut6.Tutorial.LightInfo -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.LightInfo) ->
+                 case ds2 of wild {
+                   Tut6.Tutorial.PointSrc ds3 ds4 -> GHC.Types.True
+                   Tut6.Tutorial.AmbientSrc ds3 -> GHC.Types.False }) -}
+0ca22d87977c2b85cba0704dfab5a673
+  initialize :: GHC.Types.IO Graphics.UI.GLFW.Types.Window
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.initialize1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Graphics.UI.GLFW.Types.Window>_R)) -}
+3fa6bf6beff48a550583bcf2ea40bbb3
+  initialize1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Graphics.UI.GLFW.Types.Window #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-2GG6GK5a2OkK8NpUgT7p3p glfwInit GHC.Prim.State#
+                                                                                                                    GHC.Prim.RealWorld
+                                                                                                                  -> (# GHC.Prim.State#
+                                                                                                                          GHC.Prim.RealWorld,
+                                                                                                                        GHC.Prim.Int# #)}
+                        s of wild { (#,#) ds2 ds3 ->
+                 case GHC.Prim.narrow32Int# ds3 of wild1 {
+                   DEFAULT
+                   -> case Graphics.UI.GLFW.C.$fCCIntBool3 wild1
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                Graphics.UI.GLFW.Types.Window #)
+                      of {}
+                   0#
+                   -> case GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.Prim.Any
+                             Tut6.Tutorial.initialize14
+                             ds2
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                Graphics.UI.GLFW.Types.Window #)
+                      of {}
+                   1#
+                   -> case Graphics.UI.GLFW.windowHint1
+                             Tut6.Tutorial.initialize12
+                             ds2 of ds4 { (#,#) ipv ipv1 ->
+                      case Graphics.UI.GLFW.windowHint1
+                             Tut6.Tutorial.initialize10
+                             ipv of ds5 { (#,#) ipv2 ipv3 ->
+                      case Graphics.UI.GLFW.windowHint1
+                             Tut6.Tutorial.initialize9
+                             ipv2 of ds6 { (#,#) ipv4 ipv5 ->
+                      case Graphics.UI.GLFW.windowHint1
+                             Tut6.Tutorial.initialize7
+                             ipv4 of ds7 { (#,#) ipv6 ipv7 ->
+                      case Graphics.UI.GLFW.windowHint1
+                             Tut6.Tutorial.initialize6
+                             ipv6 of ds8 { (#,#) ipv8 ipv9 ->
+                      case Graphics.UI.GLFW.createWindow1
+                             Tut6.Tutorial.screenWidth
+                             Tut6.Tutorial.screenHeight
+                             Tut6.Tutorial.initialize5
+                             (GHC.Base.Nothing @ Graphics.UI.GLFW.Types.Monitor)
+                             (GHC.Base.Nothing @ Graphics.UI.GLFW.Types.Window)
+                             ipv8 of ds9 { (#,#) ipv10 ipv11 ->
+                      case ipv11 of wild2 {
+                        GHC.Base.Nothing
+                        -> case GHC.Prim.raiseIO#
+                                  @ GHC.Exception.SomeException
+                                  @ GHC.Prim.Any
+                                  Tut6.Tutorial.initialize2
+                                  ipv10
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                     Graphics.UI.GLFW.Types.Window #)
+                           of {}
+                        GHC.Base.Just win'
+                        -> case win'
+                                  `cast`
+                                (Graphics.UI.GLFW.Types.N:Window[0]) of ds10 { GHC.Ptr.Ptr ds11 ->
+                           case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-2GG6GK5a2OkK8NpUgT7p3p glfwMakeContextCurrent GHC.Prim.Addr#
+                                                                                                                                          -> GHC.Prim.State#
+                                                                                                                                               GHC.Prim.RealWorld
+                                                                                                                                          -> (# GHC.Prim.State#
+                                                                                                                                                  GHC.Prim.RealWorld #)}
+                                  ds11
+                                  ipv10 of wild3 { Unit# ds12 ->
+                           case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-2GG6GK5a2OkK8NpUgT7p3p glfwSetInputMode GHC.Prim.Addr#
+                                                                                                                                    -> GHC.Prim.Int#
+                                                                                                                                    -> GHC.Prim.Int#
+                                                                                                                                    -> GHC.Prim.State#
+                                                                                                                                         GHC.Prim.RealWorld
+                                                                                                                                    -> (# GHC.Prim.State#
+                                                                                                                                            GHC.Prim.RealWorld #)}
+                                  ds11
+                                  208898#
+                                  1#
+                                  ds12 of wild4 { Unit# ds13 ->
+                           (# ds13,
+                              ds10
+                                `cast`
+                              (Sym (Graphics.UI.GLFW.Types.N:Window[0])) #) } } } } } } } } } } } }) -}
+6ce6aa703dab471601c9fb514c1c7b54
+  initialize10 :: Graphics.UI.GLFW.Types.WindowHint
+  {- HasNoCafRefs,
+     Unfolding: (Graphics.UI.GLFW.Types.WindowHint'DepthBits
+                   Tut6.Tutorial.initialize11) -}
+ed2d956c1c917650e29cf21738ffbb52
+  initialize11 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 16#) -}
+13893111748c32d2cc144ac4d8c350a2
+  initialize12 :: Graphics.UI.GLFW.Types.WindowHint
+  {- HasNoCafRefs,
+     Unfolding: (Graphics.UI.GLFW.Types.WindowHint'Samples
+                   Tut6.Tutorial.initialize13) -}
+d50d6976e8533cc5872366cfdcdbf855
+  initialize13 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
+9ba6d0a114ccf22b13f280885a182ba0
+  initialize14 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                   Tut6.Tutorial.initialize15) -}
+82a967ee64de689471ee5292d0f22882
+  initialize15 :: GHC.IO.Exception.IOException
+  {- Unfolding: (GHC.IO.Exception.IOError
+                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                   GHC.IO.Exception.UserError
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Tut6.Tutorial.initialize16
+                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)) -}
+065af237984e697d7e1af097964f2807
+  initialize16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Failed to initialize GLFW"#) -}
+b707e1c325ff35601ca8c65c0e0134de
+  initialize2 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                   Tut6.Tutorial.initialize3) -}
+68026f8c571bcbe3bec388a54f893b28
+  initialize3 :: GHC.IO.Exception.IOException
+  {- Unfolding: (GHC.IO.Exception.IOError
+                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                   GHC.IO.Exception.UserError
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Tut6.Tutorial.initialize4
+                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)) -}
+f2589eaf36fb32da6b30d870da2903b8
+  initialize4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Failed to create OpenGL window"#) -}
+68d20606804bce17a3b7f24b27ad610d
+  initialize5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Title of Window!"#) -}
+d130b013139a4e73e58ddf376a2f41a9
+  initialize6 :: Graphics.UI.GLFW.Types.WindowHint
+  {- HasNoCafRefs,
+     Unfolding: (Graphics.UI.GLFW.Types.WindowHint'OpenGLProfile
+                   Graphics.UI.GLFW.Types.OpenGLProfile'Core) -}
+898684e8914198909f28509ad4dab63f
+  initialize7 :: Graphics.UI.GLFW.Types.WindowHint
+  {- HasNoCafRefs,
+     Unfolding: (Graphics.UI.GLFW.Types.WindowHint'ContextVersionMinor
+                   Tut6.Tutorial.initialize8) -}
+1c9c8594592167e55ec01884363ad786
+  initialize8 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 3#) -}
+2602bea13d70e966551f9648c70b191e
+  initialize9 :: Graphics.UI.GLFW.Types.WindowHint
+  {- HasNoCafRefs,
+     Unfolding: (Graphics.UI.GLFW.Types.WindowHint'ContextVersionMajor
+                   Tut6.Tutorial.initialize8) -}
+c1807d01684f1a9848c41dfa3961cb84
+  initializeGL :: GHC.Types.IO Tut6.Tutorial.GLObjs
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.initializeGL1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Tut6.Tutorial.GLObjs>_R)) -}
+180909cf1c37dd652c97cdfbea16afbd
+  initializeGL1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Tut6.Tutorial.GLObjs #)
+  {- Arity: 1, Strictness: <S,U> -}
+c9c5be87150105048a7ae00d6fb71e4c
+  inputLoop ::
+    GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> Graphics.UI.GLFW.Types.Window
+    -> Tut6.Tutorial.GLObjs
+    -> GHC.Types.IO ()
+  {- Arity: 8,
+     Strictness: <L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,U(U(U),U,U,U(U),U(U),U,U(U),U(U),U(U),U(U),U(U),U(U),U(U),U,U,U,U,U,U,U,U,U,U(U),U(U),A,A,A,A,A,A,U(U(U),U,U,U),U(U(U),U,U,U),U(U(U),U,U),A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.inputLoop1
+                  `cast`
+                (<GHC.IORef.IORef Graphics.GL.Types.GLfloat>_R
+                 ->_R <GHC.IORef.IORef Graphics.GL.Types.GLfloat>_R
+                 ->_R <GHC.IORef.IORef Graphics.GL.Types.GLfloat>_R
+                 ->_R <GHC.IORef.IORef Graphics.GL.Types.GLfloat>_R
+                 ->_R <GHC.IORef.IORef Graphics.GL.Types.GLfloat>_R
+                 ->_R <Graphics.UI.GLFW.Types.Window>_R
+                 ->_R <Tut6.Tutorial.GLObjs>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+41659498aca55c4a8623ba71f374e56c
+  inputLoop1 ::
+    GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> Graphics.UI.GLFW.Types.Window
+    -> Tut6.Tutorial.GLObjs
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 8,
+     Strictness: <L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,1*U(U)><L,U(U(U),U,U,U(U),U(U),U,U(U),U(U),U(U),U(U),U(U),U(U),U(U),U,U,U,U,U,U,U,U,U,U(U),U(U),A,A,A,A,A,A,U(U(U),U,U,U),U(U(U),U,U,U),U(U(U),U,U),A,A,A,A)><S,U> -}
+4ccf16fbe22b8ce37e491bcbbd2f6a46
+  lcolor ::
+    Tut6.Tutorial.LightData
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.LightData
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.LightData) ->
+                 case ds2 of wild { Tut6.Tutorial.LData ds3 ds4 ds5 -> ds5 }) -}
+18a1026697e14a977c3cd4c1c840578b
+  light0 :: Tut6.Tutorial.GLObjs -> Tut6.Tutorial.LightData
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U,U),A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds35 }) -}
+49fa1b59b1e009da0dacf9fab3678d98
+  light1 :: Tut6.Tutorial.GLObjs -> Tut6.Tutorial.LightData
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U,U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds36 }) -}
+4d8f6e5370f318b6a555cf446d03d819
+  lightColor ::
+    Tut6.Tutorial.LightInfo
+    -> Graphics.Rendering.OpenGL.GL.Tensor.Vector3
+         Graphics.GL.Types.GLfloat
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Tut6.Tutorial.LightInfo) ->
+                 case w of wild {
+                   Tut6.Tutorial.PointSrc ds2 ds3
+                   -> case ds2 of wild1 { LinAlg.Vec3 x y z ->
+                      case x of dt { GHC.Types.F# ipv ->
+                      case y of dt1 { GHC.Types.F# ipv1 ->
+                      case z of dt2 { GHC.Types.F# ipv2 ->
+                      Graphics.Rendering.OpenGL.GL.Tensor.Vector3
+                        @ Graphics.GL.Types.GLfloat
+                        dt
+                        dt1
+                        dt2 } } } }
+                   Tut6.Tutorial.AmbientSrc ds2
+                   -> case ds2 of wild1 { LinAlg.Vec3 x y z ->
+                      case x of dt { GHC.Types.F# ipv ->
+                      case y of dt1 { GHC.Types.F# ipv1 ->
+                      case z of dt2 { GHC.Types.F# ipv2 ->
+                      Graphics.Rendering.OpenGL.GL.Tensor.Vector3
+                        @ Graphics.GL.Types.GLfloat
+                        dt
+                        dt1
+                        dt2 } } } } }) -}
+f70cb867c75d3404e14cbd52c8db0880
+  lightPosition ::
+    Tut6.Tutorial.LightInfo
+    -> Graphics.Rendering.OpenGL.GL.Tensor.Vertex3
+         Graphics.GL.Types.GLfloat
+  {- Arity: 1, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.LightInfo) ->
+                 case ds2 of wild {
+                   Tut6.Tutorial.PointSrc ds3 ds4
+                   -> case ds4 of wild1 { LinAlg.Point3 x y z ->
+                      Graphics.Rendering.OpenGL.GL.Tensor.$WVertex3
+                        @ Graphics.GL.Types.GLfloat
+                        x
+                        y
+                        z }
+                   Tut6.Tutorial.AmbientSrc ds3 -> Tut6.Tutorial.lightPosition1 }) -}
+0ef4967035bed473bbb9118623944fc2
+  lightPosition1 ::
+    Graphics.Rendering.OpenGL.GL.Tensor.Vertex3
+      Graphics.GL.Types.GLfloat
+  {- Strictness: x -}
+7e337614eecebac0f32ad1af35cca284
+  lightType :: Tut6.Tutorial.LightInfo -> Graphics.GL.Types.GLint
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.LightInfo) ->
+                 case ds2 of wild {
+                   Tut6.Tutorial.PointSrc ds3 ds4 -> Tut6.Tutorial.assignLight5
+                   Tut6.Tutorial.AmbientSrc ds3 -> Tut6.Tutorial.assignLight4 }) -}
+43943aedab7e99ab563ed1178924afa5
+  lpos ::
+    Tut6.Tutorial.LightData
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.LightData
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.LightData) ->
+                 case ds2 of wild { Tut6.Tutorial.LData ds3 ds4 ds5 -> ds4 }) -}
+a2f38cd5e894d6db8cacec028377b331
+  ltype ::
+    Tut6.Tutorial.LightData
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.LightData
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.LightData) ->
+                 case ds2 of wild { Tut6.Tutorial.LData ds3 ds4 ds5 -> ds3 }) -}
+65958696d3cf763fa81a9b0a61201033
+  mMat ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.CoordTrans.GLmatrix
+         Graphics.GL.Types.GLfloat
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds37 }) -}
+f4e26ffd9761033765c230854d1c90c8
+  mMatrix ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds4 }) -}
+a95dbe83ab2bbf1d0dc96c4b07a6ec64
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+8dabcb781dede6aa1dd77f106d67b934
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Tut6.Tutorial.initialize1 s of ds2 { (#,#) ipv ipv1 ->
+                 case Tut6.Tutorial.initializeGL1 ipv of ds3 { (#,#) ipv2 ipv3 ->
+                 case {__pkg_ccall_GC bindings-GLFW-3.1.2.2@bindings-GLFW-3.1.2.2-2GG6GK5a2OkK8NpUgT7p3p glfwGetTime GHC.Prim.State#
+                                                                                                                       GHC.Prim.RealWorld
+                                                                                                                     -> (# GHC.Prim.State#
+                                                                                                                             GHC.Prim.RealWorld,
+                                                                                                                           GHC.Prim.Double# #)}
+                        ipv2 of wild { (#,#) ds4 ds5 ->
+                 case GHC.Prim.newMutVar#
+                        @ GHC.Types.Float
+                        @ GHC.Prim.RealWorld
+                        (case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.==## ds5 0.0##) of wild1 {
+                           GHC.Types.False -> GHC.Types.F# (GHC.Prim.double2Float# ds5)
+                           GHC.Types.True -> Tut6.Tutorial.camPos2 })
+                        ds4 of ds6 { (#,#) ipv4 ipv5 ->
+                 case GHC.Prim.newMutVar#
+                        @ Graphics.GL.Types.GLfloat
+                        @ GHC.Prim.RealWorld
+                        Tut6.Tutorial.camPos2
+                        ipv4 of ds7 { (#,#) ipv6 ipv7 ->
+                 case GHC.Prim.newMutVar#
+                        @ Graphics.GL.Types.GLfloat
+                        @ GHC.Prim.RealWorld
+                        Tut6.Tutorial.main3
+                        ipv6 of ds8 { (#,#) ipv8 ipv9 ->
+                 case GHC.Prim.newMutVar#
+                        @ Graphics.GL.Types.GLfloat
+                        @ GHC.Prim.RealWorld
+                        Tut6.Tutorial.camPos2
+                        ipv8 of ds9 { (#,#) ipv10 ipv11 ->
+                 case GHC.Prim.newMutVar#
+                        @ Graphics.GL.Types.GLfloat
+                        @ GHC.Prim.RealWorld
+                        Tut6.Tutorial.main2
+                        ipv10 of ds10 { (#,#) ipv12 ipv13 ->
+                 case Tut6.Tutorial.inputLoop1
+                        (GHC.STRef.STRef @ GHC.Prim.RealWorld @ GHC.Types.Float ipv5)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <GHC.Types.Float>_N)
+                        (GHC.STRef.STRef
+                           @ GHC.Prim.RealWorld
+                           @ Graphics.GL.Types.GLfloat
+                           ipv7)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <Graphics.GL.Types.GLfloat>_N)
+                        (GHC.STRef.STRef
+                           @ GHC.Prim.RealWorld
+                           @ Graphics.GL.Types.GLfloat
+                           ipv9)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <Graphics.GL.Types.GLfloat>_N)
+                        (GHC.STRef.STRef
+                           @ GHC.Prim.RealWorld
+                           @ Graphics.GL.Types.GLfloat
+                           ipv11)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <Graphics.GL.Types.GLfloat>_N)
+                        (GHC.STRef.STRef
+                           @ GHC.Prim.RealWorld
+                           @ Graphics.GL.Types.GLfloat
+                           ipv13)
+                          `cast`
+                        (Sym (GHC.IORef.N:IORef[0]) <Graphics.GL.Types.GLfloat>_N)
+                        ipv1
+                        ipv3
+                        ipv12 of ds11 { (#,#) ipv14 ipv15 ->
+                 case ipv3 of wild1 { Tut6.Tutorial.GLObjs ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ds40 ds41 ds42 ds43 ds44 ds45 ds46 ds47 ds48 ->
+                 case ds42 of ww6 { Tut6.Tutorial.GLModData ww7 ww8 ww9 ww10 ->
+                 case Tut6.Tutorial.$wfreeModel
+                        ww7
+                        ww8
+                        ww9
+                        ww10
+                        ipv14 of ds49 { (#,#) ipv16 ipv17 ->
+                 case ds43 of ww11 { Tut6.Tutorial.GLModData ww12 ww13 ww14 ww15 ->
+                 case Tut6.Tutorial.$wfreeModel
+                        ww12
+                        ww13
+                        ww14
+                        ww15
+                        ipv16 of ds50 { (#,#) ipv18 ipv19 ->
+                 case Graphics.UI.GLFW.terminate1
+                        ipv18 of ds51 { (#,#) ipv20 ipv21 ->
+                 (# ipv20, GHC.Tuple.() #) } } } } } } } } } } } } } } }) -}
+af27c04c25174202d306526b73be00ec
+  main2 :: GHC.Types.Float
+  {- HasNoCafRefs, Unfolding: (GHC.Types.F# 1.5707964#) -}
+611ea725b2933789ec54572c8d60b36c
+  main3 :: Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 1.0#) -}
+3882bf31593941a5d7d76590a354726b
+  makePoints ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> [LinAlg.Point3 Graphics.GL.Types.GLfloat]
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(S),1*U(U)><S(S),1*U(U)><S(S),1*U(U)><S(S),1*U(U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: GHC.Types.Int) ->
+                 case w of ww6 { GHC.Types.I# ww7 ->
+                 case w1 of ww8 { GHC.Types.I# ww9 ->
+                 case w2 of ww10 { GHC.Types.I# ww11 ->
+                 case w3 of ww12 { GHC.Types.I# ww13 ->
+                 Tut6.Tutorial.$wmakePoints ww7 ww9 ww11 ww13 } } } }) -}
+9a08125dadb5ba5dc8eab03fd47165f8
+  makeProgram ::
+    Tut6.Types.ProgramInfo
+    -> GHC.Types.IO
+         Graphics.Rendering.OpenGL.GL.Shaders.Program.Program
+  {- Arity: 2, Strictness: <S,1*U(1*U,1*U,1*U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.makeProgram1
+                  `cast`
+                (<Tut6.Types.ProgramInfo>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Graphics.Rendering.OpenGL.GL.Shaders.Program.Program>_R)) -}
+380cfb0988016e07d70a4e70a341c5a1
+  makeProgram1 ::
+    Tut6.Types.ProgramInfo
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Graphics.Rendering.OpenGL.GL.Shaders.Program.Program #)
+  {- Arity: 2, Strictness: <S,1*U(1*U,1*U,1*U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Tut6.Types.ProgramInfo)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww6 { Tut6.Types.ProgInfo ww7 ww8 ww9 ->
+                 Tut6.Tutorial.$wmakeProgram ww7 ww8 ww9 w1 }) -}
+da9101613133b7ebc0346fb0a7bceef2
+  marshalFramebufferObjectAttachment ::
+    Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.FramebufferObjectAttachment
+    -> GHC.Base.Maybe Graphics.GL.Types.GLenum
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.FramebufferObjectAttachment) ->
+                 case x of wild {
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.ColorAttachment dt
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.geWord# dt 16##) of wild1 {
+                        GHC.Types.False
+                        -> GHC.Base.Just
+                             @ Graphics.GL.Types.GLenum
+                             (GHC.Word.W32#
+                                (GHC.Prim.narrow32Word# (GHC.Prim.plusWord# 36064## dt)))
+                        GHC.Types.True -> GHC.Base.Nothing @ Graphics.GL.Types.GLenum }
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.DepthAttachment
+                   -> Tut6.Tutorial.marshalFramebufferObjectAttachment3
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.StencilAttachment
+                   -> Tut6.Tutorial.marshalFramebufferObjectAttachment2
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObjectAttachment.DepthStencilAttachment
+                   -> Tut6.Tutorial.marshalFramebufferObjectAttachment1 }) -}
+bb1df3fd76a5a1d0d5d18f3122dbb35b
+  marshalFramebufferObjectAttachment1 ::
+    GHC.Base.Maybe Graphics.GL.Types.GLenum
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ Graphics.GL.Types.GLenum
+                   Graphics.GL.Tokens.$bGL_DEPTH_STENCIL_ATTACHMENT) -}
+985f2dbdcb219655c09aaaf411ffd1ff
+  marshalFramebufferObjectAttachment2 ::
+    GHC.Base.Maybe Graphics.GL.Types.GLenum
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ Graphics.GL.Types.GLenum
+                   Graphics.GL.Tokens.$bGL_STENCIL_ATTACHMENT_OES) -}
+eeca03aed8c9a94380ae9b8dfae27054
+  marshalFramebufferObjectAttachment3 ::
+    GHC.Base.Maybe Graphics.GL.Types.GLenum
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ Graphics.GL.Types.GLenum
+                   Graphics.GL.Tokens.$bGL_DEPTH_ATTACHMENT_OES) -}
+3f1d91702b9d72c7044a3a34bbdcd4c4
+  marshalFramebufferTarget ::
+    Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.FramebufferTarget
+    -> Graphics.GL.Types.GLenum
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (xs :: Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.FramebufferTarget) ->
+                 case xs of wild {
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.DrawFramebuffer
+                   -> Graphics.GL.Tokens.$bGL_DRAW_FRAMEBUFFER_NV
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.ReadFramebuffer
+                   -> Graphics.GL.Tokens.$bGL_READ_FRAMEBUFFER_NV
+                   Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferTarget.Framebuffer
+                   -> Graphics.GL.Tokens.$bGL_FRAMEBUFFER_OES }) -}
+371cfc0d75dff0f3456c2f32d1153027
+  mat ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds28 }) -}
+fa46fcf9ee77851640b9437368ba7417
+  mat0 ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLSLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds17 }) -}
+695b2d0b618936b297c04f55766e7ccc
+  mat1 ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLSLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds18 }) -}
+157ef3ff9a59325f8f77d16241678113
+  mat2 ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLSLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds19 }) -}
+8a3b416917ba8140f27d6c6c01eba465
+  mat3 ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLSLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds20 }) -}
+c2115d55264db5dfdfafddcc3c1b06d8
+  mat4 ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLSLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds21 }) -}
+80e46050f53e18c9264c3fd850db7e01
+  mat5 ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLSLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds22 }) -}
+9be201515ea663979cea5a2ab5a4e6fc
+  maxColorAttachments :: Graphics.GL.Types.GLenum
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W32# 16##) -}
+17bbe96cc1f6e548058706622ab9913b
+  normalAttrib ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLSLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds13 }) -}
+b04bbce01e765acaf09a8309a3272e71
+  normalBuffObj ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+  RecSel Left Tut6.Tutorial.GLModelData
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLS),1*U(A,A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLModelData) ->
+                 case ds2 of wild { Tut6.Tutorial.GLModData ds3 ds4 ds5 ds6 ->
+                 ds6 }) -}
+ae459c4a5f818d82678a373d9fcb481f
+  numLights ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds6 }) -}
+8ae1abd52d9ef8d547b6960e6148ab94
+  program ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Program.Program
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds3 }) -}
+c968517a4f0af096bb6efd1ba57e66d0
+  screenHeight :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 720#) -}
+c3dfeb10ecc1eaa29f26a0ed65455c62
+  screenWidth :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1280#) -}
+8b2760ec27901aabfe39279538194741
+  setupShadowMap ::
+    GHC.Types.IO
+      (Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject,
+       Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Tut6.Tutorial.setupShadowMap1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0]
+                          <(Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject,
+                            Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject)>_R)) -}
+9e34372112438475955e6cadaec1e5e4
+  setupShadowMap1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject,
+           Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case (Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.$fGeneratableObjectNameFramebufferObject_$cgenObjectNames
+                         @ GHC.Types.IO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.$fGeneratableObjectNameFramebufferObject2)
+                        `cast`
+                      (GHC.Types.N:IO[0]
+                           <[Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject]>_R)
+                        s of ds2 { (#,#) ipv ipv1 ->
+                 Tut6.Tutorial.setupShadowMap2
+                   (GHC.List.head
+                      @ Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject
+                      ipv1)
+                   ipv }) -}
+01218f2883e03bb4e6e1e46e3c0cdac9
+  setupShadowMap2 ::
+    Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject,
+           Graphics.Rendering.OpenGL.GL.Texturing.TextureObject.TextureObject) #)
+  {- Arity: 2, Strictness: <L,1*U(U)><S,U> -}
+37312da8d6e439f58c8fdc00fd98717e
+  shadFarPlane ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLSLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds25 }) -}
+a08848cbde1ec210f99b07604fb2d8df
+  shadLL ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLSLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds24 }) -}
+d631fa7bb67d2d66c85da47067cc8795
+  shadModel ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLSLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds23 }) -}
+5bbf8039487a972188ba92a4ea07f4dd
+  shadTestFarPlane ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds31 }) -}
+7e3d05f8ae44b8d5c19957ff179890b1
+  shadTestLL ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds30 }) -}
+e62e30db6bb0db28b722d33a72592a20
+  shadTestModel ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds29 }) -}
+f24bd34507d5b7eda373c95391e90dba
+  shadTestVertAttrib ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds32 }) -}
+ca6a1c4522ca4a6a617371dd3869f096
+  shadVertAttrib ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLSLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds26 }) -}
+abf7e43b7d81209df71819f23933e757
+  shadowBuff ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.FramebufferObjects.FramebufferObject.FramebufferObject
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLSLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds15 }) -}
+3ad914dba65783f9755e63c7fd3c87c4
+  shadowHeight :: Graphics.GL.Types.GLsizei
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True) Tut6.Tutorial.shadowWidth -}
+6a8397cdf64508580ea9d7a2fbdb9640
+  shadowMap ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLSLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds9 }) -}
+16a5319ac8875b5a78b6bc0ecf64dc8e
+  shadowProg ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Program.Program
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLSLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds14 }) -}
+5f2e843ac418534a3a39d1b945a945e0
+  shadowTestProg ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Program.Program
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLSLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds27 }) -}
+e2c024d66ce82a5efc53062ff099edb3
+  shadowWidth :: Graphics.GL.Types.GLsizei
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Int.I32# 1024#) -}
+369f715cee1f74d65e6c141102572c47
+  specPow ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds7 }) -}
+1c7055a7310acc628f11ca44fbcaec73
+  squareModel :: Tut6.Tutorial.GLObjs -> Tut6.Tutorial.GLModelData
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSLLLLL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U,U,U),A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds34 }) -}
+62c99fa5b8251f28dd935da9a827b7ad
+  vertArrObj ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.VertexArrayObjects.VertexArrayObject
+  RecSel Left Tut6.Tutorial.GLModelData
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLModelData) ->
+                 case ds2 of wild { Tut6.Tutorial.GLModData ds3 ds4 ds5 ds6 ->
+                 ds3 }) -}
+2d34a3605a0cef79ea5bd2411ebd33db
+  vertAttrib ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.QueryUtils.VertexAttrib.AttribLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLSLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,A,A,A,A,A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds11 }) -}
+b3ff53d1631a636c4567421024d985da
+  vertBuffObj ::
+    Tut6.Tutorial.GLModelData
+    -> Graphics.Rendering.OpenGL.GL.BufferObjects.BufferObject
+  RecSel Left Tut6.Tutorial.GLModelData
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLL),1*U(A,1*U(U),A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLModelData) ->
+                 case ds2 of wild { Tut6.Tutorial.GLModData ds3 ds4 ds5 ds6 ->
+                 ds4 }) -}
+8ab00bab1e2c99c3c19d0f1ed0481347
+  vpMat ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.CoordTrans.GLmatrix
+         Graphics.GL.Types.GLfloat
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLSL),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U(U,U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds38 }) -}
+3c246ff891461fd1b99fc6862695ea8d
+  vpMatRaw ::
+    Tut6.Tutorial.GLObjs -> LinAlg.Mat4 Graphics.GL.Types.GLfloat
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLS),1*U(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds39 }) -}
+43a7ad13430eaff85cb5b3cd89e140b4
+  vpMatrix ::
+    Tut6.Tutorial.GLObjs
+    -> Graphics.Rendering.OpenGL.GL.Shaders.Uniform.UniformLocation
+  RecSel Left Tut6.Tutorial.GLObjs
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL),1*U(A,A,1*U(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds2 :: Tut6.Tutorial.GLObjs) ->
+                 case ds2 of wild { Tut6.Tutorial.GLObjs ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 ds26 ds27 ds28 ds29 ds30 ds31 ds32 ds33 ds34 ds35 ds36 ds37 ds38 ds39 ->
+                 ds5 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

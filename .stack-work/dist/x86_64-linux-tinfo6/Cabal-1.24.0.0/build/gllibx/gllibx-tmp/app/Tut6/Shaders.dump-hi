@@ -1,0 +1,1366 @@
+
+==================== FINAL INTERFACE ====================
+2018-07-09 20:56:55.610135736 UTC
+
+interface main@main:Tut6.Shaders 8001
+  interface hash: db5d68736f77094999f1b02892b62a8c
+  ABI hash: 5d1566887cce773a884c76ae392dd2ee
+  export-list hash: b84b9226829ed2b23093d35aac9a240f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 2f739a7d1afac59bd62673c76c06d364
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Tut6.Shaders.progInfo2
+  Tut6.Shaders.shadTestShader
+  Tut6.Shaders.shadowProgInfo
+module dependencies: Tut6.Types
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  Tut6.Types 70deb94b18b41cef8d8990998ae2ba54
+  exports: 16a60c2ff6a67fe1e02a8635389206f8
+  ProgInfo ea94e974b56cf5b937e15e0b68c70205
+  ProgramInfo 8674f37b9b498b629f9c4eedaba63491
+  fragmentShader e80f7f25c8f550f506cbb6aae2ce2343
+  geometryShader f8da23d0a9c8d095c5b1aba431e1a036
+  vertexShader e33904e448b84fec01756c0e237645d5
+3645dd9bf2bb7a6d34c4a74d5a6f3468
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Tut6.Shaders.$trModule2
+                   Tut6.Shaders.$trModule1) -}
+41db5505d3789c762606e88018639bc8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Tut6.Shaders"#) -}
+c36be32edcde10f1edaadfef71089644
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+59a18272dcafdae0d5d3f7b3bc2f7e8c
+  fragmentShader2 :: GHC.Base.String
+  {- Unfolding: (Data.OldList.unlines Tut6.Shaders.progInfo1) -}
+b4cfade6b0e2c13bc40e6936d94218b2
+  progInfo1 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo146
+                   Tut6.Shaders.progInfo3) -}
+b5d9e293d06de916515acbab93179d9a
+  progInfo10 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo138
+                   Tut6.Shaders.progInfo11) -}
+2d4680b8b8bb2249a60804478ca7a111
+  progInfo100 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 specLightIntensities=vec3(0);"#) -}
+c0296361af3bcfe30f880ed9eb305e25
+  progInfo101 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 diffLightIntensities=vec3(0);"#) -}
+d3f4e6d103a2ad2e22e03d07247f4959
+  progInfo102 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 normal = normalize(fragmentNormal.xyz);"#) -}
+a0b2c846ea586d932b7b5533dc8c79e5
+  progInfo103 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "{"#) -}
+252dd10dbfada0c6cc9b82e72e89cf15
+  progInfo104 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "void main()"#) -}
+b609b6107c7f8605e0e589a77e05443a
+  progInfo105 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "return shadow;"#) -}
+64b6c60114bdbd86012e6e991cc2f1a0
+  progInfo106 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "shadow /= float(samples);"#) -}
+5dd0dc2efc09d320cace0e63b607676c
+  progInfo107 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "shadow += depth-bias > closestDepth ? 1.0 : 0.0;"#) -}
+20e5512e514d21cbcb50c90e86941cd0
+  progInfo108 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "closestDepth *= far_plane;"#) -}
+c33840a60838c9725716dcf9b62a3f1d
+  progInfo109 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float closestDepth = texture(shadowMap,(fromLight/depth)+(sampleOffsetDirections[i]*diskRadius)).r;"#) -}
+f71e84ae3e881206188c102ff3ebcc23
+  progInfo11 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo137
+                   Tut6.Shaders.progInfo12) -}
+1388207fe020f8e11bbd9028a5a7a6b6
+  progInfo110 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "for(int i = 0; i < samples; ++i) {"#) -}
+474770908a63d34f6d56763340bdcd6e
+  progInfo111 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float diskRadius = (1.0+(viewdist/far_plane))/500.0;"#) -}
+6d90037949a3577e7a93b5cdcf8e251c
+  progInfo112 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "int samples = 20;"#) -}
+a0b38bc67dcf73da5d6b60aa93eb7877
+  progInfo113 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "float bias = 0.15;"#) -}
+8fac9bafaaaa3e60356aa88db1d3027e
+  progInfo114 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float shadow = 0.0;"#) -}
+14060612980435b734b8f9c0ceb893e4
+  progInfo115 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float ShadowCalculation(vec3 fromLight, float depth, float viewdist) {"#) -}
+a38955c625c390918b622b1cdc031186
+  progInfo116 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ");"#) -}
+583c4ad9102952fcd7e90b8eaaf675cc
+  progInfo117 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3( 0,  1,  1), vec3( 0, -1,  1), vec3( 0, -1, -1), vec3( 0,  1, -1)"#) -}
+2847114851cc574df3c14def0467940a
+  progInfo118 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3( 1,  0,  1), vec3(-1,  0,  1), vec3( 1,  0, -1), vec3(-1,  0, -1),"#) -}
+cdbaa79109eb074bafe33023eb990f6a
+  progInfo119 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3( 1,  1,  0), vec3( 1, -1,  0), vec3(-1, -1,  0), vec3(-1,  1,  0),"#) -}
+62848d55853b71f0e201ae12f5c0d4af
+  progInfo12 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo136
+                   Tut6.Shaders.progInfo13) -}
+12e51b469e99181f2d0f75c5b9e8a98a
+  progInfo120 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3( 1,  1, -1), vec3( 1, -1, -1), vec3(-1, -1, -1), vec3(-1,  1, -1),"#) -}
+5a0313dbbb1da1310e7dd741841f7e02
+  progInfo121 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3( 1,  1,  1), vec3( 1, -1,  1), vec3(-1, -1,  1), vec3(-1,  1,  1),"#) -}
+ab3dcc12a9eae519f6dd327f3b4ebcb5
+  progInfo122 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "("#) -}
+bb42f7abf513de40078b53293ef84443
+  progInfo123 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 sampleOffsetDirections[20] = vec3[]"#) -}
+e6a1455110a8dd3fb0c91faaf3dee6db
+  progInfo124 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "return fract(sin(sn) * c);"#) -}
+b171a9f7363ced14f98e8ec41cb6ea9b
+  progInfo125 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "highp float sn= mod(dt,3.14);"#) -}
+43ef14435949782a47fe0604ee3f05f8
+  progInfo126 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "highp float dt= dot(co.xy ,vec2(a,b));"#) -}
+3a22db9e091a13cb91bb57e675d1eea6
+  progInfo127 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "highp float c = 43758.5453;"#) -}
+3552d9e957bb960f8efb604388a94603
+  progInfo128 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "highp float b = 78.233;"#) -}
+6a378cbc75a521d08dec6cec38cff000
+  progInfo129 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "highp float a = 12.9898;"#) -}
+695ccb1557ee17a0c553c4c14301e4db
+  progInfo13 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo135
+                   Tut6.Shaders.progInfo14) -}
+4a14218708ab941e5e6d487dd6623c82
+  progInfo130 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "highp float rand(vec2 co) {"#) -}
+7b1727eb8d896828850733f25d62c238
+  progInfo131 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "out vec3 finalColor;"#) -}
+4704b27e0b03c6c7b66cba6b36ac2bf7
+  progInfo132 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform int numLights;"#) -}
+10cbaaafddf224b32d20a428d99c9b4d
+  progInfo133 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform Light lights[5];"#) -}
+c13c953a42cbf5325bbef767c90a0afa
+  progInfo134 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform float specPow;"#) -}
+526c406fba21184918482f283db52a2b
+  progInfo135 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform vec3 cameraPos;"#) -}
+7139a17348a093af817f3a6819beaf53
+  progInfo136 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform float far_plane;"#) -}
+7d9a9b1d96917433340577cba2bcccef
+  progInfo137 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform samplerCube shadowMap;"#) -}
+1977ab95a18d9ef721ae3236866f0363
+  progInfo138 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "};"#) -}
+fb7f32b6896793c03549e76058a88d70
+  progInfo139 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vec3 color;"#) -}
+b933151e60f3f70b9d9cbff4d5e53b90
+  progInfo14 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo134
+                   Tut6.Shaders.progInfo15) -}
+51779d0eff1adfda976528dcaade7d59
+  progInfo140 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vec3 lightPos;"#) -}
+f2c8a0c152084468dcd3e5321d9d7b19
+  progInfo141 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "int type;"#) -}
+9d0d0eb7d139349d5c35caa04ceac05b
+  progInfo142 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "struct Light {"#) -}
+e5ea2a927e84852c481da6d5cb069600
+  progInfo143 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "in vec4 fragPos_ws;"#) -}
+c81e3cdcf49ad2dd4effa767545a4c63
+  progInfo144 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "in vec4 fragmentNormal;"#) -}
+f04466bebb74c96239df8304497cb3c1
+  progInfo145 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "in vec3 fragmentColor;"#) -}
+3c6f651fb4e461896fb4516c4db9cda4
+  progInfo146 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "#version 330 core"#) -}
+be12912a1590269983b6fe258590a4c9
+  progInfo147 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo146
+                   Tut6.Shaders.progInfo148) -}
+a61552ddbb8e4b0efd877bfb47814a5b
+  progInfo148 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo177
+                   Tut6.Shaders.progInfo149) -}
+c270db9e575bd19aeaad33cc518ec3aa
+  progInfo149 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo176
+                   Tut6.Shaders.progInfo150) -}
+089fa3231db04d768d56f76a332458e2
+  progInfo15 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo133
+                   Tut6.Shaders.progInfo16) -}
+3c046107f495858d2dd18669cefcfb37
+  progInfo150 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo175
+                   Tut6.Shaders.progInfo151) -}
+cfc441921eea8e5dc8c903486518f018
+  progInfo151 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo174
+                   Tut6.Shaders.progInfo152) -}
+2dc854283ef39aaefa2aa592d3c63ad2
+  progInfo152 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo173
+                   Tut6.Shaders.progInfo153) -}
+81a29fdce1e0e496ec07d7962a7ec209
+  progInfo153 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo172
+                   Tut6.Shaders.progInfo154) -}
+0d86e367b545732056638b03f85d7351
+  progInfo154 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo171
+                   Tut6.Shaders.progInfo155) -}
+a159bb14eb583b04077b81a7cfe9bb3a
+  progInfo155 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo170
+                   Tut6.Shaders.progInfo156) -}
+bf7f8e79172856b18221570b15a1f137
+  progInfo156 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo104
+                   Tut6.Shaders.progInfo157) -}
+ada80b84ecd6bfeedd5afc418247bf67
+  progInfo157 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo103
+                   Tut6.Shaders.progInfo158) -}
+00d0d8ffe0aeb9dded52b64864c216ed
+  progInfo158 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo169
+                   Tut6.Shaders.progInfo159) -}
+ccc55455b160bfae719de444d4332868
+  progInfo159 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo168
+                   Tut6.Shaders.progInfo160) -}
+8de2004d49123961ed2b7fc77fc115f3
+  progInfo16 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo132
+                   Tut6.Shaders.progInfo17) -}
+92708f76ea16b6df3227818ea60e0910
+  progInfo160 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo167
+                   Tut6.Shaders.progInfo161) -}
+bbba5e9195a970388f6bdb8c2e3672b2
+  progInfo161 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo166
+                   Tut6.Shaders.progInfo162) -}
+a3df49a62bcae12b7f2e2b521c5a9738
+  progInfo162 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo165
+                   Tut6.Shaders.progInfo163) -}
+e7ebea58f957478bf69f27045433171d
+  progInfo163 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo164
+                   Tut6.Shaders.progInfo76) -}
+34f02b3f263c40075bea443a4fbd9fa6
+  progInfo164 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "fragmentNormal = M * n;"#) -}
+db3e7176f4b5ec060010f9ead7bf2675
+  progInfo165 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec4 n = vec4(vertexNormal_ms,0);"#) -}
+0a1177791076a571cf135835d86e3feb
+  progInfo166 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "gl_Position = VP * fragPos_ws;"#) -}
+dbe2a3c31fa3dd28a69630ac1c6e8bd1
+  progInfo167 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "fragPos_ws = M * v;"#) -}
+401759d029b0173d7af84863fb415053
+  progInfo168 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec4 v = vec4(vertexPos_ms,1);"#) -}
+d522fb38447de3823e6308d1564a82c6
+  progInfo169 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "fragmentColor = vertexColor;"#) -}
+70e3002f0ee5d50567845f18d14c8e24
+  progInfo17 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo131
+                   Tut6.Shaders.progInfo18) -}
+2b042bcaa82567884b08c118cb97d525
+  progInfo170 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "out vec4 fragPos_ws;"#) -}
+f1771c3e2f66c1e9390ea967a5d856a7
+  progInfo171 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "out vec4 fragmentNormal;"#) -}
+e68cb0e98b5f45c919244423aabef7f5
+  progInfo172 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "out vec3 fragmentColor;"#) -}
+631fc85adcf24d7031d8b2c60b4fd1ed
+  progInfo173 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "uniform mat4 VP;"#) -}
+15cc04a0805582178bdbc3a3f74f43ef
+  progInfo174 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "uniform mat4 M;"#) -}
+cae74ed50086512b81b3d67cb5b99166
+  progInfo175 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "in vec3 vertexNormal_ms;"#) -}
+d3622ca5959c931fd30ccc57c8cac12a
+  progInfo176 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "in vec3 vertexColor;"#) -}
+0e0f49dab6f31c726fb393e94e409cf7
+  progInfo177 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "in vec3 vertexPos_ms;"#) -}
+d8bbe00a19daa3c1832bb1a2665fd445
+  progInfo18 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo130
+                   Tut6.Shaders.progInfo19) -}
+3247bfc4fdf9959da15ae189daa455b9
+  progInfo19 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo129
+                   Tut6.Shaders.progInfo20) -}
+3846a9914ae066ff381caf37c99d3fdd
+  progInfo2 :: Tut6.Types.ProgramInfo
+  {- Strictness: m,
+     Unfolding: (Tut6.Types.ProgInfo
+                   Tut6.Shaders.vertexShader2
+                   (GHC.Base.Nothing @ GHC.Base.String)
+                   Tut6.Shaders.fragmentShader2) -}
+141dfd1fee2fbf24c7402bef8239c4a7
+  progInfo20 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo128
+                   Tut6.Shaders.progInfo21) -}
+e94dd20461c5753a37090b090f232262
+  progInfo21 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo127
+                   Tut6.Shaders.progInfo22) -}
+9cf84bd92ffdc48549351afcc0535c8e
+  progInfo22 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo126
+                   Tut6.Shaders.progInfo23) -}
+6f6b3d26ef1dc73bff0a27df949927f5
+  progInfo23 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo125
+                   Tut6.Shaders.progInfo24) -}
+82bcfb41be3c8c3359b21721daee151f
+  progInfo24 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo124
+                   Tut6.Shaders.progInfo25) -}
+5a981aa07d0347fa4e326e5005924b14
+  progInfo25 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   Tut6.Shaders.progInfo26) -}
+12b08666df7f34367823601fa172f1db
+  progInfo26 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo123
+                   Tut6.Shaders.progInfo27) -}
+1f758d2c0181b20cd4b8c46101588aeb
+  progInfo27 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo122
+                   Tut6.Shaders.progInfo28) -}
+94acb0754d5c4c5550abf3272163f51d
+  progInfo28 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo121
+                   Tut6.Shaders.progInfo29) -}
+81c51f7a9052d4752289495891de0020
+  progInfo29 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo120
+                   Tut6.Shaders.progInfo30) -}
+c20cba077c52bff079fe54e16a9db819
+  progInfo3 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo145
+                   Tut6.Shaders.progInfo4) -}
+7524167ce61d5a3ec57b8c10594baff9
+  progInfo30 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo119
+                   Tut6.Shaders.progInfo31) -}
+504a12aaf724a3b8464e8e2504ca5e10
+  progInfo31 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo118
+                   Tut6.Shaders.progInfo32) -}
+6057f7f9d3c96fb8b6fdf8a27b2d7f0c
+  progInfo32 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo117
+                   Tut6.Shaders.progInfo33) -}
+887cdd42edf5cf37157477232e831a1e
+  progInfo33 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo116
+                   Tut6.Shaders.progInfo34) -}
+e3e5f76590497886af55aa165bf24bcd
+  progInfo34 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo115
+                   Tut6.Shaders.progInfo35) -}
+962d032cc178ac2287d523f041c10334
+  progInfo35 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo114
+                   Tut6.Shaders.progInfo36) -}
+0121b407cd74f6488d49491c4dad2586
+  progInfo36 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo113
+                   Tut6.Shaders.progInfo37) -}
+ebc3e8312cb0bab9915e0b279cfe96a6
+  progInfo37 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo112
+                   Tut6.Shaders.progInfo38) -}
+20c8bb96c2ca0d277d49de5ec918cea2
+  progInfo38 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo111
+                   Tut6.Shaders.progInfo39) -}
+4b572793d9981593f9263f264757b54f
+  progInfo39 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo110
+                   Tut6.Shaders.progInfo40) -}
+adf59af226ff58279df87e30c549703a
+  progInfo4 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo144
+                   Tut6.Shaders.progInfo5) -}
+2967ece47ad5f870dfc310bdc77ccfc4
+  progInfo40 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo109
+                   Tut6.Shaders.progInfo41) -}
+0679a8be0af97056277b6e646c023361
+  progInfo41 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo108
+                   Tut6.Shaders.progInfo42) -}
+2261351a9ec2db3df3d361051b393ab2
+  progInfo42 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo107
+                   Tut6.Shaders.progInfo43) -}
+b88628adbba0c638b723b836f8a71069
+  progInfo43 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   Tut6.Shaders.progInfo44) -}
+17c04217ff11c252053d56deb2e97321
+  progInfo44 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo106
+                   Tut6.Shaders.progInfo45) -}
+cef91b8b67999d0425e096cf6391d1dd
+  progInfo45 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo105
+                   Tut6.Shaders.progInfo46) -}
+e2f11c8010b15dba6ee14ae756fbc1ac
+  progInfo46 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   Tut6.Shaders.progInfo47) -}
+c0c5940696fbe6fcac1f75677c890037
+  progInfo47 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo104
+                   Tut6.Shaders.progInfo48) -}
+41789708f27827c971137015f08085b3
+  progInfo48 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo103
+                   Tut6.Shaders.progInfo49) -}
+0a81705a3fa77c5776399aec1113a81f
+  progInfo49 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo102
+                   Tut6.Shaders.progInfo50) -}
+98e3e042091030e068d3be50c0c8fd1a
+  progInfo5 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo143
+                   Tut6.Shaders.progInfo6) -}
+bfae385283e2fc0ef27829dc83e0af10
+  progInfo50 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo101
+                   Tut6.Shaders.progInfo51) -}
+de49b3a1bb8d4318bb6779f7e8db4037
+  progInfo51 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo100
+                   Tut6.Shaders.progInfo52) -}
+a19001cbefc010bfbdfde2becde581d5
+  progInfo52 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo99
+                   Tut6.Shaders.progInfo53) -}
+40eac24c32bb2cdc95dbeba47b05f6a6
+  progInfo53 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo98
+                   Tut6.Shaders.progInfo54) -}
+1a551849bd09b7e96bbcba36461b641e
+  progInfo54 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo97
+                   Tut6.Shaders.progInfo55) -}
+39034c40929ef1150d4dd7f1d5f42a26
+  progInfo55 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo96
+                   Tut6.Shaders.progInfo56) -}
+a892b8ec9767382fece34a4e2c8e439e
+  progInfo56 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo95
+                   Tut6.Shaders.progInfo57) -}
+d9c578ed6ba9fa20149b58d865f282e3
+  progInfo57 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo94
+                   Tut6.Shaders.progInfo58) -}
+a387f9d42e8100f30198a8a6c7966d7a
+  progInfo58 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo93
+                   Tut6.Shaders.progInfo59) -}
+71077a09e7efbb7b572c4dde816a8ef6
+  progInfo59 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo92
+                   Tut6.Shaders.progInfo60) -}
+e901fb313767c63c86383e21bcbd6f26
+  progInfo6 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo142
+                   Tut6.Shaders.progInfo7) -}
+6fba602f7e0fa54cc1bce58406451b75
+  progInfo60 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo91
+                   Tut6.Shaders.progInfo61) -}
+8db2d16083bf06bce89958cebb1fdfd4
+  progInfo61 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo90
+                   Tut6.Shaders.progInfo62) -}
+98d0910cf87b5344e9372e070f23098b
+  progInfo62 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo89
+                   Tut6.Shaders.progInfo63) -}
+351e24eca50194494ffece19cd74f23a
+  progInfo63 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo88
+                   Tut6.Shaders.progInfo64) -}
+99f92d8f8685a709fcb5c8fc8085e191
+  progInfo64 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo87
+                   Tut6.Shaders.progInfo65) -}
+7f8c849e9cb280a66e10f314b97e36e4
+  progInfo65 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo86
+                   Tut6.Shaders.progInfo66) -}
+bfcf57710815afd51a069ba786914bf0
+  progInfo66 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo85
+                   Tut6.Shaders.progInfo67) -}
+f4bf9922b1b12ddce856db948362ca35
+  progInfo67 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo84
+                   Tut6.Shaders.progInfo68) -}
+edb097d6d36b2e60a8f56f4ba2ee5334
+  progInfo68 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo83
+                   Tut6.Shaders.progInfo69) -}
+86646d844e6f3566c094561fe364cd8d
+  progInfo69 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo82
+                   Tut6.Shaders.progInfo70) -}
+5e5ff7facf477b19ab655bfa2b7e77be
+  progInfo7 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo141
+                   Tut6.Shaders.progInfo8) -}
+6cf0d594d956ced73767f090ec7bec2b
+  progInfo70 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo81
+                   Tut6.Shaders.progInfo71) -}
+d06a10fb1e3d5b367fc88099742e340e
+  progInfo71 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   Tut6.Shaders.progInfo72) -}
+416d7e94d13615b24bc5432b5509e9ff
+  progInfo72 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   Tut6.Shaders.progInfo73) -}
+9627e679b1a21e9d0807c801f093f0f4
+  progInfo73 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo80
+                   Tut6.Shaders.progInfo74) -}
+8867b31526aa2488b10e50c6b0c571b3
+  progInfo74 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo79
+                   Tut6.Shaders.progInfo75) -}
+5690da15da49a240eac6985df9f4231a
+  progInfo75 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo78
+                   Tut6.Shaders.progInfo76) -}
+d3a3328c7d31ea97219966dec6fa7cc8
+  progInfo76 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   (GHC.Types.[] @ GHC.Base.String)) -}
+e26c4cee32be1359953e1222802a052b
+  progInfo77 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+10b14a0302446a24046e65a890deb046
+  progInfo78 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "finalColor = pow(finalColor, vec3(1.0/2.2));"#) -}
+22399733016843d1954e26dfe22c5ac3
+  progInfo79 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "finalColor = finalColor + 0.0005*vec3(rand(fragPos_ws.xy));"#) -}
+9f77beab3771c6e27602ed723b864647
+  progInfo8 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo140
+                   Tut6.Shaders.progInfo9) -}
+bca6460ff0b8d1d19decaaf34382cd9b
+  progInfo80 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "finalColor = diffLightIntensities * fragmentColor+specLightIntensities;"#) -}
+63ab82cc88450f320c628ecd4f1acd46
+  progInfo81 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "diffLightIntensities = diffLightIntensities + lights[j].color;"#) -}
+5a83e2534c7ecdeece598da8b65978c7
+  progInfo82 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "} else if(lights[j].type == 1) {"#) -}
+dea35dbec2748cfa80ba73ef02859ff5
+  progInfo83 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "specLightIntensities = specLightIntensities + specularAtt * lights[j].color;"#) -}
+2de1b62fcfebdb672ed00087966d5abb
+  progInfo84 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "diffLightIntensities = diffLightIntensities + diffuseAtt*lights[j].color;"#) -}
+79dc1f4d75d024f1c02a2bf96d42199f
+  progInfo85 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float specularAtt = pow(max(dot(h,normal),0),specPow)*att;"#) -}
+bb908dba8a1ed6b1e8be4642d217a16d
+  progInfo86 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float diffuseAtt = max(dot(l,normal),0)*att;"#) -}
+778eb5eef8dffb8228f58623ca361da5
+  progInfo87 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float att = (1.0-shadow)/(ll*ll);"#) -}
+a888a809aea6dd7d70be3c9f37f4e4ae
+  progInfo88 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "shadow = ShadowCalculation(-toLight,ll,length(view));"#) -}
+29def290406f8998674c7c23edfc7ec4
+  progInfo89 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 h = normalize(l+v);"#) -}
+042fb655bfe8240785ed8e9b872d0215
+  progInfo9 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo139
+                   Tut6.Shaders.progInfo10) -}
+33ab55efaf23b8164a9a0b7646bc559f
+  progInfo90 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 v = normalize(view);"#) -}
+b931456dd73082454e47ef71ed97c10e
+  progInfo91 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 view = cameraPos-pos;"#) -}
+73249024f21f5b441fb0d4851658db89
+  progInfo92 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 l = toLight/ll;"#) -}
+30bb1f3ac6e4ebedaab1dacbdce79141
+  progInfo93 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float ll = length(toLight);"#) -}
+93c301ec4d112210d9cdb81d5510539e
+  progInfo94 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "toLight=lights[j].lightPos-pos;"#) -}
+b626b2357b035f64384f7fffbb923e28
+  progInfo95 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "if(lights[j].type == 0) {"#) -}
+144673d86dc4b6af670a3fa0d71ab981
+  progInfo96 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "for(int j = 0; j < numLights; j++) {"#) -}
+147e03142a11acfbfad98764bee25fbb
+  progInfo97 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vec3 toLight;"#) -}
+de06f1063227072472bb48da5aa31f29
+  progInfo98 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "float shadow=0.0;"#) -}
+be653aa265d884e64bac74b06ceecf69
+  progInfo99 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 pos=fragPos_ws.xyz;"#) -}
+e1fa121fd465fd4881468a5f5b94d1ec
+  shadTestShader :: Tut6.Types.ProgramInfo
+  {- Strictness: m,
+     Unfolding: (Tut6.Types.ProgInfo
+                   Tut6.Shaders.shadTestShader22
+                   (GHC.Base.Nothing @ GHC.Base.String)
+                   Tut6.Shaders.shadTestShader1) -}
+ca09e2d7700f0ba21a66752028df4715
+  shadTestShader1 :: GHC.Base.String
+  {- Unfolding: (Data.OldList.unlines
+                   Tut6.Shaders.shadTestShader2) -}
+ad9f5d0d755e4643ae8bf8fe6439e2a6
+  shadTestShader10 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader15
+                   Tut6.Shaders.shadTestShader11) -}
+9f1bb6b445df8fa3d221862fffa53c21
+  shadTestShader11 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader14
+                   Tut6.Shaders.shadTestShader12) -}
+c16de07ff2e28cad761a980bc7e70fb9
+  shadTestShader12 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader13
+                   Tut6.Shaders.progInfo76) -}
+45c36bbe33c2a0bcc85bbe4ef8abc384
+  shadTestShader13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "fragColor = vec4(fragc,1);"#) -}
+7b6c65ce71d38fca024f636da3ab444f
+  shadTestShader14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "vec3 fragc = (1-ld) * vec3(1);"#) -}
+32e9c7970238eb224014ab974504fe3a
+  shadTestShader15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "gl_FragDepth = ld;"#) -}
+85ff0b441c27a9807f6786ca904855e9
+  shadTestShader16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "ld = ld / far_plane;"#) -}
+543cd4db7f9c59c3f57a940b7cb7b34e
+  shadTestShader17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "float ld = length(frag_pos_ws.xyz-lightPos);"#) -}
+268e4b4bb7635bbab1c063dcce48916d
+  shadTestShader18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "void main() {"#) -}
+a97ed96ff8ec1c175c4831e11be83883
+  shadTestShader19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform vec3 lightPos;"#) -}
+d5c410b0589e3d3a79fc1eec802bc3c7
+  shadTestShader2 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo146
+                   Tut6.Shaders.shadTestShader3) -}
+275a3d8e3d6265da8a8fa583fcee0d4d
+  shadTestShader20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "out vec4 fragColor;"#) -}
+ce5f0bf71c345a03c45d688cd9da9150
+  shadTestShader21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "in vec4 frag_pos_ws;"#) -}
+d267d0402caa4ccaa80cfaaae944b239
+  shadTestShader22 :: GHC.Base.String
+  {- Unfolding: (Data.OldList.unlines
+                   Tut6.Shaders.shadTestShader23) -}
+a171240aff95d492c32a4305f1fb90e4
+  shadTestShader23 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo146
+                   Tut6.Shaders.shadTestShader24) -}
+d9a76afbe45ae0ed37b299fe250ecd15
+  shadTestShader24 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo177
+                   Tut6.Shaders.shadTestShader25) -}
+f5fa98c1bd7d84235d492722d7ab585d
+  shadTestShader25 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo174
+                   Tut6.Shaders.shadTestShader26) -}
+53d1b0e1132d88f9036ec9f43d819a9e
+  shadTestShader26 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader35
+                   Tut6.Shaders.shadTestShader27) -}
+e3b6c05867ff0c4246e03d9552bb52d8
+  shadTestShader27 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader34
+                   Tut6.Shaders.shadTestShader28) -}
+3256ef391036d0da5d730f9962c197a8
+  shadTestShader28 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo104
+                   Tut6.Shaders.shadTestShader29) -}
+e7af62fa434ff588c53939b2e68bb45f
+  shadTestShader29 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo103
+                   Tut6.Shaders.shadTestShader30) -}
+1a2b9fb911ec0fe34b75a8b485d9b39d
+  shadTestShader3 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader21
+                   Tut6.Shaders.shadTestShader4) -}
+95a4aabf293b85003b86d8acc76246ca
+  shadTestShader30 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader33
+                   Tut6.Shaders.shadTestShader31) -}
+a47ae2de5f68b75f4c4502fa8e64aee7
+  shadTestShader31 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader32
+                   Tut6.Shaders.progInfo76) -}
+0556608e51696bfdf4e67751d5c3bb3f
+  shadTestShader32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "gl_Position = projection * frag_pos_ws;"#) -}
+d3751f06d61c24130cb40e463e241b50
+  shadTestShader33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "frag_pos_ws = M * vec4(vertexPos_ms,1);"#) -}
+bb6e3d422db77cbcfd603d0bb2ce049e
+  shadTestShader34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "out vec4 frag_pos_ws;"#) -}
+f1d91dcdab34eafbdc5d7e738f467ba6
+  shadTestShader35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform mat4 projection;"#) -}
+48320d7f938118bae2456b8747e4811c
+  shadTestShader4 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader20
+                   Tut6.Shaders.shadTestShader5) -}
+59cbd6b795adca536f5472bc8226da1d
+  shadTestShader5 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader19
+                   Tut6.Shaders.shadTestShader6) -}
+cbd061d96b92e62d9d131cd2bb26093f
+  shadTestShader6 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo136
+                   Tut6.Shaders.shadTestShader7) -}
+bb0f3f59d3f7627612ca3fe232dc55a1
+  shadTestShader7 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader18
+                   Tut6.Shaders.shadTestShader8) -}
+6863acbbc2dcf6d817863d75808214bd
+  shadTestShader8 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader17
+                   Tut6.Shaders.shadTestShader9) -}
+f212f64a6647fea3450fbd7623ec2ae6
+  shadTestShader9 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader16
+                   Tut6.Shaders.shadTestShader10) -}
+78d94ae267b87334551ac4c09f2d9961
+  shadowProgInfo :: Tut6.Types.ProgramInfo
+  {- Strictness: m,
+     Unfolding: (Tut6.Types.ProgInfo
+                   Tut6.Shaders.shadowProgInfo37
+                   Tut6.Shaders.shadowProgInfo10
+                   Tut6.Shaders.shadowProgInfo1) -}
+751cc7992b225e81111b741b23399193
+  shadowProgInfo1 :: GHC.Base.String
+  {- Unfolding: (Data.OldList.unlines
+                   Tut6.Shaders.shadowProgInfo2) -}
+b0db91c7d908fe39c7215b68ca4f377c
+  shadowProgInfo10 :: GHC.Base.Maybe GHC.Base.String
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo11) -}
+559728151fe766fad652a59294eb9bea
+  shadowProgInfo11 :: GHC.Base.String
+  {- Unfolding: (Data.OldList.unlines
+                   Tut6.Shaders.shadowProgInfo12) -}
+62413e4f0153947a1db42d4e685165d0
+  shadowProgInfo12 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo146
+                   Tut6.Shaders.shadowProgInfo13) -}
+928ef1e28e648bfc762138a519fb3f30
+  shadowProgInfo13 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo36
+                   Tut6.Shaders.shadowProgInfo14) -}
+bcd055d889a1d00559aa1776d8a1793a
+  shadowProgInfo14 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo35
+                   Tut6.Shaders.shadowProgInfo15) -}
+f6f9a27ea6e732de41331795f09e7bc3
+  shadowProgInfo15 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo34
+                   Tut6.Shaders.shadowProgInfo16) -}
+e4b61b79923af3f5ba42cf3ef753664b
+  shadowProgInfo16 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader34
+                   Tut6.Shaders.shadowProgInfo17) -}
+0fe3abec5953d61b7013fe28a1ab43cb
+  shadowProgInfo17 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader18
+                   Tut6.Shaders.shadowProgInfo18) -}
+a1e68e74a383cfd41ae9922197c02ad9
+  shadowProgInfo18 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo33
+                   Tut6.Shaders.shadowProgInfo19) -}
+81309a092356e11ee1a55ed6fc027d7c
+  shadowProgInfo19 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo32
+                   Tut6.Shaders.shadowProgInfo20) -}
+148c84276af5e548434031d5e463ab5f
+  shadowProgInfo2 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo146
+                   Tut6.Shaders.shadowProgInfo3) -}
+d49c9b7f58e7d318b38f384df99fc359
+  shadowProgInfo20 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo31
+                   Tut6.Shaders.shadowProgInfo21) -}
+299b1c6677e1ecd7aed9bc68049e4cf5
+  shadowProgInfo21 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo30
+                   Tut6.Shaders.shadowProgInfo22) -}
+351f31f6e4b6904592b7b882dbba73ff
+  shadowProgInfo22 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo29
+                   Tut6.Shaders.shadowProgInfo23) -}
+9a87f6ac5d83a119bf2a4b58ae96a8f0
+  shadowProgInfo23 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo28
+                   Tut6.Shaders.shadowProgInfo24) -}
+bffc6e7db155fe3c5a9c8963a0336ade
+  shadowProgInfo24 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   Tut6.Shaders.shadowProgInfo25) -}
+e00ff1a374ba1a295a6c05d35ba46b42
+  shadowProgInfo25 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo27
+                   Tut6.Shaders.shadowProgInfo26) -}
+91149292241031f4c9a90fdeca78bd50
+  shadowProgInfo26 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo77
+                   Tut6.Shaders.progInfo76) -}
+c77f7df5ab2b380f231f49674d8f02be
+  shadowProgInfo27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "EndPrimitive();"#) -}
+f78f39693f996971214daf3e18ec2305
+  shadowProgInfo28 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "EmitVertex();"#) -}
+17806462557dd066741902693218f3cc
+  shadowProgInfo29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "gl_Position = cubeMapProjections[j] * frag_pos_ws;"#) -}
+2bc23e28c9a3077e3e044c40dc018d69
+  shadowProgInfo3 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader21
+                   Tut6.Shaders.shadowProgInfo4) -}
+22f9b7e90a0d12de36e05f75c9779939
+  shadowProgInfo30 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "frag_pos_ws = gl_in[i].gl_Position;"#) -}
+b4a3ca1098501c590fad35da26d15698
+  shadowProgInfo31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "for(int i = 0; i < 3; ++i) {"#) -}
+5e9f3d156f29e54445fe16b37a567e1e
+  shadowProgInfo32 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "gl_Layer = j;"#) -}
+c7ddf1e4687186c6c3dccd437a7e3039
+  shadowProgInfo33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "for(int j = 0; j < 6; ++j) {"#) -}
+8fcb739a45ef63d8d2d9a5564a5672ae
+  shadowProgInfo34 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "layout(triangle_strip, max_vertices = 18) out;"#) -}
+dac997a50024fbe73f981f118a100a6a
+  shadowProgInfo35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "layout(triangles) in;"#) -}
+c0e1fb2b7b399a172513ec3f4b9aad8d
+  shadowProgInfo36 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "uniform mat4 cubeMapProjections[6];"#) -}
+d7f40094c80cf0f4004f1e55033660be
+  shadowProgInfo37 :: GHC.Base.String
+  {- Unfolding: (Data.OldList.unlines
+                   Tut6.Shaders.shadowProgInfo38) -}
+ca580f9ef7f499926e7ec0034b0ed970
+  shadowProgInfo38 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo146
+                   Tut6.Shaders.shadowProgInfo39) -}
+60112b8521fb3a812911079def82f885
+  shadowProgInfo39 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo177
+                   Tut6.Shaders.shadowProgInfo40) -}
+0b66cf2630576d76f36cd5528ef89805
+  shadowProgInfo4 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader19
+                   Tut6.Shaders.shadowProgInfo5) -}
+d9e31e24ad4e601c398731bb26ac1b57
+  shadowProgInfo40 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo174
+                   Tut6.Shaders.shadowProgInfo41) -}
+1dfd10a4dbefc1bbc01699782bb9ce7e
+  shadowProgInfo41 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo104
+                   Tut6.Shaders.shadowProgInfo42) -}
+7b7b98a308706bc2245cf14463ac0307
+  shadowProgInfo42 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo103
+                   Tut6.Shaders.shadowProgInfo43) -}
+8d9d96cbe1690d415ca52e2d48f4af4f
+  shadowProgInfo43 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadowProgInfo44
+                   Tut6.Shaders.progInfo76) -}
+b96114e43ba54f9cd05a01ee037d01f0
+  shadowProgInfo44 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "gl_Position = M * vec4(vertexPos_ms,1);"#) -}
+fb7ddfab174782726726c2254474106f
+  shadowProgInfo5 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.progInfo136
+                   Tut6.Shaders.shadowProgInfo6) -}
+27c0bed85919cf81b50d44e5d4aaa353
+  shadowProgInfo6 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader18
+                   Tut6.Shaders.shadowProgInfo7) -}
+36df35ae90a1766039ce99648d542837
+  shadowProgInfo7 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader17
+                   Tut6.Shaders.shadowProgInfo8) -}
+1e5571db4efc7df5e46fdd74e3ff55fd
+  shadowProgInfo8 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader16
+                   Tut6.Shaders.shadowProgInfo9) -}
+ea09c32d684bf8daa2421d39fae87210
+  shadowProgInfo9 :: [GHC.Base.String]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Tut6.Shaders.shadTestShader15
+                   Tut6.Shaders.progInfo76) -}
+c555ddec8076887ef07fe56b32935dd0
+  vertexShader2 :: GHC.Base.String
+  {- Unfolding: (Data.OldList.unlines Tut6.Shaders.progInfo147) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

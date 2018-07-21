@@ -1,0 +1,2184 @@
+
+==================== FINAL INTERFACE ====================
+2018-07-09 20:56:53.831131835 UTC
+
+interface gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:Model 8001
+  interface hash: 28b65bb8a0e24ebc159f8da068746688
+  ABI hash: c8897eb9dec5caf14a1d1d526b76c564
+  export-list hash: 75fd2fb6f12a4773a7a2d935d90ac671
+  orphan hash: cbb8d59efaf23bd1f4b5bd62c46d039c
+  flag hash: f027c2d924599b030ab5fbe897072b35
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Model.cube
+  Model.fromTriangles
+  Model.parallelogram
+  Model.vertexLists
+  Model.BasicModel
+  Model.Color
+  Model.Face{Model.Face faceProperties vertex1 vertex2 vertex3}
+  Model.Model{Model.Model faces vertices}
+  Model.Normal
+  Model.Position
+  Model.Triangle{Model.Triangle}
+  Model.Vertex{Model.Vertex position vertexData}
+  Model.VertexNormal{Model.FaceNormal Model.VertexNormal}
+module dependencies: Geometry LinAlg Utils
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+import  -/  base-4.9.0.0:Data.Maybe 5f2ba364cbe65c060bc5436bc0b9d049
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Float 469226b1bc53433e95d0167dec5d0312
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Read 817c914615ac8e308afc0c675fb3f671
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.ParserCombinators.ReadPrec 9512e2f4b227f507f87a150887202aed
+import  -/  base-4.9.0.0:Text.Read.Lex fe3dd7b823826bf6870140c5363f9596
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map 24b19ef74cea78e4c18332bed9f0491d
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base 154358b87864fcf334db0438debcf373
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  Geometry b10b54794538e570add23a3b49ea9804
+  exports: 143ce5ed8dd6d622b350b359b49930db
+  triangleNormal f440a33c65f30e50e49df7e510c04d79
+import  -/  LinAlg 2fda7d8c21b2891c403a8ca2bc84537e
+  exports: 5319308500b79c249305bf8a6f3dfa12
+  Point3 35f673f087fd6ea9bdf059f28c8585fc
+  Point3 cb5121f112964add8c441c87d877e1d0
+  Vec3 612757d7fc79515f94281ffe21894d69
+  Vec3 af0264ef4c5439016c6b5a03ae914a6c
+  difference a30d16f5aa006558923917ad3ff9a085
+  translatePoint feb44743f4604431645af78b504e9997
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fEqFace ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq f) =>
+    GHC.Classes.Eq (Model.Face a f)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      @ f
+                      ($dEq :: GHC.Classes.Eq a)
+                      ($dEq1 :: GHC.Classes.Eq f).
+                  @ (Model.Face a f)
+                  (Model.$fEqFace_$c== @ a @ f $dEq $dEq1)
+                  (Model.$fEqFace_$c/= @ a @ f $dEq $dEq1) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fEqFace_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq f) =>
+    Model.Face a f -> Model.Face a f -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ f
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq f)
+                   (a1 :: Model.Face a f)
+                   (b :: Model.Face a f) ->
+                 case Model.$fEqFace_$c== @ a @ f $dEq $dEq1 a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fEqFace_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq f) =>
+    Model.Face a f -> Model.Face a f -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ f
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq f)
+                   (w2 :: Model.Face a f)
+                   (w3 :: Model.Face a f) ->
+                 case w2 of ww { Model.Face ww1 ww2 ww3 ww4 ->
+                 case w3 of ww5 { Model.Face ww6 ww7 ww8 ww9 ->
+                 Model.$w$c== @ a @ f w w1 ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fEqModel ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq r, GHC.Classes.Eq b,
+     GHC.Classes.Eq f) =>
+    GHC.Classes.Eq (Model.Model a r b f)
+  DFunId
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      @ r
+                      @ b
+                      @ f
+                      ($dEq :: GHC.Classes.Eq a)
+                      ($dEq1 :: GHC.Classes.Eq r)
+                      ($dEq2 :: GHC.Classes.Eq b)
+                      ($dEq3 :: GHC.Classes.Eq f).
+                  @ (Model.Model a r b f)
+                  (Model.$fEqModel_$c== @ a @ r @ b @ f $dEq $dEq1 $dEq2 $dEq3)
+                  (Model.$fEqModel_$c/= @ a @ r @ b @ f $dEq $dEq1 $dEq2 $dEq3) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fEqModel_$c/= ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq r, GHC.Classes.Eq b,
+     GHC.Classes.Eq f) =>
+    Model.Model a r b f -> Model.Model a r b f -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (6, True, False)
+                (\ @ a
+                   @ r
+                   @ b
+                   @ f
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq r)
+                   ($dEq2 :: GHC.Classes.Eq b)
+                   ($dEq3 :: GHC.Classes.Eq f)
+                   (a1 :: Model.Model a r b f)
+                   (b1 :: Model.Model a r b f) ->
+                 case Model.$fEqModel_$c==
+                        @ a
+                        @ r
+                        @ b
+                        @ f
+                        $dEq
+                        $dEq1
+                        $dEq2
+                        $dEq3
+                        a1
+                        b1 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fEqModel_$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq r, GHC.Classes.Eq b,
+     GHC.Classes.Eq f) =>
+    Model.Model a r b f -> Model.Model a r b f -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>,
+     Unfolding: (\ @ a
+                   @ r
+                   @ b
+                   @ f
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dEq1 :: GHC.Classes.Eq r)
+                   ($dEq2 :: GHC.Classes.Eq b)
+                   ($dEq3 :: GHC.Classes.Eq f) ->
+                 let {
+                   $dEq4 :: GHC.Classes.Eq (Model.Vertex r b)
+                   = Model.$fEqVertex @ r @ b $dEq1 $dEq2
+                 } in
+                 let {
+                   lvl52 :: Data.Map.Base.Map a (Model.Vertex r b)
+                            -> Data.Map.Base.Map a (Model.Vertex r b) -> GHC.Types.Bool
+                   = Data.Map.Base.$fEqMap_$c== @ a @ (Model.Vertex r b) $dEq $dEq4
+                 } in
+                 let {
+                   $dEq5 :: GHC.Classes.Eq (Model.Face a f)
+                   = Model.$fEqFace @ a @ f $dEq $dEq3
+                 } in
+                 \ (ds :: Model.Model a r b f) (ds1 :: Model.Model a r b f) ->
+                 case ds of wild { Model.Model a1 a2 ->
+                 case ds1 of wild1 { Model.Model b1 b2 ->
+                 case lvl52 a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> GHC.Classes.$fEq[]_$c== @ (Model.Face a f) $dEq5 a2 b2 } } }) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fEqVertex ::
+    (GHC.Classes.Eq r, GHC.Classes.Eq b) =>
+    GHC.Classes.Eq (Model.Vertex r b)
+  DFunId
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ r
+                      @ b
+                      ($dEq :: GHC.Classes.Eq r)
+                      ($dEq1 :: GHC.Classes.Eq b).
+                  @ (Model.Vertex r b)
+                  (Model.$fEqVertex_$c== @ r @ b $dEq $dEq1)
+                  (Model.$fEqVertex_$c/= @ r @ b $dEq $dEq1) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fEqVertexNormal ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (Model.VertexNormal a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (Model.VertexNormal a)
+                  (Model.$fEqVertexNormal_$c== @ a $dEq)
+                  (Model.$fEqVertexNormal_$c/= @ a $dEq) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fEqVertexNormal_$c/= ::
+    GHC.Classes.Eq a =>
+    Model.VertexNormal a -> Model.VertexNormal a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: Model.VertexNormal a)
+                   (b :: Model.VertexNormal a) ->
+                 case a1 of wild {
+                   Model.VertexNormal a2
+                   -> case b of wild1 {
+                        Model.VertexNormal b1
+                        -> case a2 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                           case b1 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                           case GHC.Classes.== @ a $dEq ww1 ww5 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True
+                             -> case GHC.Classes.== @ a $dEq ww2 ww6 of wild3 {
+                                  GHC.Types.False -> GHC.Types.True
+                                  GHC.Types.True
+                                  -> case GHC.Classes.== @ a $dEq ww3 ww7 of wild4 {
+                                       GHC.Types.False -> GHC.Types.True
+                                       GHC.Types.True -> GHC.Types.False } } } } }
+                        Model.FaceNormal -> GHC.Types.True }
+                   Model.FaceNormal
+                   -> case b of wild1 {
+                        Model.VertexNormal ipv -> GHC.Types.True
+                        Model.FaceNormal -> GHC.Types.False } }) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fEqVertexNormal_$c== ::
+    GHC.Classes.Eq a =>
+    Model.VertexNormal a -> Model.VertexNormal a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: Model.VertexNormal a)
+                   (ds1 :: Model.VertexNormal a) ->
+                 case ds of wild {
+                   Model.VertexNormal a1
+                   -> case ds1 of wild1 {
+                        Model.VertexNormal b1 -> LinAlg.$fEqVec3_$c== @ a $dEq a1 b1
+                        Model.FaceNormal -> GHC.Types.False }
+                   Model.FaceNormal
+                   -> case ds1 of wild1 {
+                        Model.VertexNormal ipv -> GHC.Types.False
+                        Model.FaceNormal -> GHC.Types.True } }) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fEqVertex_$c/= ::
+    (GHC.Classes.Eq r, GHC.Classes.Eq b) =>
+    Model.Vertex r b -> Model.Vertex r b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S(SL),1*U(1*U(U,U,U),U)><S(SL),1*U(1*U(U,U,U),U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ r
+                   @ b
+                   (w :: GHC.Classes.Eq r)
+                   (w1 :: GHC.Classes.Eq b)
+                   (w2 :: Model.Vertex r b)
+                   (w3 :: Model.Vertex r b) ->
+                 case w2 of ww { Model.Vertex ww1 ww2 ->
+                 case ww1 of ww3 { LinAlg.Point3 ww4 ww5 ww6 ->
+                 case w3 of ww7 { Model.Vertex ww8 ww9 ->
+                 case ww8 of ww10 { LinAlg.Point3 ww11 ww12 ww13 ->
+                 Model.$w$c/=
+                   @ r
+                   @ b
+                   w
+                   w1
+                   ww4
+                   ww5
+                   ww6
+                   ww2
+                   ww11
+                   ww12
+                   ww13
+                   ww9 } } } }) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fEqVertex_$c== ::
+    (GHC.Classes.Eq r, GHC.Classes.Eq b) =>
+    Model.Vertex r b -> Model.Vertex r b -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><S(SL),1*U(1*U(U,U,U),U)><S(SL),1*U(1*U(U,U,U),U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ r
+                   @ b
+                   (w :: GHC.Classes.Eq r)
+                   (w1 :: GHC.Classes.Eq b)
+                   (w2 :: Model.Vertex r b)
+                   (w3 :: Model.Vertex r b) ->
+                 case w2 of ww { Model.Vertex ww1 ww2 ->
+                 case ww1 of ww3 { LinAlg.Point3 ww4 ww5 ww6 ->
+                 case w3 of ww7 { Model.Vertex ww8 ww9 ->
+                 case ww8 of ww10 { LinAlg.Point3 ww11 ww12 ww13 ->
+                 Model.$w$c==1
+                   @ r
+                   @ b
+                   w
+                   w1
+                   ww4
+                   ww5
+                   ww6
+                   ww2
+                   ww11
+                   ww12
+                   ww13
+                   ww9 } } } }) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fReadFace ::
+    (GHC.Read.Read a, GHC.Read.Read f) =>
+    GHC.Read.Read (Model.Face a f)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      @ f
+                      ($dRead :: GHC.Read.Read a)
+                      ($dRead1 :: GHC.Read.Read f).
+                  @ (Model.Face a f)
+                  (Model.$fReadFace_$creadsPrec @ a @ f $dRead $dRead1)
+                  (Model.$fReadFace_$creadList @ a @ f $dRead $dRead1)
+                  (Model.$fReadFace_$creadPrec @ a @ f $dRead $dRead1)
+                  (Model.$fReadFace_$creadListPrec @ a @ f $dRead $dRead1) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fReadFace1 ::
+    (GHC.Read.Read a, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Model.Face a f] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 4, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ f
+                   ($dRead :: GHC.Read.Read a)
+                   ($dRead1 :: GHC.Read.Read f)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Model.Face a f] -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Model.Face a f)
+                   (Model.$fReadFace2 @ a @ f $dRead $dRead1)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Model.Face a f>_R))
+                   @ b
+                   eta1) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fReadFace2 ::
+    (GHC.Read.Read a, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Model.Face a f)
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,1*U(A,A,1*U,A)><L,U> -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fReadFace_$creadList ::
+    (GHC.Read.Read a, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadP.ReadS [Model.Face a f]
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ f
+                   ($dRead :: GHC.Read.Read a)
+                   ($dRead1 :: GHC.Read.Read f) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Model.Face a f]
+                   (GHC.Read.$wlist
+                      @ (Model.Face a f)
+                      (Model.$fReadFace2 @ a @ f $dRead $dRead1)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Model.Face a f>_R))
+                      @ [Model.Face a f]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Model.Face a f]))) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fReadFace_$creadListPrec ::
+    (GHC.Read.Read a, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Model.Face a f]
+  {- Arity: 4, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadFace1
+                  `cast`
+                (forall (a :: <*>_N) (f :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R <GHC.Read.Read f>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Model.Face a f]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Model.Face a f]>_R))) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fReadFace_$creadPrec ::
+    (GHC.Read.Read a, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Model.Face a f)
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,1*U(A,A,1*U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadFace2
+                  `cast`
+                (forall (a :: <*>_N) (f :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R <GHC.Read.Read f>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Model.Face a f>_R)) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fReadFace_$creadsPrec ::
+    (GHC.Read.Read a, GHC.Read.Read f) =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Model.Face a f)
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,1*U(A,A,1*U,A)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ f
+                   ($dRead :: GHC.Read.Read a)
+                   ($dRead1 :: GHC.Read.Read f)
+                   (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Model.Face a f)
+                   ((Model.$fReadFace2 @ a @ f $dRead $dRead1 eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <Model.Face a f>_R)
+                      @ (Model.Face a f)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Model.Face a f)))) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fReadModel ::
+    (GHC.Classes.Ord a, GHC.Read.Read a, GHC.Read.Read r,
+     GHC.Read.Read b, GHC.Read.Read f) =>
+    GHC.Read.Read (Model.Model a r b f)
+  DFunId
+  {- Arity: 5,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      @ r
+                      @ b
+                      @ f
+                      ($dOrd :: GHC.Classes.Ord a)
+                      ($dRead :: GHC.Read.Read a)
+                      ($dRead1 :: GHC.Read.Read r)
+                      ($dRead2 :: GHC.Read.Read b)
+                      ($dRead3 :: GHC.Read.Read f).
+                  @ (Model.Model a r b f)
+                  (Model.$fReadModel_$creadsPrec
+                     @ a
+                     @ r
+                     @ b
+                     @ f
+                     $dOrd
+                     $dRead
+                     $dRead1
+                     $dRead2
+                     $dRead3)
+                  (Model.$fReadModel_$creadList
+                     @ a
+                     @ r
+                     @ b
+                     @ f
+                     $dOrd
+                     $dRead
+                     $dRead1
+                     $dRead2
+                     $dRead3)
+                  (Model.$fReadModel_$creadPrec
+                     @ a
+                     @ r
+                     @ b
+                     @ f
+                     $dOrd
+                     $dRead
+                     $dRead1
+                     $dRead2
+                     $dRead3)
+                  (Model.$fReadModel_$creadListPrec
+                     @ a
+                     @ r
+                     @ b
+                     @ f
+                     $dOrd
+                     $dRead
+                     $dRead1
+                     $dRead2
+                     $dRead3) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fReadModel1 ::
+    (GHC.Classes.Ord a, GHC.Read.Read a, GHC.Read.Read r,
+     GHC.Read.Read b, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b1.
+       ([Model.Model a r b f] -> Text.ParserCombinators.ReadP.P b1)
+       -> Text.ParserCombinators.ReadP.P b1
+  {- Arity: 7,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (7, True, False)
+                (\ @ a
+                   @ r
+                   @ b
+                   @ f
+                   ($dOrd :: GHC.Classes.Ord a)
+                   ($dRead :: GHC.Read.Read a)
+                   ($dRead1 :: GHC.Read.Read r)
+                   ($dRead2 :: GHC.Read.Read b)
+                   ($dRead3 :: GHC.Read.Read f)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b1
+                   (eta1 :: [Model.Model a r b f]
+                            -> Text.ParserCombinators.ReadP.P b1) ->
+                 GHC.Read.$wlist
+                   @ (Model.Model a r b f)
+                   (Model.$fReadModel2
+                      @ a
+                      @ r
+                      @ b
+                      @ f
+                      $dOrd
+                      $dRead
+                      $dRead1
+                      $dRead2
+                      $dRead3)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Model.Model a r b f>_R))
+                   @ b1
+                   eta1) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fReadModel2 ::
+    (GHC.Classes.Ord a, GHC.Read.Read a, GHC.Read.Read r,
+     GHC.Read.Read b, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Model.Model a r b f)
+  {- Arity: 5,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)> -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fReadModel_$creadList ::
+    (GHC.Classes.Ord a, GHC.Read.Read a, GHC.Read.Read r,
+     GHC.Read.Read b, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadP.ReadS [Model.Model a r b f]
+  {- Arity: 5,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ r
+                   @ b
+                   @ f
+                   ($dOrd :: GHC.Classes.Ord a)
+                   ($dRead :: GHC.Read.Read a)
+                   ($dRead1 :: GHC.Read.Read r)
+                   ($dRead2 :: GHC.Read.Read b)
+                   ($dRead3 :: GHC.Read.Read f) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Model.Model a r b f]
+                   (GHC.Read.$wlist
+                      @ (Model.Model a r b f)
+                      (Model.$fReadModel2
+                         @ a
+                         @ r
+                         @ b
+                         @ f
+                         $dOrd
+                         $dRead
+                         $dRead1
+                         $dRead2
+                         $dRead3)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Model.Model a r b f>_R))
+                      @ [Model.Model a r b f]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Model.Model a r b f]))) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fReadModel_$creadListPrec ::
+    (GHC.Classes.Ord a, GHC.Read.Read a, GHC.Read.Read r,
+     GHC.Read.Read b, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Model.Model a r b f]
+  {- Arity: 7,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadModel1
+                  `cast`
+                (forall (a :: <*>_N) (r :: <*>_N) (b :: <*>_N) (f :: <*>_N).
+                 <GHC.Classes.Ord a>_R
+                 ->_R <GHC.Read.Read a>_R
+                 ->_R <GHC.Read.Read r>_R
+                 ->_R <GHC.Read.Read b>_R
+                 ->_R <GHC.Read.Read f>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Model.Model a r b f]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Model.Model a r b f]>_R))) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fReadModel_$creadPrec ::
+    (GHC.Classes.Ord a, GHC.Read.Read a, GHC.Read.Read r,
+     GHC.Read.Read b, GHC.Read.Read f) =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Model.Model a r b f)
+  {- Arity: 5,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadModel2
+                  `cast`
+                (forall (a :: <*>_N) (r :: <*>_N) (b :: <*>_N) (f :: <*>_N).
+                 <GHC.Classes.Ord a>_R
+                 ->_R <GHC.Read.Read a>_R
+                 ->_R <GHC.Read.Read r>_R
+                 ->_R <GHC.Read.Read b>_R
+                 ->_R <GHC.Read.Read f>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Model.Model a r b f>_R)) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fReadModel_$creadsPrec ::
+    (GHC.Classes.Ord a, GHC.Read.Read a, GHC.Read.Read r,
+     GHC.Read.Read b, GHC.Read.Read f) =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Model.Model a r b f)
+  {- Arity: 6,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (6, True, False)
+                (\ @ a
+                   @ r
+                   @ b
+                   @ f
+                   ($dOrd :: GHC.Classes.Ord a)
+                   ($dRead :: GHC.Read.Read a)
+                   ($dRead1 :: GHC.Read.Read r)
+                   ($dRead2 :: GHC.Read.Read b)
+                   ($dRead3 :: GHC.Read.Read f)
+                   (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Model.Model a r b f)
+                   ((Model.$fReadModel2
+                       @ a
+                       @ r
+                       @ b
+                       @ f
+                       $dOrd
+                       $dRead
+                       $dRead1
+                       $dRead2
+                       $dRead3
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <Model.Model a r b f>_R)
+                      @ (Model.Model a r b f)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Model.Model a r b f)))) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fReadVertex ::
+    (GHC.Read.Read r, GHC.Read.Read b) =>
+    GHC.Read.Read (Model.Vertex r b)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ r
+                      @ b
+                      ($dRead :: GHC.Read.Read r)
+                      ($dRead1 :: GHC.Read.Read b).
+                  @ (Model.Vertex r b)
+                  (Model.$fReadVertex_$creadsPrec @ r @ b $dRead $dRead1)
+                  (Model.$fReadVertex_$creadList @ r @ b $dRead $dRead1)
+                  (Model.$fReadVertex_$creadPrec @ r @ b $dRead $dRead1)
+                  (Model.$fReadVertex_$creadListPrec @ r @ b $dRead $dRead1) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fReadVertex1 ::
+    (GHC.Read.Read r, GHC.Read.Read b) =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b1.
+       ([Model.Vertex r b] -> Text.ParserCombinators.ReadP.P b1)
+       -> Text.ParserCombinators.ReadP.P b1
+  {- Arity: 4, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ r
+                   @ b
+                   ($dRead :: GHC.Read.Read r)
+                   ($dRead1 :: GHC.Read.Read b)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b1
+                   (eta1 :: [Model.Vertex r b]
+                            -> Text.ParserCombinators.ReadP.P b1) ->
+                 GHC.Read.$wlist
+                   @ (Model.Vertex r b)
+                   (Model.$fReadVertex2 @ r @ b $dRead $dRead1)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Model.Vertex r b>_R))
+                   @ b1
+                   eta1) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fReadVertex2 ::
+    (GHC.Read.Read r, GHC.Read.Read b) =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Model.Vertex r b)
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,1*U(A,A,1*U,A)><L,U> -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fReadVertexNormal ::
+    GHC.Read.Read a => GHC.Read.Read (Model.VertexNormal a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (Model.VertexNormal a)
+                  (Model.$fReadVertexNormal_$creadsPrec @ a $dRead)
+                  (Model.$fReadVertexNormal_$creadList @ a $dRead)
+                  (Model.$fReadVertexNormal_$creadPrec @ a $dRead)
+                  (Model.$fReadVertexNormal_$creadListPrec @ a $dRead) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fReadVertexNormal1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Model.VertexNormal a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Model.VertexNormal a]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Model.VertexNormal a)
+                   (Model.$fReadVertexNormal2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Model.VertexNormal a>_R))
+                   @ b
+                   eta1) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fReadVertexNormal2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Model.VertexNormal a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec) ->
+                 GHC.Read.$fReadDouble10
+                   @ (Model.VertexNormal a)
+                   (\ (n :: Text.ParserCombinators.ReadPrec.Prec)
+                      @ b
+                      (eta1 :: Model.VertexNormal a
+                               -> Text.ParserCombinators.ReadP.P b) ->
+                    let {
+                      lvl80 :: Text.ParserCombinators.ReadP.P b
+                      = let {
+                          lvl81 :: Text.ParserCombinators.ReadP.P b
+                          = eta1 (Model.FaceNormal @ a)
+                        } in
+                        Text.Read.Lex.expect2
+                          @ b
+                          (\ (a1 :: Text.Read.Lex.Lexeme) ->
+                           case a1 of wild {
+                             DEFAULT -> Text.ParserCombinators.ReadP.Fail @ b
+                             Text.Read.Lex.Ident a2
+                             -> case GHC.Base.eqString a2 Model.$fReadVertexNormal5 of wild1 {
+                                  GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                                  GHC.Types.True -> lvl81 } })
+                    } in
+                    let {
+                      k :: () -> Text.ParserCombinators.ReadP.P b
+                        {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+                           Unfolding: InlineRule (1, True, True) (\ (w4 :: ()) -> lvl80) -}
+                      = \ (w4 :: ()) -> lvl80
+                    } in
+                    Text.ParserCombinators.ReadP.$fAlternativeP_$c<|>
+                      @ b
+                      (Text.ParserCombinators.ReadP.Look
+                         @ b
+                         (\ (a1 :: GHC.Base.String) ->
+                          (Text.ParserCombinators.ReadP.skipSpaces_skip a1)
+                            `cast`
+                          (Text.ParserCombinators.ReadP.N:ReadP[0] <()>_R)
+                            @ b
+                            k))
+                      (case n of wild { GHC.Types.I# x ->
+                       case GHC.Prim.tagToEnum#
+                              @ GHC.Types.Bool
+                              (GHC.Prim.<=# x 10#) of wild2 {
+                         GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                         GHC.Types.True
+                         -> let {
+                              lvl52 :: Text.ParserCombinators.ReadP.P b
+                              = let {
+                                  lvl81 :: Text.ParserCombinators.ReadP.P b
+                                  = (LinAlg.$fReadVec2 @ a $dRead Model.$fReadVertexNormal4)
+                                      `cast`
+                                    (Text.ParserCombinators.ReadP.N:ReadP[0] <Model.Normal a>_R)
+                                      @ b
+                                      (\ (a1 :: Model.Normal a) -> eta1 (Model.VertexNormal @ a a1))
+                                } in
+                                Text.Read.Lex.expect2
+                                  @ b
+                                  (\ (a1 :: Text.Read.Lex.Lexeme) ->
+                                   case a1 of wild1 {
+                                     DEFAULT -> Text.ParserCombinators.ReadP.Fail @ b
+                                     Text.Read.Lex.Ident a2
+                                     -> case GHC.Base.eqString
+                                               a2
+                                               Model.$fReadVertexNormal3 of wild3 {
+                                          GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                                          GHC.Types.True -> lvl81 } })
+                            } in
+                            let {
+                              k1 :: () -> Text.ParserCombinators.ReadP.P b
+                                {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+                                   Unfolding: InlineRule (1, True, True) (\ (w4 :: ()) -> lvl52) -}
+                              = \ (w4 :: ()) -> lvl52
+                            } in
+                            Text.ParserCombinators.ReadP.Look
+                              @ b
+                              (\ (a1 :: GHC.Base.String) ->
+                               (Text.ParserCombinators.ReadP.skipSpaces_skip a1)
+                                 `cast`
+                               (Text.ParserCombinators.ReadP.N:ReadP[0] <()>_R)
+                                 @ b
+                                 k1) } }))
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <Model.VertexNormal a>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <Model.VertexNormal a>_R)))
+                   eta) -}
+c97e08e97aaa6aa0a3332ab3c350ff79
+  $fReadVertexNormal3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "VertexNormal"#) -}
+7cf8cf1cbcb7fa6986bf11dbf6163151
+  $fReadVertexNormal4 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 11#) -}
+26524954299fff23b54604a2f37c651d
+  $fReadVertexNormal5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "FaceNormal"#) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fReadVertexNormal_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [Model.VertexNormal a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Model.VertexNormal a]
+                   (GHC.Read.$wlist
+                      @ (Model.VertexNormal a)
+                      (Model.$fReadVertexNormal2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Model.VertexNormal a>_R))
+                      @ [Model.VertexNormal a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Model.VertexNormal a]))) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fReadVertexNormal_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Model.VertexNormal a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadVertexNormal1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Model.VertexNormal a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Model.VertexNormal a]>_R))) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fReadVertexNormal_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Model.VertexNormal a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadVertexNormal2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Model.VertexNormal a>_R)) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fReadVertexNormal_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Model.VertexNormal a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Model.VertexNormal a)
+                   ((Model.$fReadVertexNormal2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <Model.VertexNormal a>_R)
+                      @ (Model.VertexNormal a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Model.VertexNormal a)))) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fReadVertex_$creadList ::
+    (GHC.Read.Read r, GHC.Read.Read b) =>
+    Text.ParserCombinators.ReadP.ReadS [Model.Vertex r b]
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ r
+                   @ b
+                   ($dRead :: GHC.Read.Read r)
+                   ($dRead1 :: GHC.Read.Read b) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Model.Vertex r b]
+                   (GHC.Read.$wlist
+                      @ (Model.Vertex r b)
+                      (Model.$fReadVertex2 @ r @ b $dRead $dRead1)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Model.Vertex r b>_R))
+                      @ [Model.Vertex r b]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Model.Vertex r b]))) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fReadVertex_$creadListPrec ::
+    (GHC.Read.Read r, GHC.Read.Read b) =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Model.Vertex r b]
+  {- Arity: 4, Strictness: <L,U(A,A,U,A)><L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadVertex1
+                  `cast`
+                (forall (r :: <*>_N) (b :: <*>_N).
+                 <GHC.Read.Read r>_R
+                 ->_R <GHC.Read.Read b>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Model.Vertex r b]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Model.Vertex r b]>_R))) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fReadVertex_$creadPrec ::
+    (GHC.Read.Read r, GHC.Read.Read b) =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Model.Vertex r b)
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,1*U(A,A,1*U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Model.$fReadVertex2
+                  `cast`
+                (forall (r :: <*>_N) (b :: <*>_N).
+                 <GHC.Read.Read r>_R
+                 ->_R <GHC.Read.Read b>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Model.Vertex r b>_R)) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fReadVertex_$creadsPrec ::
+    (GHC.Read.Read r, GHC.Read.Read b) =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Model.Vertex r b)
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,1*U(A,A,1*U,A)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ r
+                   @ b
+                   ($dRead :: GHC.Read.Read r)
+                   ($dRead1 :: GHC.Read.Read b)
+                   (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Model.Vertex r b)
+                   ((Model.$fReadVertex2 @ r @ b $dRead $dRead1 eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <Model.Vertex r b>_R)
+                      @ (Model.Vertex r b)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Model.Vertex r b)))) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fShowFace ::
+    (GHC.Show.Show a, GHC.Show.Show f) =>
+    GHC.Show.Show (Model.Face a f)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      @ f
+                      ($dShow :: GHC.Show.Show a)
+                      ($dShow1 :: GHC.Show.Show f).
+                  @ (Model.Face a f)
+                  (Model.$fShowFace_$cshowsPrec @ a @ f $dShow $dShow1)
+                  (Model.$fShowFace_$cshow @ a @ f $dShow $dShow1)
+                  (Model.$fShowFace_$cshowList @ a @ f $dShow $dShow1) -}
+699938591944bcb8e5be368e378c0097
+  $fShowFace1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+a1b418e93710b898d6dbc1b635a7ad2b
+  $fShowFace2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+11e080fa280c7d05514d706d380e0d44
+  $fShowFace3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "faceProperties = "#) -}
+ce884c07fe4f05605ce980f467e7d3c2
+  $fShowFace4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vertex3 = "#) -}
+42b26d7b5fcc3ff929e40dc53885d317
+  $fShowFace5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vertex2 = "#) -}
+69fe5a7ea79e5bb533698c02e9fef13a
+  $fShowFace6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+43ab5a95ff74501c94e46217ffdd8b53
+  $fShowFace7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vertex1 = "#) -}
+14774c663108fd7d7f29a2e22f2e0293
+  $fShowFace8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Face {"#) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fShowFace_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show f) =>
+    Model.Face a f -> GHC.Base.String
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   @ f
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show f)
+                   (x :: Model.Face a f) ->
+                 Model.$fShowFace_$cshowsPrec
+                   @ a
+                   @ f
+                   $dShow
+                   $dShow1
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fShowFace_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show f) =>
+    [Model.Face a f] -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ f
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show f)
+                   (eta :: [Model.Face a f])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Model.Face a f)
+                   (Model.$fShowFace_$cshowsPrec
+                      @ a
+                      @ f
+                      $dShow
+                      $dShow1
+                      Model.$fShowFace1)
+                   eta
+                   eta1) -}
+ebc437c0ce643fdafa8dc729d5f7138c
+  $fShowFace_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show f) =>
+    GHC.Types.Int -> Model.Face a f -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ f
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show f)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Model.Face a f) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w3 of ww2 { Model.Face ww3 ww4 ww5 ww6 ->
+                 Model.$w$cshowsPrec @ a @ f w w1 ww1 ww3 ww4 ww5 ww6 } }) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fShowModel ::
+    (GHC.Show.Show a, GHC.Show.Show r, GHC.Show.Show b,
+     GHC.Show.Show f) =>
+    GHC.Show.Show (Model.Model a r b f)
+  DFunId
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      @ r
+                      @ b
+                      @ f
+                      ($dShow :: GHC.Show.Show a)
+                      ($dShow1 :: GHC.Show.Show r)
+                      ($dShow2 :: GHC.Show.Show b)
+                      ($dShow3 :: GHC.Show.Show f).
+                  @ (Model.Model a r b f)
+                  (Model.$fShowModel_$cshowsPrec
+                     @ a
+                     @ r
+                     @ b
+                     @ f
+                     $dShow
+                     $dShow1
+                     $dShow2
+                     $dShow3)
+                  (Model.$fShowModel_$cshow
+                     @ a
+                     @ r
+                     @ b
+                     @ f
+                     $dShow
+                     $dShow1
+                     $dShow2
+                     $dShow3)
+                  (Model.$fShowModel_$cshowList
+                     @ a
+                     @ r
+                     @ b
+                     @ f
+                     $dShow
+                     $dShow1
+                     $dShow2
+                     $dShow3) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fShowModel_$cshow ::
+    (GHC.Show.Show a, GHC.Show.Show r, GHC.Show.Show b,
+     GHC.Show.Show f) =>
+    Model.Model a r b f -> GHC.Base.String
+  {- Arity: 5,
+     Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   @ r
+                   @ b
+                   @ f
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show r)
+                   ($dShow2 :: GHC.Show.Show b)
+                   ($dShow3 :: GHC.Show.Show f)
+                   (x :: Model.Model a r b f) ->
+                 Model.$fShowModel_$cshowsPrec
+                   @ a
+                   @ r
+                   @ b
+                   @ f
+                   $dShow
+                   $dShow1
+                   $dShow2
+                   $dShow3
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fShowModel_$cshowList ::
+    (GHC.Show.Show a, GHC.Show.Show r, GHC.Show.Show b,
+     GHC.Show.Show f) =>
+    [Model.Model a r b f] -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   @ r
+                   @ b
+                   @ f
+                   ($dShow :: GHC.Show.Show a)
+                   ($dShow1 :: GHC.Show.Show r)
+                   ($dShow2 :: GHC.Show.Show b)
+                   ($dShow3 :: GHC.Show.Show f) ->
+                 GHC.Show.showList__
+                   @ (Model.Model a r b f)
+                   (Model.$fShowModel_$cshowsPrec
+                      @ a
+                      @ r
+                      @ b
+                      @ f
+                      $dShow
+                      $dShow1
+                      $dShow2
+                      $dShow3
+                      Model.$fShowFace1)) -}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  $fShowModel_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show r, GHC.Show.Show b,
+     GHC.Show.Show f) =>
+    GHC.Types.Int -> Model.Model a r b f -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)> -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fShowVertex ::
+    (GHC.Show.Show r, GHC.Show.Show b) =>
+    GHC.Show.Show (Model.Vertex r b)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ r
+                      @ b
+                      ($dShow :: GHC.Show.Show r)
+                      ($dShow1 :: GHC.Show.Show b).
+                  @ (Model.Vertex r b)
+                  (Model.$fShowVertex_$cshowsPrec @ r @ b $dShow $dShow1)
+                  (Model.$fShowVertex_$cshow @ r @ b $dShow $dShow1)
+                  (Model.$fShowVertex_$cshowList @ r @ b $dShow $dShow1) -}
+68cbec39e545f020ad0c32f3ccdd490d
+  $fShowVertex1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "vertexData = "#) -}
+f629124174e853baf7d765dd2f2f12eb
+  $fShowVertex2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "position = "#) -}
+77b7ea086eba0a21ff6b0ab6619d4f5a
+  $fShowVertex3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vertex {"#) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fShowVertexNormal ::
+    GHC.Show.Show a => GHC.Show.Show (Model.VertexNormal a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (Model.VertexNormal a)
+                  (Model.$fShowVertexNormal_$cshowsPrec @ a $dShow)
+                  (Model.$fShowVertexNormal_$cshow @ a $dShow)
+                  (Model.$fShowVertexNormal_$cshowList @ a $dShow) -}
+8295dcf6bf4892b42b552d0ff77a1e6e
+  $fShowVertexNormal1 :: GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Model.$fReadVertexNormal5) -}
+5dd99318b1b5ddd77f75dca601f32512
+  $fShowVertexNormal2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "VertexNormal "#) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fShowVertexNormal_$cshow ::
+    GHC.Show.Show a => Model.VertexNormal a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: Model.VertexNormal a) ->
+                 case x of wild {
+                   Model.VertexNormal b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Model.$fShowVertexNormal2
+                        (case b1 of ww2 { LinAlg.Vec3 ww3 ww4 ww5 ->
+                         LinAlg.$w$cshowsPrec2
+                           @ a
+                           $dShow
+                           11#
+                           ww3
+                           ww4
+                           ww5
+                           (GHC.Types.[] @ GHC.Types.Char) })
+                   Model.FaceNormal -> Model.$fReadVertexNormal5 }) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fShowVertexNormal_$cshowList ::
+    GHC.Show.Show a => [Model.VertexNormal a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Model.VertexNormal a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Model.VertexNormal a)
+                   (Model.$fShowVertexNormal_$cshowsPrec @ a $dShow Model.$fShowFace1)
+                   eta
+                   eta1) -}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  $fShowVertexNormal_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Model.VertexNormal a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><L,1*U(U)><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (a1 :: GHC.Types.Int)
+                   (ds :: Model.VertexNormal a) ->
+                 case ds of wild {
+                   Model.VertexNormal b1
+                   -> case a1 of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = case b1 of ww2 { LinAlg.Vec3 ww3 ww4 ww5 ->
+                          LinAlg.$w$cshowsPrec2 @ a $dShow 11# ww3 ww4 ww5 }
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char Model.$fShowVertexNormal2 (g x1)
+                        GHC.Types.True
+                        -> \ (x1 :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Model.$fShowVertexNormal2
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x1))) } }
+                   Model.FaceNormal -> Model.$fShowVertexNormal1 }) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fShowVertex_$cshow ::
+    (GHC.Show.Show r, GHC.Show.Show b) =>
+    Model.Vertex r b -> GHC.Base.String
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S,1*U(1*U(U,U,U),U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ r
+                   @ b
+                   ($dShow :: GHC.Show.Show r)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (x :: Model.Vertex r b) ->
+                 Model.$fShowVertex_$cshowsPrec
+                   @ r
+                   @ b
+                   $dShow
+                   $dShow1
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fShowVertex_$cshowList ::
+    (GHC.Show.Show r, GHC.Show.Show b) =>
+    [Model.Vertex r b] -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ r
+                   @ b
+                   ($dShow :: GHC.Show.Show r)
+                   ($dShow1 :: GHC.Show.Show b)
+                   (eta :: [Model.Vertex r b])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Model.Vertex r b)
+                   (Model.$fShowVertex_$cshowsPrec
+                      @ r
+                      @ b
+                      $dShow
+                      $dShow1
+                      Model.$fShowFace1)
+                   eta
+                   eta1) -}
+dbf9541e51b3a06b55fd68839a25fc84
+  $fShowVertex_$cshowsPrec ::
+    (GHC.Show.Show r, GHC.Show.Show b) =>
+    GHC.Types.Int -> Model.Vertex r b -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S(S),1*U(U)><S,1*U(1*U(U,U,U),U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ r
+                   @ b
+                   (w :: GHC.Show.Show r)
+                   (w1 :: GHC.Show.Show b)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Model.Vertex r b) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 case w3 of ww2 { Model.Vertex ww3 ww4 ->
+                 Model.$w$cshowsPrec1 @ r @ b w w1 ww1 ww3 ww4 } }) -}
+3ad2155ab565c88abc637e6f349d90d9
+  $sfromList ::
+    [(GHC.Types.Int, a)] -> Data.Map.Base.Map GHC.Types.Int a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(GHC.Types.Int, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Base.Tip @ GHC.Types.Int @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { GHC.Types.I# ipv ->
+                           Data.Map.Base.Bin
+                             @ GHC.Types.Int
+                             @ a
+                             1#
+                             dt
+                             x
+                             (Data.Map.Base.Tip @ GHC.Types.Int @ a)
+                             (Data.Map.Base.Tip @ GHC.Types.Int @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of wild4 { GHC.Types.I# x1 ->
+                           case ky of wild5 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x1 y) of wild6 {
+                             GHC.Types.False
+                             -> Model.$wpoly_go10
+                                  @ a
+                                  1#
+                                  (Data.Map.Base.Bin
+                                     @ GHC.Types.Int
+                                     @ a
+                                     1#
+                                     wild4
+                                     x
+                                     (Data.Map.Base.Tip @ GHC.Types.Int @ a)
+                                     (Data.Map.Base.Tip @ GHC.Types.Int @ a))
+                                  wild2
+                             GHC.Types.True
+                             -> Model.$sfromList1
+                                  @ a
+                                  (Data.Map.Base.Bin
+                                     @ GHC.Types.Int
+                                     @ a
+                                     1#
+                                     wild4
+                                     x
+                                     (Data.Map.Base.Tip @ GHC.Types.Int @ a)
+                                     (Data.Map.Base.Tip @ GHC.Types.Int @ a))
+                                  wild2 } } } } } } }) -}
+43f6e8000137d042327fcc10658a1ed2
+  $sfromList1 ::
+    Data.Map.Base.Map GHC.Types.Int a1
+    -> [(GHC.Types.Int, a1)] -> Data.Map.Base.Map GHC.Types.Int a1
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+c76e978e1567a56b06975d268adeb658
+  $tc'Face :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7291137367644119433##
+                   3555949027882132631##
+                   Model.$trModule
+                   Model.$tc'Face1) -}
+e447855b03d242a69da71e26923fe30a
+  $tc'Face1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Face"#) -}
+c0e9433d786207f4edfe0e0721db4add
+  $tc'FaceNormal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13730117598910777620##
+                   8061639749070837820##
+                   Model.$trModule
+                   Model.$tc'FaceNormal1) -}
+5ebfbcc0e0ecb8fe460f0c76051d564a
+  $tc'FaceNormal1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'FaceNormal"#) -}
+e7e2b6199c09298ba1fba4b4910717c6
+  $tc'Model :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1581159657816884029##
+                   1275069275117118158##
+                   Model.$trModule
+                   Model.$tc'Model1) -}
+895525240734e413d87bcdc04ce3e956
+  $tc'Model1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Model"#) -}
+c3e3b64d9236fb23df03d2befb23ed8e
+  $tc'Triangle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17437186661185682167##
+                   18271050361690152545##
+                   Model.$trModule
+                   Model.$tc'Triangle1) -}
+35ba6ca1ef5717f409bf749edaa5c319
+  $tc'Triangle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Triangle"#) -}
+714d1de75e9dc6707567f3ce9b0e1f98
+  $tc'Vertex :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9726363607501824580##
+                   9501562335028032059##
+                   Model.$trModule
+                   Model.$tc'Vertex1) -}
+de8bde118687a5926fd0ce6308537af8
+  $tc'Vertex1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Vertex"#) -}
+36d2c3143f1a92426bddf4e083e35b7e
+  $tc'VertexNormal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6804887446884602004##
+                   240605337979778775##
+                   Model.$trModule
+                   Model.$tc'VertexNormal1) -}
+fe6d86bcefb0c9dc0e18e4c4618f01e3
+  $tc'VertexNormal1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'VertexNormal"#) -}
+4b568399de339213a7dfa81e5905c087
+  $tcFace :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2068497980807608666##
+                   17398761505771076861##
+                   Model.$trModule
+                   Model.$tcFace1) -}
+7fc5e182873bd38bc1e6bb289cf68142
+  $tcFace1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Face"#) -}
+25bcb8b8d534063e39f8ef33c19d3283
+  $tcModel :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5721397591254507655##
+                   6816332805608596721##
+                   Model.$trModule
+                   Model.$trModule1) -}
+5dbd459d2bfd75f0943b5a8848e0c071
+  $tcTriangle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12836938655553000824##
+                   12715351313853028553##
+                   Model.$trModule
+                   Model.$tcTriangle1) -}
+2cfe3184f0c6a6e6e73cd88fc48d4b0e
+  $tcTriangle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Triangle"#) -}
+9be15f46540bfed645653f1d1aa227a7
+  $tcVertex :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3724928409203272349##
+                   10762190737192239551##
+                   Model.$trModule
+                   Model.$tcVertex1) -}
+c0e79b1e26a7eac5eedd497d1556d746
+  $tcVertex1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Vertex"#) -}
+c27e33e107313ebc41278e69a9a38af1
+  $tcVertexNormal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9992375104123956089##
+                   5121072328779279427##
+                   Model.$trModule
+                   Model.$tcVertexNormal1) -}
+8f8657a2352890ed127f9a080a2b2843
+  $tcVertexNormal1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "VertexNormal"#) -}
+2964a20a12fcc7067ae3dab328be6701
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Model.$trModule2 Model.$trModule1) -}
+226feef14f9ff79df97ba4e2f7f9183e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Model"#) -}
+c2966323d80bb6c836733e53d084f01c
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT"#) -}
+4525b3a815eca686ed896c4e47f9ae61
+  $w$c/= ::
+    (GHC.Classes.Eq r, GHC.Classes.Eq b) =>
+    r -> r -> r -> b -> r -> r -> r -> b -> GHC.Types.Bool
+  {- Arity: 10, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ r
+                   @ b
+                   (w :: GHC.Classes.Eq r)
+                   (w1 :: GHC.Classes.Eq b)
+                   (ww :: r)
+                   (ww1 :: r)
+                   (ww2 :: r)
+                   (ww3 :: b)
+                   (ww4 :: r)
+                   (ww5 :: r)
+                   (ww6 :: r)
+                   (ww7 :: b) ->
+                 case GHC.Classes.== @ r w ww ww4 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ r w ww1 ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True
+                        -> case GHC.Classes.== @ r w ww2 ww6 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True
+                             -> case GHC.Classes.== @ b w1 ww3 ww7 of wild3 {
+                                  GHC.Types.False -> GHC.Types.True
+                                  GHC.Types.True -> GHC.Types.False } } } }) -}
+167fe8e2b1e804e3983074b35be37ef9
+  $w$c== ::
+    (GHC.Classes.Eq a, GHC.Classes.Eq f) =>
+    a -> a -> a -> f -> a -> a -> a -> f -> GHC.Types.Bool
+  {- Arity: 10, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ f
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Classes.Eq f)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: f)
+                   (ww4 :: a)
+                   (ww5 :: a)
+                   (ww6 :: a)
+                   (ww7 :: f) ->
+                 case GHC.Classes.== @ a w ww ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ a w ww1 ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.== @ a w ww2 ww6 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.== @ f w1 ww3 ww7 } } }) -}
+5ca4a2adfb4b3468502769fce97ee689
+  $w$c==1 ::
+    (GHC.Classes.Eq r, GHC.Classes.Eq b) =>
+    r -> r -> r -> b -> r -> r -> r -> b -> GHC.Types.Bool
+  {- Arity: 10, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,1*U(1*C1(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ r
+                   @ b
+                   (w :: GHC.Classes.Eq r)
+                   (w1 :: GHC.Classes.Eq b)
+                   (ww :: r)
+                   (ww1 :: r)
+                   (ww2 :: r)
+                   (ww3 :: b)
+                   (ww4 :: r)
+                   (ww5 :: r)
+                   (ww6 :: r)
+                   (ww7 :: b) ->
+                 case GHC.Classes.== @ r w ww ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ r w ww1 ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.== @ r w ww2 ww6 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.== @ b w1 ww3 ww7 } } }) -}
+b6a85fc597adcbaa28361541b167fd01
+  $w$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Show.Show f) =>
+    GHC.Prim.Int# -> a -> a -> a -> f -> GHC.Show.ShowS
+  {- Arity: 7,
+     Strictness: <L,U(C(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   @ f
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Show.Show f)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: f) ->
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Model.$fShowFace1 ww1
+                 } in
+                 let {
+                   f2 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Model.$fShowFace1 ww2
+                 } in
+                 let {
+                   f3 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Model.$fShowFace1 ww3
+                 } in
+                 let {
+                   f4 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ f w1 Model.$fShowFace1 ww4
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Model.$fShowFace8
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Model.$fShowFace7
+                          (f1
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Model.$fShowFace6
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Model.$fShowFace5
+                                   (f2
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Model.$fShowFace6
+                                         (GHC.Base.++
+                                            @ GHC.Types.Char
+                                            Model.$fShowFace4
+                                            (f3
+                                               (GHC.Base.++
+                                                  @ GHC.Types.Char
+                                                  Model.$fShowFace6
+                                                  (GHC.Base.++
+                                                     @ GHC.Types.Char
+                                                     Model.$fShowFace3
+                                                     (f4
+                                                        (GHC.Base.++
+                                                           @ GHC.Types.Char
+                                                           Model.$fShowFace2
+                                                           x))))))))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+37c22e9e20c3e63ae0c797a6b7bb43b9
+  $w$cshowsPrec1 ::
+    (GHC.Show.Show r, GHC.Show.Show b) =>
+    GHC.Prim.Int# -> Model.Position r -> b -> GHC.Show.ShowS
+  {- Arity: 5,
+     Strictness: <L,U(C(C1(U)),A,A)><L,1*U(1*C1(C1(U)),A,A)><S,U><L,1*U(U,U,U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ r
+                   @ b
+                   (w :: GHC.Show.Show r)
+                   (w1 :: GHC.Show.Show b)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: Model.Position r)
+                   (ww2 :: b) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = case ww1 of ww3 { LinAlg.Point3 ww4 ww5 ww6 ->
+                     LinAlg.$w$cshowsPrec1 @ r w 0# ww4 ww5 ww6 }
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ b w1 Model.$fShowFace1 ww2
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Model.$fShowVertex3
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Model.$fShowVertex2
+                          (f (GHC.Base.++
+                                @ GHC.Types.Char
+                                Model.$fShowFace6
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Model.$fShowVertex1
+                                   (f1 (GHC.Base.++ @ GHC.Types.Char Model.$fShowFace2 x))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+5cc77be0bf7d2ea6c80c35a4e498d358
+  $w$sgo10 ::
+    GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Base.Map GHC.Types.Int a1
+    -> Data.Map.Base.Map GHC.Types.Int a1
+  {- Arity: 3, Strictness: <L,U><L,U><S,1*U>, Inline: [0] -}
+04eb70de22ab220eccec829deda4b405
+  $wcube ::
+    GHC.Float.Floating a =>
+    (# Data.Map.Base.Map
+         GHC.Types.Int
+         (Model.Vertex a (Model.Color a, Model.VertexNormal a)),
+       [Model.Face GHC.Types.Int ()] #)
+  {- Arity: 1,
+     Strictness: <L,1*U(1*U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>,
+     Inline: [0] -}
+859d1c2c0c428448845ac4d515ec91cc
+  $wfromTrianglesHelper ::
+    GHC.Types.Int
+    -> Model.Color a
+    -> [Model.Triangle a]
+    -> (# Data.Map.Base.Map
+            GHC.Types.Int
+            (Model.Vertex a (Model.Color a, Model.VertexNormal a)),
+          [Model.Face GHC.Types.Int ()] #)
+  {- Arity: 3, Strictness: <L,U(U)><L,U><S,1*U>, Inline: [0] -}
+c57ba1a62914bd724e1bc6b157f3a1f5
+  $wmodelLists ::
+    [(Model.Position a, Model.Color a, Model.Normal a)]
+    -> (# [a], [a], [a] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+5e5e6b3c4c8367500a5df8842f19fe7d
+  $wparallelogram ::
+    GHC.Num.Num a =>
+    Model.Color a
+    -> Model.Position a
+    -> Model.Position a
+    -> Model.Position a
+    -> (# Data.Map.Base.Map
+            GHC.Types.Int
+            (Model.Vertex a (Model.Color a, Model.VertexNormal a)),
+          [Model.Face GHC.Types.Int ()] #)
+  {- Arity: 5,
+     Strictness: <L,U(C(C1(U)),C(C1(U)),A,A,A,A,A)><L,U><L,U(U,U,U)><L,U(U,U,U)><L,U(U,U,U)>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: Model.Color a)
+                   (ww :: Model.Position a)
+                   (ww1 :: Model.Position a)
+                   (ww2 :: Model.Position a) ->
+                 Model.$wfromTrianglesHelper
+                   @ a
+                   Model.$fShowFace1
+                   w1
+                   (GHC.Types.:
+                      @ (Model.Triangle a)
+                      (Model.Triangle @ a ww ww1 ww2)
+                      (GHC.Types.:
+                         @ (Model.Triangle a)
+                         (Model.Triangle
+                            @ a
+                            ww1
+                            (case ww2 of ww3 { LinAlg.Point3 ww4 ww5 ww6 ->
+                             case ww1 of ww7 { LinAlg.Point3 ww8 ww9 ww10 ->
+                             case ww of ww11 { LinAlg.Point3 ww12 ww13 ww14 ->
+                             LinAlg.Point3
+                               @ a
+                               (GHC.Num.+ @ a w ww4 (GHC.Num.- @ a w ww8 ww12))
+                               (GHC.Num.+ @ a w ww5 (GHC.Num.- @ a w ww9 ww13))
+                               (GHC.Num.+ @ a w ww6 (GHC.Num.- @ a w ww10 ww14)) } } })
+                            ww2)
+                         (GHC.Types.[] @ (Model.Triangle a))))) -}
+a7776587e95d3add88834ea1e25e5ce6
+  $wpoly_go1 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map GHC.Types.Int a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>, Inline: [0] -}
+913252b4739b90dcd9f735edc34d18a3
+  $wpoly_go10 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map GHC.Types.Int a
+    -> [(GHC.Types.Int, a)]
+    -> Data.Map.Base.Map GHC.Types.Int a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+924b83d89627b3bb580eb845a81107f4
+  $wvertexLists ::
+    (GHC.Classes.Eq a, GHC.Float.Floating a) =>
+    Data.Map.Base.Map
+      GHC.Types.Int
+      (Model.Vertex a (Model.Color a, Model.VertexNormal a))
+    -> [Model.Face GHC.Types.Int ()] -> (# [a], [a], [a] #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(U,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Float.Floating a)
+                   (ww :: Data.Map.Base.Map
+                            GHC.Types.Int
+                            (Model.Vertex a (Model.Color a, Model.VertexNormal a)))
+                   (ww1 :: [Model.Face GHC.Types.Int ()]) ->
+                 letrec {
+                   go :: [Model.Face GHC.Types.Int ()]
+                         -> [(Model.Position a, Model.Color a, Model.Normal a)]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [Model.Face GHC.Types.Int ()]) ->
+                     case ds of wild {
+                       []
+                       -> GHC.Types.[] @ (Model.Position a, Model.Color a, Model.Normal a)
+                       : y ys
+                       -> case y of wild1 { Model.Face ds1 ds2 ds3 ds4 ->
+                          case ds1 of ww2 { GHC.Types.I# ww3 ->
+                          case Model.$wpoly_go1
+                                 @ (Model.Vertex a (Model.Color a, Model.VertexNormal a))
+                                 ww3
+                                 ww of wild2 {
+                            GHC.Base.Nothing -> go ys
+                            GHC.Base.Just x
+                            -> case ds2 of ww4 { GHC.Types.I# ww5 ->
+                               case Model.$wpoly_go1
+                                      @ (Model.Vertex a (Model.Color a, Model.VertexNormal a))
+                                      ww5
+                                      ww of wild3 {
+                                 GHC.Base.Nothing -> go ys
+                                 GHC.Base.Just x1
+                                 -> case ds3 of ww6 { GHC.Types.I# ww7 ->
+                                    case Model.$wpoly_go1
+                                           @ (Model.Vertex a (Model.Color a, Model.VertexNormal a))
+                                           ww7
+                                           ww of wild4 {
+                                      GHC.Base.Nothing -> go ys
+                                      GHC.Base.Just x2
+                                      -> let {
+                                           v1Pos :: Model.Position a
+                                           = case x of wild5 { Model.Vertex ds5 ds6 -> ds5 }
+                                         } in
+                                         let {
+                                           v2Pos :: Model.Position a
+                                           = case x1 of wild5 { Model.Vertex ds5 ds6 -> ds5 }
+                                         } in
+                                         let {
+                                           v3Pos :: Model.Position a
+                                           = case x2 of wild5 { Model.Vertex ds5 ds6 -> ds5 }
+                                         } in
+                                         case Geometry.triangleNormal
+                                                @ a
+                                                w
+                                                w1
+                                                v1Pos
+                                                v2Pos
+                                                v3Pos of wild5 {
+                                           GHC.Base.Nothing -> go ys
+                                           GHC.Base.Just x3
+                                           -> let {
+                                                ds5 :: (Model.Color a, Model.VertexNormal a)
+                                                = case x of wild6 { Model.Vertex ds6 ds7 -> ds7 }
+                                              } in
+                                              GHC.Types.:
+                                                @ (Model.Position a, Model.Color a, Model.Normal a)
+                                                (v1Pos,
+                                                 case ds5 of wild6 { (,) v1Col v1Norm -> v1Col },
+                                                 case ds5 of wild6 { (,) v1Col v1Norm ->
+                                                 case v1Norm of wild7 {
+                                                   Model.VertexNormal n -> n
+                                                   Model.FaceNormal -> x3 } })
+                                                (let {
+                                                   ds6 :: (Model.Color a, Model.VertexNormal a)
+                                                   = case x1 of wild6 { Model.Vertex ds7 ds8 ->
+                                                     ds8 }
+                                                 } in
+                                                 GHC.Types.:
+                                                   @ (Model.Position a, Model.Color a,
+                                                      Model.Normal a)
+                                                   (v2Pos,
+                                                    case ds6 of wild6 { (,) v2Col v2Norm -> v2Col },
+                                                    case ds6 of wild6 { (,) v2Col v2Norm ->
+                                                    case v2Norm of wild7 {
+                                                      Model.VertexNormal n -> n
+                                                      Model.FaceNormal -> x3 } })
+                                                   (let {
+                                                      ds7 :: (Model.Color a, Model.VertexNormal a)
+                                                      = case x2 of wild6 { Model.Vertex ds8 ds9 ->
+                                                        ds9 }
+                                                    } in
+                                                    GHC.Types.:
+                                                      @ (Model.Position a, Model.Color a,
+                                                         Model.Normal a)
+                                                      (v3Pos,
+                                                       case ds7 of wild6 { (,) v3Col v3Norm ->
+                                                       v3Col },
+                                                       case ds7 of wild6 { (,) v3Col v3Norm ->
+                                                       case v3Norm of wild7 {
+                                                         Model.VertexNormal n -> n
+                                                         Model.FaceNormal -> x3 } })
+                                                      (go ys))) } } } } } } } } }
+                 } in
+                 Model.$wmodelLists @ a (go ww1)) -}
+2dd97a453e384b5899db53908d140b36
+  type BasicModel a =
+    Model.Model
+      GHC.Types.Int a (Model.Color a, Model.VertexNormal a) ()
+67e4fefbb7c35afdcf5703e059f03129
+  type Color a = LinAlg.Vec3 a
+ebc437c0ce643fdafa8dc729d5f7138c
+  data Face a f
+    = Face {vertex1 :: a,
+            vertex2 :: a,
+            vertex3 :: a,
+            faceProperties :: f}
+ad0d0f85a2e59bc7c2030f5d39bff325
+  type role Model nominal representational representational representational
+  data Model a r b f
+    = Model {vertices :: Data.Map.Base.Map a (Model.Vertex r b),
+             faces :: [Model.Face a f]}
+34df5df75230e717287cbcc174730fc6
+  type Normal a = LinAlg.Vec3 a
+a24ef81ef40ee4948d5b99f8c7acb0c8
+  type Position a = LinAlg.Point3 a
+dcb987eb54948d5c87ca8274ceb20144
+  data Triangle a
+    = Triangle (Model.Position a) (Model.Position a) (Model.Position a)
+dbf9541e51b3a06b55fd68839a25fc84
+  data Vertex r b
+    = Vertex {position :: Model.Position r, vertexData :: b}
+7ca3a178dbb8672af1ecc38cd6a9ba40
+  data VertexNormal a = VertexNormal (Model.Normal a) | FaceNormal
+0325e80e064f24bff3f669693bb33809
+  cube :: GHC.Float.Floating a => Model.BasicModel a
+  {- Arity: 1,
+     Strictness: <L,1*U(1*U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (w :: GHC.Float.Floating a) ->
+                 case Model.$wcube @ a w of ww { (#,#) ww1 ww2 ->
+                 Model.Model
+                   @ GHC.Types.Int
+                   @ a
+                   @ (Model.Color a, Model.VertexNormal a)
+                   @ ()
+                   ww1
+                   ww2 }) -}
+f90b244fcdf70789751a3e6ae2aa4bdd
+  faceProperties :: Model.Face a f -> f
+  RecSel Left Model.Face
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ f (ds :: Model.Face a f) ->
+                 case ds of wild { Model.Face ds1 ds2 ds3 ds4 -> ds4 }) -}
+f6cc520b1c130729b7535329f74e5b19
+  faces :: Model.Model a r b f -> [Model.Face a f]
+  RecSel Left Model.Model
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ r @ b @ f (ds :: Model.Model a r b f) ->
+                 case ds of wild { Model.Model ds1 ds2 -> ds2 }) -}
+534185d59ee1ea98fc4c315640b7024a
+  fromTriangles ::
+    Model.Color a -> [Model.Triangle a] -> Model.BasicModel a
+  {- Arity: 2,
+     Unfolding: (\ @ a
+                   (w :: Model.Color a)
+                   (w1 :: [Model.Triangle a]) ->
+                 case Model.$wfromTrianglesHelper
+                        @ a
+                        Model.$fShowFace1
+                        w
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 Model.Model
+                   @ GHC.Types.Int
+                   @ a
+                   @ (Model.Color a, Model.VertexNormal a)
+                   @ ()
+                   ww1
+                   ww2 }) -}
+0c2826836c0d14ad66050aabc068af78
+  parallelogram ::
+    GHC.Num.Num a =>
+    Model.Color a -> Model.Triangle a -> Model.BasicModel a
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),C(C1(U)),A,A,A,A,A)><L,U><S,1*U(U(U,U,U),U(U,U,U),U(U,U,U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: Model.Color a)
+                   (w2 :: Model.Triangle a) ->
+                 case w2 of ww { Model.Triangle ww1 ww2 ww3 ->
+                 case Model.$wparallelogram
+                        @ a
+                        w
+                        w1
+                        ww1
+                        ww2
+                        ww3 of ww4 { (#,#) ww5 ww6 ->
+                 Model.Model
+                   @ GHC.Types.Int
+                   @ a
+                   @ (Model.Color a, Model.VertexNormal a)
+                   @ ()
+                   ww5
+                   ww6 } }) -}
+a1a4f34e2392e312b92b019c11b68d01
+  position :: Model.Vertex r b -> Model.Position r
+  RecSel Left Model.Vertex
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U,U,U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ r @ b (ds :: Model.Vertex r b) ->
+                 case ds of wild { Model.Vertex ds1 ds2 -> ds1 }) -}
+01e28c7c6ac5e5aee25c2b30c73288ac
+  vertex1 :: Model.Face a f -> a
+  RecSel Left Model.Face
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ f (ds :: Model.Face a f) ->
+                 case ds of wild { Model.Face ds1 ds2 ds3 ds4 -> ds1 }) -}
+2a4df7cca69ba3012dca6f0f20371253
+  vertex2 :: Model.Face a f -> a
+  RecSel Left Model.Face
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ f (ds :: Model.Face a f) ->
+                 case ds of wild { Model.Face ds1 ds2 ds3 ds4 -> ds2 }) -}
+4ffea25a8a706c11bddcd489f865165e
+  vertex3 :: Model.Face a f -> a
+  RecSel Left Model.Face
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ f (ds :: Model.Face a f) ->
+                 case ds of wild { Model.Face ds1 ds2 ds3 ds4 -> ds3 }) -}
+f80ada695de25f63efba116fb5e0a68e
+  vertexData :: Model.Vertex r b -> b
+  RecSel Left Model.Vertex
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ r @ b (ds :: Model.Vertex r b) ->
+                 case ds of wild { Model.Vertex ds1 ds2 -> ds2 }) -}
+846b1bdf4db607a091eea5038d9e2531
+  vertexLists ::
+    (GHC.Classes.Eq a, GHC.Float.Floating a) =>
+    Model.BasicModel a -> ([a], [a], [a])
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(U,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S(LS),1*U(U,1*U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Float.Floating a)
+                   (w2 :: Model.BasicModel a) ->
+                 case w2 of ww { Model.Model ww1 ww2 ->
+                 case Model.$wvertexLists
+                        @ a
+                        w
+                        w1
+                        ww1
+                        ww2 of ww3 { (#,,#) ww4 ww5 ww6 ->
+                 (ww4, ww5, ww6) } }) -}
+cd4dfb3a17b14ddd4f0db97dc259c37c
+  vertices ::
+    Model.Model a r b f -> Data.Map.Base.Map a (Model.Vertex r b)
+  RecSel Left Model.Model
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ r @ b @ f (ds :: Model.Model a r b f) ->
+                 case ds of wild { Model.Model ds1 ds2 -> ds1 }) -}
+instance [safe] GHC.Classes.Eq [Model.Face] = Model.$fEqFace
+instance [safe] GHC.Classes.Eq [Model.Model] = Model.$fEqModel
+instance [safe] GHC.Classes.Eq [Model.Vertex] = Model.$fEqVertex
+instance [safe] GHC.Classes.Eq [Model.VertexNormal]
+  = Model.$fEqVertexNormal
+instance [safe] GHC.Read.Read [Model.Face] = Model.$fReadFace
+instance [safe] GHC.Read.Read [Model.Model] = Model.$fReadModel
+instance [safe] GHC.Read.Read [Model.Vertex] = Model.$fReadVertex
+instance [safe] GHC.Read.Read [Model.VertexNormal]
+  = Model.$fReadVertexNormal
+instance [safe] GHC.Show.Show [Model.Face] = Model.$fShowFace
+instance [safe] GHC.Show.Show [Model.Model] = Model.$fShowModel
+instance [safe] GHC.Show.Show [Model.Vertex] = Model.$fShowVertex
+instance [safe] GHC.Show.Show [Model.VertexNormal]
+  = Model.$fShowVertexNormal
+"SPEC/Model fromList @ Int _" [ALWAYS] forall @ a
+                                              ($dOrd :: GHC.Classes.Ord GHC.Types.Int)
+  Data.Map.Base.fromList @ GHC.Types.Int @ a $dOrd
+  = Model.$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

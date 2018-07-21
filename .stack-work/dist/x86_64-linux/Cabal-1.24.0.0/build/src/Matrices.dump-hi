@@ -1,0 +1,1714 @@
+
+==================== FINAL INTERFACE ====================
+2017-01-09 22:58:56.986203 UTC
+
+interface gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:Matrices 8001
+  interface hash: 2e238000c517b0a9b92bb5471e6d3398
+  ABI hash: a485fdec4145390b71522b8e02c97a5f
+  export-list hash: 85735070153991f7fc4a075659a93044
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b6ac6cdddd087a5f3f8adb53cf21c5c3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Matrices.buildView
+  Matrices.fovCamera
+  Matrices.fovProjMat
+  Matrices.fpsCamera
+  Matrices.lookAt
+  Matrices.matrixToCMList
+  Matrices.projectionMatrix
+  Matrices.vectorToList
+  Matrices.CameraVolume{Matrices.Frustum Matrices.Prism Matrices.SymFrustum Matrices.SymPrism}
+  Matrices.ClippingPlanes{Matrices.ClipP far near}
+  Matrices.Rectangle{Matrices.Rect bottom left right top}
+  Matrices.SymRectangle{Matrices.SymRect lr tb}
+module dependencies: Geometry LinAlg Utils
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Float 469226b1bc53433e95d0167dec5d0312
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Read 817c914615ac8e308afc0c675fb3f671
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.ParserCombinators.ReadPrec 9512e2f4b227f507f87a150887202aed
+import  -/  base-4.9.0.0:Text.Read.Lex fe3dd7b823826bf6870140c5363f9596
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  Geometry b10b54794538e570add23a3b49ea9804
+  exports: 143ce5ed8dd6d622b350b359b49930db
+  crossProduct f3240d3498aef8b61e9c800d5a358e82
+  e4 33591b0f14019626b57f503eebe49333
+  v3 2ba15f797fe4b9b6553078a16fab5d97
+import  -/  LinAlg 2fda7d8c21b2891c403a8ca2bc84537e
+  exports: 5319308500b79c249305bf8a6f3dfa12
+  *| 57fea7a92201615192c8b10fa179e191
+  -# 1f7a1f5fe1213614fb70bbf5af083482
+  Diag4 6e16e893e0a158fa5e80057146d47a63
+  Mat4 dc5def3bee1deb8f493473663dfb4657
+  Mat4 f48d9ee945d73f4a5f68d747f3967607
+  Point3 35f673f087fd6ea9bdf059f28c8585fc
+  Point3 cb5121f112964add8c441c87d877e1d0
+  Vec3 af0264ef4c5439016c6b5a03ae914a6c
+  Vec4 9fcd860e973a3ff408d82033d9c74854
+  Vec4 4e967cd2124bf4a10865b8598081d4bf
+  dot 440316f47fddbe7780600f5a5af47404
+  homogenize 609843129e27e27f5247a10015c575dc
+  normalize bd2c85cee1990e85d2206b2c14fab3c9
+  transpose 3ba26841bb1ed158ab02a98d748f27b6
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fEqCameraVolume ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (Matrices.CameraVolume a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (Matrices.CameraVolume a)
+                  (Matrices.$fEqCameraVolume_$c== @ a $dEq)
+                  (Matrices.$fEqCameraVolume_$c/= @ a $dEq) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fEqCameraVolume_$c/= ::
+    GHC.Classes.Eq a =>
+    Matrices.CameraVolume a
+    -> Matrices.CameraVolume a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: Matrices.CameraVolume a)
+                   (b :: Matrices.CameraVolume a) ->
+                 case Matrices.$fEqCameraVolume_$c== @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fEqCameraVolume_$c== ::
+    GHC.Classes.Eq a =>
+    Matrices.CameraVolume a
+    -> Matrices.CameraVolume a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: Matrices.CameraVolume a)
+                   (ds1 :: Matrices.CameraVolume a) ->
+                 case ds of wild {
+                   Matrices.Frustum a1 a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Matrices.Frustum b1 b2
+                        -> case a1 of ww { Matrices.Rect ww1 ww2 ww3 ww4 ->
+                           case b1 of ww5 { Matrices.Rect ww6 ww7 ww8 ww9 ->
+                           case Matrices.$w$c==1
+                                  @ a
+                                  $dEq
+                                  ww1
+                                  ww2
+                                  ww3
+                                  ww4
+                                  ww6
+                                  ww7
+                                  ww8
+                                  ww9 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> Matrices.$fEqCameraVolume_$c==1 @ a $dEq a2 b2 } } } }
+                   Matrices.SymFrustum a1 a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Matrices.SymFrustum b1 b2
+                        -> case a1 of ww { Matrices.SymRect ww1 ww2 ->
+                           case b1 of ww3 { Matrices.SymRect ww4 ww5 ->
+                           case GHC.Classes.== @ a $dEq ww1 ww4 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Classes.== @ a $dEq ww2 ww5 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> Matrices.$fEqCameraVolume_$c==1 @ a $dEq a2 b2 } } } } }
+                   Matrices.Prism a1 a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Matrices.Prism b1 b2
+                        -> case a1 of ww { Matrices.Rect ww1 ww2 ww3 ww4 ->
+                           case b1 of ww5 { Matrices.Rect ww6 ww7 ww8 ww9 ->
+                           case Matrices.$w$c==1
+                                  @ a
+                                  $dEq
+                                  ww1
+                                  ww2
+                                  ww3
+                                  ww4
+                                  ww6
+                                  ww7
+                                  ww8
+                                  ww9 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> Matrices.$fEqCameraVolume_$c==1 @ a $dEq a2 b2 } } } }
+                   Matrices.SymPrism a1 a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Matrices.SymPrism b1 b2
+                        -> case a1 of ww { Matrices.SymRect ww1 ww2 ->
+                           case b1 of ww3 { Matrices.SymRect ww4 ww5 ->
+                           case GHC.Classes.== @ a $dEq ww1 ww4 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Classes.== @ a $dEq ww2 ww5 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> Matrices.$fEqCameraVolume_$c==1 @ a $dEq a2 b2 } } } } } }) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fEqCameraVolume_$c==1 ::
+    GHC.Classes.Eq a =>
+    Matrices.ClippingPlanes a
+    -> Matrices.ClippingPlanes a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: Matrices.ClippingPlanes a)
+                   (w2 :: Matrices.ClippingPlanes a) ->
+                 case w1 of ww { Matrices.ClipP ww1 ww2 ->
+                 case w2 of ww3 { Matrices.ClipP ww4 ww5 ->
+                 Matrices.$w$c== @ a w ww1 ww2 ww4 ww5 } }) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fEqClippingPlanes ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (Matrices.ClippingPlanes a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (Matrices.ClippingPlanes a)
+                  (Matrices.$fEqCameraVolume_$c==1 @ a $dEq)
+                  (Matrices.$fEqClippingPlanes_$c/= @ a $dEq) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fEqClippingPlanes_$c/= ::
+    GHC.Classes.Eq a =>
+    Matrices.ClippingPlanes a
+    -> Matrices.ClippingPlanes a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: Matrices.ClippingPlanes a)
+                   (b :: Matrices.ClippingPlanes a) ->
+                 case Matrices.$fEqCameraVolume_$c==1 @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fEqRectangle ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (Matrices.Rectangle a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (Matrices.Rectangle a)
+                  (Matrices.$fEqRectangle_$c== @ a $dEq)
+                  (Matrices.$fEqRectangle_$c/= @ a $dEq) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fEqRectangle_$c/= ::
+    GHC.Classes.Eq a =>
+    Matrices.Rectangle a -> Matrices.Rectangle a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: Matrices.Rectangle a)
+                   (b :: Matrices.Rectangle a) ->
+                 case Matrices.$fEqRectangle_$c== @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fEqRectangle_$c== ::
+    GHC.Classes.Eq a =>
+    Matrices.Rectangle a -> Matrices.Rectangle a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: Matrices.Rectangle a)
+                   (w2 :: Matrices.Rectangle a) ->
+                 case w1 of ww { Matrices.Rect ww1 ww2 ww3 ww4 ->
+                 case w2 of ww5 { Matrices.Rect ww6 ww7 ww8 ww9 ->
+                 Matrices.$w$c==1 @ a w ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fEqSymRectangle ::
+    GHC.Classes.Eq a => GHC.Classes.Eq (Matrices.SymRectangle a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (Matrices.SymRectangle a)
+                  (Matrices.$fEqSymRectangle_$c== @ a $dEq)
+                  (Matrices.$fEqSymRectangle_$c/= @ a $dEq) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fEqSymRectangle_$c/= ::
+    GHC.Classes.Eq a =>
+    Matrices.SymRectangle a
+    -> Matrices.SymRectangle a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: Matrices.SymRectangle a)
+                   (b :: Matrices.SymRectangle a) ->
+                 case Matrices.$fEqSymRectangle_$c== @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fEqSymRectangle_$c== ::
+    GHC.Classes.Eq a =>
+    Matrices.SymRectangle a
+    -> Matrices.SymRectangle a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: Matrices.SymRectangle a)
+                   (w2 :: Matrices.SymRectangle a) ->
+                 case w1 of ww { Matrices.SymRect ww1 ww2 ->
+                 case w2 of ww3 { Matrices.SymRect ww4 ww5 ->
+                 Matrices.$w$c==2 @ a w ww1 ww2 ww4 ww5 } }) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fReadCameraVolume ::
+    GHC.Read.Read a => GHC.Read.Read (Matrices.CameraVolume a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (Matrices.CameraVolume a)
+                  (Matrices.$fReadCameraVolume_$creadsPrec @ a $dRead)
+                  (Matrices.$fReadCameraVolume_$creadList @ a $dRead)
+                  (Matrices.$fReadCameraVolume_$creadPrec @ a $dRead)
+                  (Matrices.$fReadCameraVolume_$creadListPrec @ a $dRead) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fReadCameraVolume1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Matrices.CameraVolume a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Matrices.CameraVolume a]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Matrices.CameraVolume a)
+                   (Matrices.$fReadCameraVolume2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Matrices.CameraVolume a>_R))
+                   @ b
+                   eta1) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fReadCameraVolume2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Matrices.CameraVolume a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U> -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fReadCameraVolume_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [Matrices.CameraVolume a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Matrices.CameraVolume a]
+                   (GHC.Read.$wlist
+                      @ (Matrices.CameraVolume a)
+                      (Matrices.$fReadCameraVolume2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Matrices.CameraVolume a>_R))
+                      @ [Matrices.CameraVolume a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Matrices.CameraVolume a]))) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fReadCameraVolume_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Matrices.CameraVolume a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadCameraVolume1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Matrices.CameraVolume a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Matrices.CameraVolume a]>_R))) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fReadCameraVolume_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Matrices.CameraVolume a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadCameraVolume2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Matrices.CameraVolume a>_R)) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fReadCameraVolume_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Matrices.CameraVolume a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Matrices.CameraVolume a)
+                   ((Matrices.$fReadCameraVolume2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <Matrices.CameraVolume a>_R)
+                      @ (Matrices.CameraVolume a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Matrices.CameraVolume a)))) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fReadClippingPlanes ::
+    GHC.Read.Read a => GHC.Read.Read (Matrices.ClippingPlanes a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (Matrices.ClippingPlanes a)
+                  (Matrices.$fReadClippingPlanes_$creadsPrec @ a $dRead)
+                  (Matrices.$fReadClippingPlanes_$creadList @ a $dRead)
+                  (Matrices.$fReadClippingPlanes_$creadPrec @ a $dRead)
+                  (Matrices.$fReadClippingPlanes_$creadListPrec @ a $dRead) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fReadClippingPlanes1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Matrices.ClippingPlanes a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Matrices.ClippingPlanes a]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Matrices.ClippingPlanes a)
+                   (Matrices.$fReadClippingPlanes2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Matrices.ClippingPlanes a>_R))
+                   @ b
+                   eta1) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fReadClippingPlanes2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Matrices.ClippingPlanes a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U> -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fReadClippingPlanes_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [Matrices.ClippingPlanes a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Matrices.ClippingPlanes a]
+                   (GHC.Read.$wlist
+                      @ (Matrices.ClippingPlanes a)
+                      (Matrices.$fReadClippingPlanes2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Matrices.ClippingPlanes a>_R))
+                      @ [Matrices.ClippingPlanes a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Matrices.ClippingPlanes a]))) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fReadClippingPlanes_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [Matrices.ClippingPlanes a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadClippingPlanes1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Matrices.ClippingPlanes a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Matrices.ClippingPlanes a]>_R))) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fReadClippingPlanes_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      (Matrices.ClippingPlanes a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadClippingPlanes2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Matrices.ClippingPlanes a>_R)) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fReadClippingPlanes_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Matrices.ClippingPlanes a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Matrices.ClippingPlanes a)
+                   ((Matrices.$fReadClippingPlanes2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <Matrices.ClippingPlanes a>_R)
+                      @ (Matrices.ClippingPlanes a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Matrices.ClippingPlanes a)))) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fReadRectangle ::
+    GHC.Read.Read a => GHC.Read.Read (Matrices.Rectangle a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (Matrices.Rectangle a)
+                  (Matrices.$fReadRectangle_$creadsPrec @ a $dRead)
+                  (Matrices.$fReadRectangle_$creadList @ a $dRead)
+                  (Matrices.$fReadRectangle_$creadPrec @ a $dRead)
+                  (Matrices.$fReadRectangle_$creadListPrec @ a $dRead) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fReadRectangle1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Matrices.Rectangle a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Matrices.Rectangle a]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Matrices.Rectangle a)
+                   (Matrices.$fReadRectangle2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Matrices.Rectangle a>_R))
+                   @ b
+                   eta1) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fReadRectangle2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Matrices.Rectangle a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U> -}
+41bbf95708b1c76cba99427c7d67e492
+  $fReadRectangle_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [Matrices.Rectangle a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Matrices.Rectangle a]
+                   (GHC.Read.$wlist
+                      @ (Matrices.Rectangle a)
+                      (Matrices.$fReadRectangle2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Matrices.Rectangle a>_R))
+                      @ [Matrices.Rectangle a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Matrices.Rectangle a]))) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fReadRectangle_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Matrices.Rectangle a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadRectangle1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Matrices.Rectangle a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Matrices.Rectangle a]>_R))) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fReadRectangle_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Matrices.Rectangle a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadRectangle2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Matrices.Rectangle a>_R)) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fReadRectangle_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Matrices.Rectangle a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Matrices.Rectangle a)
+                   ((Matrices.$fReadRectangle2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <Matrices.Rectangle a>_R)
+                      @ (Matrices.Rectangle a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Matrices.Rectangle a)))) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fReadSymRectangle ::
+    GHC.Read.Read a => GHC.Read.Read (Matrices.SymRectangle a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (Matrices.SymRectangle a)
+                  (Matrices.$fReadSymRectangle_$creadsPrec @ a $dRead)
+                  (Matrices.$fReadSymRectangle_$creadList @ a $dRead)
+                  (Matrices.$fReadSymRectangle_$creadPrec @ a $dRead)
+                  (Matrices.$fReadSymRectangle_$creadListPrec @ a $dRead) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fReadSymRectangle1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Matrices.SymRectangle a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [Matrices.SymRectangle a]
+                            -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (Matrices.SymRectangle a)
+                   (Matrices.$fReadSymRectangle2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <Matrices.SymRectangle a>_R))
+                   @ b
+                   eta1) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fReadSymRectangle2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Matrices.SymRectangle a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U> -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fReadSymRectangle_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [Matrices.SymRectangle a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Matrices.SymRectangle a]
+                   (GHC.Read.$wlist
+                      @ (Matrices.SymRectangle a)
+                      (Matrices.$fReadSymRectangle2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <Matrices.SymRectangle a>_R))
+                      @ [Matrices.SymRectangle a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [Matrices.SymRectangle a]))) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fReadSymRectangle_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Matrices.SymRectangle a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadSymRectangle1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[Matrices.SymRectangle a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[Matrices.SymRectangle a]>_R))) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fReadSymRectangle_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Matrices.SymRectangle a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Matrices.$fReadSymRectangle2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <Matrices.SymRectangle a>_R)) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fReadSymRectangle_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (Matrices.SymRectangle a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Matrices.SymRectangle a)
+                   ((Matrices.$fReadSymRectangle2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0]
+                         <Matrices.SymRectangle a>_R)
+                      @ (Matrices.SymRectangle a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (Matrices.SymRectangle a)))) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fShowCameraVolume ::
+    GHC.Show.Show a => GHC.Show.Show (Matrices.CameraVolume a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (Matrices.CameraVolume a)
+                  (Matrices.$fShowCameraVolume_$cshowsPrec @ a $dShow)
+                  (Matrices.$fShowCameraVolume_$cshow @ a $dShow)
+                  (Matrices.$fShowCameraVolume_$cshowList @ a $dShow) -}
+f523af1ae22c1e0197392ce72bd59d78
+  $fShowCameraVolume1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fShowCameraVolume_$cshow ::
+    GHC.Show.Show a => Matrices.CameraVolume a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: Matrices.CameraVolume a) ->
+                 Matrices.$fShowCameraVolume_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fShowCameraVolume_$cshowList ::
+    GHC.Show.Show a => [Matrices.CameraVolume a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Matrices.CameraVolume a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Matrices.CameraVolume a)
+                   (Matrices.$fShowCameraVolume_$cshowsPrec
+                      @ a
+                      $dShow
+                      Matrices.$fShowCameraVolume1)
+                   eta
+                   eta1) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $fShowCameraVolume_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Matrices.CameraVolume a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: Matrices.CameraVolume a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 Matrices.$w$cshowsPrec @ a w ww1 w2 }) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fShowClippingPlanes ::
+    GHC.Show.Show a => GHC.Show.Show (Matrices.ClippingPlanes a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (Matrices.ClippingPlanes a)
+                  (Matrices.$fShowClippingPlanes_$cshowsPrec @ a $dShow)
+                  (Matrices.$fShowClippingPlanes_$cshow @ a $dShow)
+                  (Matrices.$fShowClippingPlanes_$cshowList @ a $dShow) -}
+3d72726c7011b0381882e859eb08dbf8
+  $fShowClippingPlanes1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+46260343838a577292f3e34d4896ef29
+  $fShowClippingPlanes2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "far = "#) -}
+b5cfdbd240bcb5b6aa128568196c62da
+  $fShowClippingPlanes3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+da4ff096b057c8718ca3c58768ec2d9d
+  $fShowClippingPlanes4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "near = "#) -}
+83a2a669e9ce471c5a04a9e372c2ecd9
+  $fShowClippingPlanes5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ClipP {"#) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fShowClippingPlanes_$cshow ::
+    GHC.Show.Show a => Matrices.ClippingPlanes a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: Matrices.ClippingPlanes a) ->
+                 Matrices.$fShowClippingPlanes_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fShowClippingPlanes_$cshowList ::
+    GHC.Show.Show a => [Matrices.ClippingPlanes a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Matrices.ClippingPlanes a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Matrices.ClippingPlanes a)
+                   (Matrices.$fShowClippingPlanes_$cshowsPrec
+                      @ a
+                      $dShow
+                      Matrices.$fShowCameraVolume1)
+                   eta
+                   eta1) -}
+aaa9152dbdc6f711612422e40c9a0d86
+  $fShowClippingPlanes_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Matrices.ClippingPlanes a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: Matrices.ClippingPlanes a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { Matrices.ClipP ww3 ww4 ->
+                 Matrices.$w$cshowsPrec1 @ a w ww1 ww3 ww4 } }) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fShowRectangle ::
+    GHC.Show.Show a => GHC.Show.Show (Matrices.Rectangle a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (Matrices.Rectangle a)
+                  (Matrices.$fShowRectangle_$cshowsPrec @ a $dShow)
+                  (Matrices.$fShowRectangle_$cshow @ a $dShow)
+                  (Matrices.$fShowRectangle_$cshowList @ a $dShow) -}
+4ec1c63dd8aea1afaa9b395486cf6881
+  $fShowRectangle1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "bottom = "#) -}
+f02f100804e5324a92eddc1003595516
+  $fShowRectangle2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "top = "#) -}
+96133413ec73e13b328ed7caec0c08b3
+  $fShowRectangle3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "right = "#) -}
+e7e0b10d53cd2a7a07f1fd07f1c77420
+  $fShowRectangle4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "left = "#) -}
+7632b61962f02cb73f55a710680dca56
+  $fShowRectangle5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Rect {"#) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fShowRectangle_$cshow ::
+    GHC.Show.Show a => Matrices.Rectangle a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dShow :: GHC.Show.Show a) (x :: Matrices.Rectangle a) ->
+                 Matrices.$fShowRectangle_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fShowRectangle_$cshowList ::
+    GHC.Show.Show a => [Matrices.Rectangle a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Matrices.Rectangle a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Matrices.Rectangle a)
+                   (Matrices.$fShowRectangle_$cshowsPrec
+                      @ a
+                      $dShow
+                      Matrices.$fShowCameraVolume1)
+                   eta
+                   eta1) -}
+41bbf95708b1c76cba99427c7d67e492
+  $fShowRectangle_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Matrices.Rectangle a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: Matrices.Rectangle a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { Matrices.Rect ww3 ww4 ww5 ww6 ->
+                 Matrices.$w$cshowsPrec2 @ a w ww1 ww3 ww4 ww5 ww6 } }) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fShowSymRectangle ::
+    GHC.Show.Show a => GHC.Show.Show (Matrices.SymRectangle a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (Matrices.SymRectangle a)
+                  (Matrices.$fShowSymRectangle_$cshowsPrec @ a $dShow)
+                  (Matrices.$fShowSymRectangle_$cshow @ a $dShow)
+                  (Matrices.$fShowSymRectangle_$cshowList @ a $dShow) -}
+ec416b3924b9e6bddc11e30c4ba82840
+  $fShowSymRectangle1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "tb = "#) -}
+12902ffaf2f1f37931857dc9543f829b
+  $fShowSymRectangle2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "lr = "#) -}
+f9e00d264475e27a163281a96af2d012
+  $fShowSymRectangle3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SymRect {"#) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fShowSymRectangle_$cshow ::
+    GHC.Show.Show a => Matrices.SymRectangle a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: Matrices.SymRectangle a) ->
+                 Matrices.$fShowSymRectangle_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fShowSymRectangle_$cshowList ::
+    GHC.Show.Show a => [Matrices.SymRectangle a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [Matrices.SymRectangle a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Matrices.SymRectangle a)
+                   (Matrices.$fShowSymRectangle_$cshowsPrec
+                      @ a
+                      $dShow
+                      Matrices.$fShowCameraVolume1)
+                   eta
+                   eta1) -}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  $fShowSymRectangle_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Matrices.SymRectangle a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: Matrices.SymRectangle a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { Matrices.SymRect ww3 ww4 ->
+                 Matrices.$w$cshowsPrec3 @ a w ww1 ww3 ww4 } }) -}
+1a68090cd773495af384e611a1448d75
+  $tc'ClipP :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17900345067848684595##
+                   11997435811074954353##
+                   Matrices.$trModule
+                   Matrices.$tc'ClipP1) -}
+08c65376d2381e7a0b0eb7cce7b72217
+  $tc'ClipP1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ClipP"#) -}
+c33f5918db50edaded9e1afed643ba37
+  $tc'Frustum :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15323645768908149067##
+                   12474256718106853480##
+                   Matrices.$trModule
+                   Matrices.$tc'Frustum1) -}
+2d62fcbff03ab4ed2a3121a36294b9c0
+  $tc'Frustum1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Frustum"#) -}
+5372a720460ca197315dc201efdf13d7
+  $tc'Prism :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4305053421116611493##
+                   15825931146170346852##
+                   Matrices.$trModule
+                   Matrices.$tc'Prism1) -}
+e624636cad76b55384340f7f94314a05
+  $tc'Prism1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Prism"#) -}
+a7598faaf2cf1dc454ae6c6926628ef5
+  $tc'Rect :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6051649126463399337##
+                   4717654799439722355##
+                   Matrices.$trModule
+                   Matrices.$tc'Rect1) -}
+2635c92c0d88a2948b18f3537c414af9
+  $tc'Rect1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Rect"#) -}
+4195426ce1ffef872e287554aa7a88af
+  $tc'SymFrustum :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8582605195157098522##
+                   7932525975045615002##
+                   Matrices.$trModule
+                   Matrices.$tc'SymFrustum1) -}
+1833cd7f0a590cb51393f65c5669732b
+  $tc'SymFrustum1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SymFrustum"#) -}
+a9b3d3b73043c74d8dc8e45106e2baeb
+  $tc'SymPrism :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17310269354676973370##
+                   2127124438649448641##
+                   Matrices.$trModule
+                   Matrices.$tc'SymPrism1) -}
+35d2da8e01067d88df3decc9586ee1d0
+  $tc'SymPrism1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SymPrism"#) -}
+f106ddaea38bff232ad34ba56fb27c48
+  $tc'SymRect :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18438838796352681342##
+                   189562751454803240##
+                   Matrices.$trModule
+                   Matrices.$tc'SymRect1) -}
+77aa3389267e0ec41df36cd2cd7bb6e6
+  $tc'SymRect1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SymRect"#) -}
+01f2eea29dbff11547f7337aa9ce4925
+  $tcCameraVolume :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2730399742645275779##
+                   5117514193514640991##
+                   Matrices.$trModule
+                   Matrices.$tcCameraVolume1) -}
+f94af6966be036709e783bb34f8f1258
+  $tcCameraVolume1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "CameraVolume"#) -}
+7d1dde2de2923dd4c732b2adbb1a2f4a
+  $tcClippingPlanes :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6568606872516340228##
+                   7553238511219571397##
+                   Matrices.$trModule
+                   Matrices.$tcClippingPlanes1) -}
+c83e0473b99c5c6dfcac2b0e02b571ea
+  $tcClippingPlanes1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "ClippingPlanes"#) -}
+8c7a0c937f210a8827beb7642debabb6
+  $tcRectangle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18398677780473550252##
+                   16118130879966769097##
+                   Matrices.$trModule
+                   Matrices.$tcRectangle1) -}
+64a64ebf7e50abcc68e923432f0a4976
+  $tcRectangle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Rectangle"#) -}
+35e28f233fbb3162c92e3db068bf69bb
+  $tcSymRectangle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13188229413626992655##
+                   6391396089517700534##
+                   Matrices.$trModule
+                   Matrices.$tcSymRectangle1) -}
+f79cac87caf527a4ca78e8b1d898a2d4
+  $tcSymRectangle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SymRectangle"#) -}
+d86c0b8c2e5616f75710bf3a65b5fd49
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Matrices.$trModule2
+                   Matrices.$trModule1) -}
+240de1d96f30486207cc25c70409d2e0
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Matrices"#) -}
+0cbb15e7442b5a410f386741e6c0035b
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT"#) -}
+e2040f5d2d19eb60283227fbf989410f
+  $w$c== :: GHC.Classes.Eq a => a -> a -> a -> a -> GHC.Types.Bool
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 case GHC.Classes.== @ a w ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.== @ a w ww1 ww3 }) -}
+3e5f790e82479ccd353fb20ff8d53e19
+  $w$c==1 ::
+    GHC.Classes.Eq a =>
+    a -> a -> a -> a -> a -> a -> a -> a -> GHC.Types.Bool
+  {- Arity: 9, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a)
+                   (ww5 :: a)
+                   (ww6 :: a)
+                   (ww7 :: a) ->
+                 case GHC.Classes.== @ a w ww ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ a w ww1 ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.== @ a w ww2 ww6 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.== @ a w ww3 ww7 } } }) -}
+045e3988e958e03c4056e677042fc290
+  $w$c==2 :: GHC.Classes.Eq a => a -> a -> a -> a -> GHC.Types.Bool
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 case GHC.Classes.== @ a w ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.== @ a w ww1 ww3 }) -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  $w$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int# -> Matrices.CameraVolume a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,U><S,1*U>,
+     Inline: [0] -}
+c075b05c02614f57c92b394e674b3a98
+  $w$cshowsPrec1 ::
+    GHC.Show.Show a => GHC.Prim.Int# -> a -> a -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U(C(C1(U)),A,A)><S,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww2
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Matrices.$fShowClippingPlanes5
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Matrices.$fShowClippingPlanes4
+                          (f (GHC.Base.++
+                                @ GHC.Types.Char
+                                Matrices.$fShowClippingPlanes3
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Matrices.$fShowClippingPlanes2
+                                   (f1
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Matrices.$fShowClippingPlanes1
+                                         x))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+13a62e7e0aaa9ec747429c6e7c00072a
+  $w$cshowsPrec2 ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int# -> a -> a -> a -> a -> GHC.Show.ShowS
+  {- Arity: 6,
+     Strictness: <L,U(C(C1(U)),A,A)><S,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww2
+                 } in
+                 let {
+                   f2 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww3
+                 } in
+                 let {
+                   f3 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww4
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Matrices.$fShowRectangle5
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Matrices.$fShowRectangle4
+                          (f (GHC.Base.++
+                                @ GHC.Types.Char
+                                Matrices.$fShowClippingPlanes3
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Matrices.$fShowRectangle3
+                                   (f1
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Matrices.$fShowClippingPlanes3
+                                         (GHC.Base.++
+                                            @ GHC.Types.Char
+                                            Matrices.$fShowRectangle2
+                                            (f2
+                                               (GHC.Base.++
+                                                  @ GHC.Types.Char
+                                                  Matrices.$fShowClippingPlanes3
+                                                  (GHC.Base.++
+                                                     @ GHC.Types.Char
+                                                     Matrices.$fShowRectangle1
+                                                     (f3
+                                                        (GHC.Base.++
+                                                           @ GHC.Types.Char
+                                                           Matrices.$fShowClippingPlanes1
+                                                           x))))))))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+7f441c2781759d41fde6a09db35c4eef
+  $w$cshowsPrec3 ::
+    GHC.Show.Show a => GHC.Prim.Int# -> a -> a -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U(C(C1(U)),A,A)><S,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w Matrices.$fShowCameraVolume1 ww2
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Matrices.$fShowSymRectangle3
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Matrices.$fShowSymRectangle2
+                          (f (GHC.Base.++
+                                @ GHC.Types.Char
+                                Matrices.$fShowClippingPlanes3
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Matrices.$fShowSymRectangle1
+                                   (f1
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Matrices.$fShowClippingPlanes1
+                                         x))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+75a120e9cdf07b6dc2c5e27169414566
+  $wbuildView ::
+    GHC.Num.Num a =>
+    LinAlg.Vec4 a
+    -> LinAlg.Vec4 a
+    -> LinAlg.Vec4 a
+    -> LinAlg.Vec4 a
+    -> (# LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a #)
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><L,U(U,U,U,U)><L,U(U,U,U,U)><L,U(U,U,U,U)><L,U(U,U,U,U)>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Vec4 a)
+                   (w3 :: LinAlg.Vec4 a)
+                   (w4 :: LinAlg.Vec4 a) ->
+                 (# LinAlg.Vec4
+                      @ a
+                      (case w1 of wild { LinAlg.Vec4 x y z ds -> x })
+                      (case w2 of wild { LinAlg.Vec4 x y z ds -> x })
+                      (case w3 of wild { LinAlg.Vec4 x y z ds -> x })
+                      (GHC.Num.fromInteger @ a w Geometry.crossProduct1),
+                    LinAlg.Vec4
+                      @ a
+                      (case w1 of wild { LinAlg.Vec4 x y z ds -> y })
+                      (case w2 of wild { LinAlg.Vec4 x y z ds -> y })
+                      (case w3 of wild { LinAlg.Vec4 x y z ds -> y })
+                      (GHC.Num.fromInteger @ a w Geometry.crossProduct1),
+                    LinAlg.Vec4
+                      @ a
+                      (case w1 of wild { LinAlg.Vec4 x y z ds -> z })
+                      (case w2 of wild { LinAlg.Vec4 x y z ds -> z })
+                      (case w3 of wild { LinAlg.Vec4 x y z ds -> z })
+                      (GHC.Num.fromInteger @ a w Geometry.crossProduct1),
+                    LinAlg.Vec4
+                      @ a
+                      (GHC.Num.negate
+                         @ a
+                         w
+                         (case w1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                          case w4 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                          LinAlg.$w$cdot1 @ a w ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }))
+                      (GHC.Num.negate
+                         @ a
+                         w
+                         (case w2 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                          case w4 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                          LinAlg.$w$cdot1 @ a w ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }))
+                      (GHC.Num.negate
+                         @ a
+                         w
+                         (case w3 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                          case w4 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                          LinAlg.$w$cdot1 @ a w ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }))
+                      (GHC.Num.fromInteger @ a w Geometry.e7) #)) -}
+0f88736fd772de54c58bc1dde3f00507
+  $wfovCamera ::
+    GHC.Float.Floating a =>
+    a
+    -> a
+    -> a
+    -> a
+    -> (# Matrices.SymRectangle a, Matrices.ClippingPlanes a #)
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(1*U,1*U,A,A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Float.Floating a)
+                   (w1 :: a)
+                   (w2 :: a)
+                   (ww :: a)
+                   (ww1 :: a) ->
+                 (# let {
+                      $dFractional :: GHC.Real.Fractional a = GHC.Float.$p1Floating @ a w
+                    } in
+                    let {
+                      $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                    } in
+                    let {
+                      lr1 :: a
+                      = GHC.Num.*
+                          @ a
+                          $dNum
+                          ww
+                          (GHC.Float.tan
+                             @ a
+                             w
+                             (GHC.Real./
+                                @ a
+                                $dFractional
+                                (GHC.Num.* @ a $dNum w1 (GHC.Float.pi @ a w))
+                                (GHC.Num.fromInteger @ a $dNum Matrices.fovCamera1)))
+                    } in
+                    Matrices.SymRect @ a lr1 (GHC.Num.* @ a $dNum w2 lr1),
+                    Matrices.ClipP @ a ww ww1 #)) -}
+8356ed125a40d3ae5e8d21be9269ab26
+  $wfpsCamera ::
+    GHC.Float.Floating a =>
+    LinAlg.Point3 a
+    -> a
+    -> a
+    -> (# LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,1*U(U,U,U)><L,U><L,U>,
+     Inline: [0] -}
+f11231c3afb55968b3e0e9a036f1eb47
+  $wlookAt ::
+    GHC.Float.Floating a =>
+    a
+    -> a
+    -> a
+    -> LinAlg.Point3 a
+    -> LinAlg.Vec3 a
+    -> (# LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a #)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U(U(U(U,U,U,U,U,U,U),U,U,U),A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U><L,U><L,1*U(U,U,U)><L,1*U(U,U,U)>,
+     Inline: [0] -}
+650987c992fc6f56f1ad1d7378caea5f
+  $wprojectionMatrix ::
+    GHC.Real.Fractional a =>
+    Matrices.CameraVolume a
+    -> (# LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a, LinAlg.Vec4 a #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,C(C1(U)),A,A)><S,1*U>, Inline: [0] -}
+ba34b65cde97b47e50813cf4bc87fd1b
+  data CameraVolume a
+    = Frustum (Matrices.Rectangle a) (Matrices.ClippingPlanes a)
+    | SymFrustum (Matrices.SymRectangle a) (Matrices.ClippingPlanes a)
+    | Prism (Matrices.Rectangle a) (Matrices.ClippingPlanes a)
+    | SymPrism (Matrices.SymRectangle a) (Matrices.ClippingPlanes a)
+aaa9152dbdc6f711612422e40c9a0d86
+  data ClippingPlanes a = ClipP {near :: a, far :: a}
+41bbf95708b1c76cba99427c7d67e492
+  data Rectangle a
+    = Rect {left :: a, right :: a, top :: a, bottom :: a}
+8f8bdd05a2e6b80d11135c9ddc30891a
+  data SymRectangle a = SymRect {lr :: a, tb :: a}
+3ce11774a075053e86208c414c463e08
+  bottom :: Matrices.Rectangle a -> a
+  RecSel Left Matrices.Rectangle
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.Rectangle a) ->
+                 case ds of wild { Matrices.Rect ds1 ds2 ds3 ds4 -> ds4 }) -}
+7e0a5a27ec6b5c20929e457d3313446c
+  buildView ::
+    GHC.Num.Num a =>
+    LinAlg.Vec4 a
+    -> LinAlg.Vec4 a -> LinAlg.Vec4 a -> LinAlg.Vec4 a -> LinAlg.Mat4 a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),C(U),A,A,C(U))><L,U(U,U,U,U)><L,U(U,U,U,U)><L,U(U,U,U,U)><L,U(U,U,U,U)>m1,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Vec4 a)
+                   (w3 :: LinAlg.Vec4 a)
+                   (w4 :: LinAlg.Vec4 a) ->
+                 case Matrices.$wbuildView
+                        @ a
+                        w
+                        w1
+                        w2
+                        w3
+                        w4 of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                 LinAlg.Mat4 @ a ww1 ww2 ww3 ww4 }) -}
+4c68e7e711b3629496f83275a87cc018
+  far :: Matrices.ClippingPlanes a -> a
+  RecSel Left Matrices.ClippingPlanes
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.ClippingPlanes a) ->
+                 case ds of wild { Matrices.ClipP ds1 ds2 -> ds2 }) -}
+e6aa894c70d8f8e732b3dee9cca0d977
+  fovCamera ::
+    GHC.Float.Floating a =>
+    a -> a -> Matrices.ClippingPlanes a -> Matrices.CameraVolume a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(1*U,1*U,A,A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U><S,1*U(U,U)>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: GHC.Float.Floating a)
+                   (w1 :: a)
+                   (w2 :: a)
+                   (w3 :: Matrices.ClippingPlanes a) ->
+                 case w3 of ww { Matrices.ClipP ww1 ww2 ->
+                 case Matrices.$wfovCamera
+                        @ a
+                        w
+                        w1
+                        w2
+                        ww1
+                        ww2 of ww3 { (#,#) ww4 ww5 ->
+                 Matrices.SymFrustum @ a ww4 ww5 } }) -}
+9c44d329098fd96bc00bc2ee57b9b34e
+  fovCamera1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (360) -}
+d544599cd17fc8c200a8bfe5f1c4e857
+  fovProjMat ::
+    GHC.Float.Floating a =>
+    a -> a -> Matrices.ClippingPlanes a -> LinAlg.Mat4 a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(U(U,U,U,U),U,A,A,A,A,A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U><S,1*U(U,U)>m1,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (eta :: a)
+                   (eta1 :: a)
+                   (eta2 :: Matrices.ClippingPlanes a) ->
+                 Matrices.projectionMatrix
+                   @ a
+                   (GHC.Float.$p1Floating @ a $dFloating)
+                   (Matrices.fovCamera @ a $dFloating eta eta1 eta2)) -}
+f5a3965fe21e6762b9af27ef6796dccf
+  fpsCamera ::
+    GHC.Float.Floating a => LinAlg.Point3 a -> a -> a -> LinAlg.Mat4 a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(1*U,A,A,A,A,A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,1*U(U,U,U)><L,U><L,U>m1,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: GHC.Float.Floating a)
+                   (w1 :: LinAlg.Point3 a)
+                   (w2 :: a)
+                   (w3 :: a) ->
+                 case Matrices.$wfpsCamera
+                        @ a
+                        w
+                        w1
+                        w2
+                        w3 of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                 LinAlg.Mat4 @ a ww1 ww2 ww3 ww4 }) -}
+b8e338accb02bc9934f7f355f25a823d
+  left :: Matrices.Rectangle a -> a
+  RecSel Left Matrices.Rectangle
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLL),1*U(1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.Rectangle a) ->
+                 case ds of wild { Matrices.Rect ds1 ds2 ds3 ds4 -> ds1 }) -}
+65e6d05a492a06e26644f075418473ae
+  lookAt ::
+    GHC.Float.Floating a =>
+    LinAlg.Point3 a
+    -> LinAlg.Point3 a -> LinAlg.Vec3 a -> LinAlg.Mat4 a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(U(U(U,U,U,U,U,U,U),U,U,U),A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U(U,U,U)><L,1*U(U,U,U)><L,1*U(U,U,U)>m1,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: GHC.Float.Floating a)
+                   (w1 :: LinAlg.Point3 a)
+                   (w2 :: LinAlg.Point3 a)
+                   (w3 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { LinAlg.Point3 ww1 ww2 ww3 ->
+                 case Matrices.$wlookAt
+                        @ a
+                        w
+                        ww1
+                        ww2
+                        ww3
+                        w2
+                        w3 of ww4 { (#,,,#) ww5 ww6 ww7 ww8 ->
+                 LinAlg.Mat4 @ a ww5 ww6 ww7 ww8 } }) -}
+11df0e84668aaa71036e140b0ee37a2b
+  lr :: Matrices.SymRectangle a -> a
+  RecSel Left Matrices.SymRectangle
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.SymRectangle a) ->
+                 case ds of wild { Matrices.SymRect ds1 ds2 -> ds1 }) -}
+b335026553ceac9a55f3ae776470476e
+  matrixToCMList :: GHC.Num.Num a => LinAlg.Mat4 a -> [a]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,A,A,A,C(U))><S,1*U> -}
+c0f4fe367371c1630560979a7ea3412a
+  near :: Matrices.ClippingPlanes a -> a
+  RecSel Left Matrices.ClippingPlanes
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.ClippingPlanes a) ->
+                 case ds of wild { Matrices.ClipP ds1 ds2 -> ds1 }) -}
+9dfb5411d5aa64cf7a6f62d34eaa6c2e
+  projectionMatrix ::
+    GHC.Real.Fractional a => Matrices.CameraVolume a -> LinAlg.Mat4 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U,C(C1(U)),A,A)><S,1*U>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   (w :: GHC.Real.Fractional a)
+                   (w1 :: Matrices.CameraVolume a) ->
+                 case Matrices.$wprojectionMatrix
+                        @ a
+                        w
+                        w1 of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                 LinAlg.Mat4 @ a ww1 ww2 ww3 ww4 }) -}
+2c6924423fbf46a9a66afd42dccbd3e6
+  right :: Matrices.Rectangle a -> a
+  RecSel Left Matrices.Rectangle
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.Rectangle a) ->
+                 case ds of wild { Matrices.Rect ds1 ds2 ds3 ds4 -> ds2 }) -}
+ee6bea4e70686b28f42ef4941caa5811
+  tb :: Matrices.SymRectangle a -> a
+  RecSel Left Matrices.SymRectangle
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.SymRectangle a) ->
+                 case ds of wild { Matrices.SymRect ds1 ds2 -> ds2 }) -}
+ed42da0d1d633c0530976a767673d71d
+  top :: Matrices.Rectangle a -> a
+  RecSel Left Matrices.Rectangle
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: Matrices.Rectangle a) ->
+                 case ds of wild { Matrices.Rect ds1 ds2 ds3 ds4 -> ds3 }) -}
+34b11b56a311aecc5da49166dadc77fa
+  vectorToList :: LinAlg.Vec4 a -> [a]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U,U)>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: LinAlg.Vec4 a) ->
+                 case ds of wild { LinAlg.Vec4 x y z w ->
+                 GHC.Types.:
+                   @ a
+                   x
+                   (GHC.Types.:
+                      @ a
+                      y
+                      (GHC.Types.: @ a z (GHC.Types.: @ a w (GHC.Types.[] @ a)))) }) -}
+instance [safe] GHC.Classes.Eq [Matrices.CameraVolume]
+  = Matrices.$fEqCameraVolume
+instance [safe] GHC.Classes.Eq [Matrices.ClippingPlanes]
+  = Matrices.$fEqClippingPlanes
+instance [safe] GHC.Classes.Eq [Matrices.Rectangle]
+  = Matrices.$fEqRectangle
+instance [safe] GHC.Classes.Eq [Matrices.SymRectangle]
+  = Matrices.$fEqSymRectangle
+instance [safe] GHC.Read.Read [Matrices.CameraVolume]
+  = Matrices.$fReadCameraVolume
+instance [safe] GHC.Read.Read [Matrices.ClippingPlanes]
+  = Matrices.$fReadClippingPlanes
+instance [safe] GHC.Read.Read [Matrices.Rectangle]
+  = Matrices.$fReadRectangle
+instance [safe] GHC.Read.Read [Matrices.SymRectangle]
+  = Matrices.$fReadSymRectangle
+instance [safe] GHC.Show.Show [Matrices.CameraVolume]
+  = Matrices.$fShowCameraVolume
+instance [safe] GHC.Show.Show [Matrices.ClippingPlanes]
+  = Matrices.$fShowClippingPlanes
+instance [safe] GHC.Show.Show [Matrices.Rectangle]
+  = Matrices.$fShowRectangle
+instance [safe] GHC.Show.Show [Matrices.SymRectangle]
+  = Matrices.$fShowSymRectangle
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

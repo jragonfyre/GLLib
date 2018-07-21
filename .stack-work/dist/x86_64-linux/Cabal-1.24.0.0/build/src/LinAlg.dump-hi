@@ -1,0 +1,3842 @@
+
+==================== FINAL INTERFACE ====================
+2017-01-09 22:58:55.535215 UTC
+
+interface gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT:LinAlg 8001
+  interface hash: e0e159dbba31668a703fa51e5b93f99f
+  ABI hash: 2fda7d8c21b2891c403a8ca2bc84537e
+  export-list hash: 5319308500b79c249305bf8a6f3dfa12
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d49a5d14af7aa02acbbf83de78f39a9d
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  LinAlg.basicMat4
+  LinAlg.diagMat4
+  LinAlg.CVector{LinAlg.basisVector LinAlg.coord LinAlg.mapCoord}
+  LinAlg.Homogenizable{LinAlg.dehomogenize LinAlg.homogenize}
+  LinAlg.IPVector{LinAlg..# LinAlg.angle LinAlg.cos2Angle LinAlg.cosAngle LinAlg.distance LinAlg.dot LinAlg.len LinAlg.normalize LinAlg.sqLen}
+  LinAlg.Mat4{LinAlg.Diag4 LinAlg.Mat4}
+  LinAlg.Matrix{LinAlg.*#* LinAlg.*| LinAlg.transpose LinAlg.|*}
+  LinAlg.Point{LinAlg.difference LinAlg.fromVector LinAlg.origin LinAlg.toVector LinAlg.translatePoint}
+  LinAlg.Point3{LinAlg.Point3}
+  LinAlg.Vec3{LinAlg.Vec3}
+  LinAlg.Vec4{LinAlg.Vec4}
+  LinAlg.Vector{LinAlg.*# LinAlg.+# LinAlg.-# LinAlg./# LinAlg.dimension LinAlg.lcomb LinAlg.lcombG LinAlg.negate' LinAlg.zero'}
+module dependencies: Utils
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Float 469226b1bc53433e95d0167dec5d0312
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Read 817c914615ac8e308afc0c675fb3f671
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.ParserCombinators.ReadPrec 9512e2f4b227f507f87a150887202aed
+import  -/  base-4.9.0.0:Text.Read.Lex fe3dd7b823826bf6870140c5363f9596
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  Utils 7e6380ca2e3aaf938470a60c7c042da9
+  exports: f01f824861514a5cc80d647a353cc3b6
+  foldl' da57b3090b75a4d4c2194db023746aff
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 62c0e736506aac47ef40569f5b82e19d
+fixities infixl 7 *#, infixr 7 *|, infixl 6 +#, infixl 6 -#,
+         infixl 7 .#, infixl 7 /#, infixl 7 |*
+bd228e7601c55ee78fb09e5b578638df
+  $dm*# ::
+    LinAlg.Vector v => forall a. GHC.Num.Num a => a -> v a -> v a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLLLLLLC(C(C(C(C(S)))))L),U(1*C1(U),A,A,A,A,A,A,1*C1(C1(C1(C1(C1(U))))),A)><L,U(U,U,U,U,U,U,U)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dVector :: LinAlg.Vector v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (a1 :: a)
+                   (v1 :: v a) ->
+                 LinAlg.lcomb
+                   @ v
+                   $dVector
+                   @ a
+                   $dNum
+                   a1
+                   v1
+                   (GHC.Num.fromInteger @ a $dNum 0)
+                   (LinAlg.zero' @ v $dVector @ a $dNum)) -}
+f9d6074a7925c7d692c472bf9d6065c9
+  $dm*| ::
+    LinAlg.Matrix m v => forall a. GHC.Num.Num a => m a -> v a -> v a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLLLC(C(C(S)))L),U(A,A,1*C1(U),A,1*C1(C1(C1(U))),A)><L,U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (m :: * -> *)
+                   @ (v :: * -> *)
+                   ($dMatrix :: LinAlg.Matrix m v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (mat :: m a)
+                   (vec :: v a) ->
+                 LinAlg.|*
+                   @ m
+                   @ v
+                   $dMatrix
+                   @ a
+                   $dNum
+                   vec
+                   (LinAlg.transpose @ m @ v $dMatrix @ a mat)) -}
+1187d0ff4d0ebc854531b2f28e129ff6
+  $dm+# ::
+    LinAlg.Vector v => forall a. GHC.Num.Num a => v a -> v a -> v a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLLLLLLC(C(C(C(C(S)))))L),1*U(A,A,A,A,A,A,A,1*C1(C1(C1(C1(C1(U))))),A)><L,U(U,U,U,U,U,U,U)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dVector :: LinAlg.Vector v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (u :: v a)
+                   (v1 :: v a) ->
+                 LinAlg.lcomb
+                   @ v
+                   $dVector
+                   @ a
+                   $dNum
+                   (GHC.Num.fromInteger @ a $dNum 1)
+                   u
+                   (GHC.Num.fromInteger @ a $dNum 1)
+                   v1) -}
+b6461fd19ccbe786692932bceda3a67d
+  $dm-# ::
+    LinAlg.Vector v => forall a. GHC.Num.Num a => v a -> v a -> v a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLLLLLLC(C(C(C(C(S)))))L),1*U(A,A,A,A,A,A,A,1*C1(C1(C1(C1(C1(U))))),A)><L,U(U,U,U,U,U,U,U)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dVector :: LinAlg.Vector v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (u :: v a)
+                   (v1 :: v a) ->
+                 LinAlg.lcomb
+                   @ v
+                   $dVector
+                   @ a
+                   $dNum
+                   (GHC.Num.fromInteger @ a $dNum 1)
+                   u
+                   (GHC.Num.negate @ a $dNum (GHC.Num.fromInteger @ a $dNum 1))
+                   v1) -}
+31f52fd44f610c0c561d3b50183f818c
+  $dm.# ::
+    LinAlg.IPVector v => forall a. GHC.Num.Num a => v a -> v a -> a
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLLLLLL),U(A,U,A,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (0, True, True) LinAlg.dot -}
+ae90df38e9157cb5441b6027b85d6139
+  $dm/# ::
+    LinAlg.Vector v =>
+    forall a. GHC.Real.Fractional a => v a -> a -> v a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLLLC(C(C(S)))LLLL),1*U(A,A,A,A,1*C1(C1(C1(U))),A,A,A,A)><L,U(1*U,1*C1(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dVector :: LinAlg.Vector v)
+                   @ a
+                   ($dFractional :: GHC.Real.Fractional a)
+                   (eta :: v a)
+                   (eta1 :: a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 LinAlg.*#
+                   @ v
+                   $dVector
+                   @ a
+                   $dNum
+                   (GHC.Real./
+                      @ a
+                      $dFractional
+                      (GHC.Num.fromInteger @ a $dNum 1)
+                      eta1)
+                   eta) -}
+bcc64778596d5d025fd52bdbe30ef5bd
+  $dmangle ::
+    LinAlg.IPVector v =>
+    forall a. GHC.Float.Floating a => v a -> v a -> a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,A,A,1*C1(C1(C1(U))),A)><S(LLLLLLLLLLLC(S)LLLLLLLLLLL),U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dIPVector :: LinAlg.IPVector v)
+                   @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (u :: v a)
+                   (v1 :: v a) ->
+                 GHC.Base.$
+                   @ 'GHC.Types.PtrRepLifted
+                   @ a
+                   @ a
+                   (GHC.Float.acos @ a $dFloating)
+                   (LinAlg.cosAngle @ v $dIPVector @ a $dFloating u v1)) -}
+37f59c75c2d976c381910dd5cc637c89
+  $dmcos2Angle ::
+    LinAlg.IPVector v =>
+    forall a. GHC.Real.Fractional a => v a -> v a -> a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,1*C1(C1(C1(U))),A,C(C1(U)),A,A,A,A,A,A)><S(LC(C(S))LL),U(1*U,1*C1(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dIPVector :: LinAlg.IPVector v)
+                   @ a
+                   ($dFractional :: GHC.Real.Fractional a)
+                   (eta :: v a)
+                   (eta1 :: v a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 GHC.Real./
+                   @ a
+                   $dFractional
+                   (let {
+                      x :: a = LinAlg.dot @ v $dIPVector @ a $dNum eta eta1
+                    } in
+                    GHC.Num.* @ a $dNum x x)
+                   (GHC.Num.*
+                      @ a
+                      $dNum
+                      (LinAlg.sqLen @ v $dIPVector @ a $dNum eta)
+                      (LinAlg.sqLen @ v $dIPVector @ a $dNum eta1))) -}
+e0c6a3077d78154fcab338f75f869ef0
+  $dmcosAngle ::
+    LinAlg.IPVector v =>
+    forall a. GHC.Float.Floating a => v a -> v a -> a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,1*C1(C1(C1(U))),A,C(C1(U)),A,A,A,A,A,A)><S(SLLLLLLLLLLLLLLLLLLLLLL),U(1*U,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dIPVector :: LinAlg.IPVector v)
+                   @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (eta :: v a)
+                   (eta1 :: v a) ->
+                 let {
+                   $dFractional :: GHC.Real.Fractional a
+                   = GHC.Float.$p1Floating @ a $dFloating
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 GHC.Real./
+                   @ a
+                   $dFractional
+                   (LinAlg.dot @ v $dIPVector @ a $dNum eta eta1)
+                   (GHC.Base.$
+                      @ 'GHC.Types.PtrRepLifted
+                      @ a
+                      @ a
+                      (GHC.Float.sqrt @ a $dFloating)
+                      (GHC.Num.*
+                         @ a
+                         $dNum
+                         (LinAlg.sqLen @ v $dIPVector @ a $dNum eta)
+                         (LinAlg.sqLen @ v $dIPVector @ a $dNum eta1)))) -}
+685540e239ab7884a4d8eb0923e61882
+  $dmdistance ::
+    LinAlg.IPVector v =>
+    forall a. GHC.Float.Floating a => v a -> v a -> a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLLLC(C(S))LLLLL),U(1*U(A,A,A,1*C1(C1(C1(U))),A,A,A,A,A),A,A,A,1*C1(C1(U)),A,A,A,A,A)><L,U(U(U,U,U,U),U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dIPVector :: LinAlg.IPVector v)
+                   @ a
+                   (eta :: GHC.Float.Floating a)
+                   (eta1 :: v a)
+                   (eta2 :: v a) ->
+                 LinAlg.len
+                   @ v
+                   $dIPVector
+                   @ a
+                   eta
+                   (LinAlg.-#
+                      @ v
+                      (LinAlg.$p1IPVector @ v $dIPVector)
+                      @ a
+                      (GHC.Real.$p1Fractional @ a (GHC.Float.$p1Floating @ a eta))
+                      eta1
+                      eta2)) -}
+b7389aa0d09c1856872af7d0599b949b
+  $dmfromVector ::
+    LinAlg.Point p v => forall a. GHC.Num.Num a => v a -> p a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLC(C(C(S)))LLL),U(A,A,1*C1(C1(C1(U))),1*C1(U),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (p :: * -> *)
+                   @ (v :: * -> *)
+                   ($dPoint :: LinAlg.Point p v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (v1 :: v a) ->
+                 LinAlg.translatePoint
+                   @ p
+                   @ v
+                   $dPoint
+                   @ a
+                   $dNum
+                   (LinAlg.origin @ p @ v $dPoint @ a $dNum)
+                   v1) -}
+26b0cbd5d24dbd735f236f5ea0aa5515
+  $dmlcomb ::
+    LinAlg.Vector v =>
+    forall a. GHC.Num.Num a => a -> v a -> a -> v a -> v a
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(LLC(C(C(S)))LLLLLL),U(A,A,1*C1(C1(C1(U))),A,C(C1(C1(U))),A,A,A,A)><L,U><L,U><L,U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dVector :: LinAlg.Vector v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (a1 :: a)
+                   (u :: v a)
+                   (b :: a)
+                   (v1 :: v a) ->
+                 LinAlg.+#
+                   @ v
+                   $dVector
+                   @ a
+                   $dNum
+                   (LinAlg.*# @ v $dVector @ a $dNum a1 u)
+                   (LinAlg.*# @ v $dVector @ a $dNum b v1)) -}
+b46d7377aa263c74f25cd48ab1e300c7
+  $dmlcombG ::
+    LinAlg.Vector v => forall a. GHC.Num.Num a => [(a, v a)] -> v a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*C1(U),A,C(C1(C1(U))),A,C(C1(C1(U))),A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dVector :: LinAlg.Vector v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a) ->
+                 Utils.foldl'
+                   @ (v a)
+                   @ (a, v a)
+                   (\ (res :: v a) (ds :: (a, v a)) ->
+                    case ds of wild { (,) a1 v1 ->
+                    LinAlg.+#
+                      @ v
+                      $dVector
+                      @ a
+                      $dNum
+                      res
+                      (LinAlg.*# @ v $dVector @ a $dNum a1 v1) })
+                   (LinAlg.zero' @ v $dVector @ a $dNum)) -}
+5ae481be14effc36489d0fc4cd4b05b2
+  $dmlen ::
+    LinAlg.IPVector v => forall a. GHC.Float.Floating a => v a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,1*C1(U),A,A,A,A,A,A)><L,U(1*U,A,A,A,1*U,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dIPVector :: LinAlg.IPVector v)
+                   @ a
+                   ($dFloating :: GHC.Float.Floating a) ->
+                 let {
+                   f :: a -> a = GHC.Float.sqrt @ a $dFloating
+                 } in
+                 let {
+                   g :: GHC.Real.Fractional a = GHC.Float.$p1Floating @ a $dFloating
+                 } in
+                 let {
+                   g1 :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a g
+                 } in
+                 let {
+                   g2 :: v a -> a = LinAlg.sqLen @ v $dIPVector @ a g1
+                 } in
+                 \ (x :: v a) -> f (g2 x)) -}
+42735894a57675e2582ea63b945e03cc
+  $dmnegate' ::
+    LinAlg.Vector v => forall a. GHC.Num.Num a => v a -> v a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLLLC(C(C(S)))LLLL),1*U(A,A,A,A,1*C1(C1(C1(U))),A,A,A,A)><L,U(U,U,U,U,U,U,U)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dVector :: LinAlg.Vector v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (v1 :: v a) ->
+                 LinAlg.*#
+                   @ v
+                   $dVector
+                   @ a
+                   $dNum
+                   (GHC.Num.negate @ a $dNum (GHC.Num.fromInteger @ a $dNum 1))
+                   v1) -}
+e812286963040a3724593e68d5d68d81
+  $dmnormalize ::
+    LinAlg.IPVector v => forall a. GHC.Float.Floating a => v a -> v a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(S(LLLLLC(C(C(S)))LLL)LLLLLLLLL),U(1*U(A,A,A,A,A,1*C1(C1(C1(U))),A,A,A),A,A,A,1*C1(C1(U)),A,A,A,A,A)><L,U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dIPVector :: LinAlg.IPVector v)
+                   @ a
+                   (eta :: GHC.Float.Floating a)
+                   (eta1 :: v a) ->
+                 LinAlg./#
+                   @ v
+                   (LinAlg.$p1IPVector @ v $dIPVector)
+                   @ a
+                   (GHC.Float.$p1Floating @ a eta)
+                   eta1
+                   (LinAlg.len @ v $dIPVector @ a eta eta1)) -}
+b111bc39f6e3d2633b06c840b67ee8c3
+  $dmsqLen ::
+    LinAlg.IPVector v => forall a. GHC.Num.Num a => v a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(C(S)))LLLLLLLL),1*U(A,1*C1(C1(C1(U))),A,A,A,A,A,A,A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (v :: * -> *)
+                   ($dIPVector :: LinAlg.IPVector v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (v1 :: v a) ->
+                 LinAlg.dot @ v $dIPVector @ a $dNum v1 v1) -}
+71484b6ccd3d0caca53ac5135f3ce13d
+  $dmtoVector ::
+    LinAlg.Point p v => forall a. GHC.Num.Num a => p a -> v a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(C(S)))LLLL),U(A,1*C1(C1(C1(U))),A,1*C1(U),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (p :: * -> *)
+                   @ (v :: * -> *)
+                   ($dPoint :: LinAlg.Point p v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (p1 :: p a) ->
+                 LinAlg.difference
+                   @ p
+                   @ v
+                   $dPoint
+                   @ a
+                   $dNum
+                   p1
+                   (LinAlg.origin @ p @ v $dPoint @ a $dNum)) -}
+1457a0c6838f9d3c5c05c38a89230ea4
+  $dm|* ::
+    LinAlg.Matrix m v => forall a. GHC.Num.Num a => v a -> m a -> v a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S(LLLC(C(C(S)))LL),U(A,A,1*C1(U),1*C1(C1(C1(U))),A,A)><L,U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ (m :: * -> *)
+                   @ (v :: * -> *)
+                   ($dMatrix :: LinAlg.Matrix m v)
+                   @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (vec :: v a)
+                   (mat :: m a) ->
+                 LinAlg.*|
+                   @ m
+                   @ v
+                   $dMatrix
+                   @ a
+                   $dNum
+                   (LinAlg.transpose @ m @ v $dMatrix @ a mat)
+                   vec) -}
+8207829e73137f12425b28e1199be61b
+  $fCVectorVec1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (3) -}
+a4bfe47b139f0b549e14cf389030d67e
+  $fCVectorVec2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+632d988dde31c54ea420ce37f717120b
+  $fCVectorVec3 :: LinAlg.CVector LinAlg.Vec3
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Vec3
+                  LinAlg.$fIPVectorVec3
+                  LinAlg.$fCVectorVec3_$cbasisVector
+                  LinAlg.$fCVectorVec3_$ccoord
+                  LinAlg.$fCVectorVec3_$cmapCoord -}
+d4dc4ce910963bc9e51a9053c1aa6fff
+  $fCVectorVec3_$cbasisVector ::
+    GHC.Num.Num a =>
+    GHC.Integer.Type.Integer -> GHC.Base.Maybe (LinAlg.Vec3 a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,A,A,A,C(U))><S,U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.eqInteger#
+                        ds
+                        LinAlg.$fCVectorVec6 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             ds
+                             LinAlg.$fCVectorVec2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case GHC.Integer.Type.eqInteger#
+                                  ds
+                                  LinAlg.$fCVectorVec1 of wild4 { DEFAULT ->
+                           case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                             GHC.Types.False -> GHC.Base.Nothing @ (LinAlg.Vec3 a)
+                             GHC.Types.True
+                             -> GHC.Base.Just
+                                  @ (LinAlg.Vec3 a)
+                                  (LinAlg.Vec3
+                                     @ a
+                                     (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                     (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                     (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)) } }
+                        GHC.Types.True
+                        -> GHC.Base.Just
+                             @ (LinAlg.Vec3 a)
+                             (LinAlg.Vec3
+                                @ a
+                                (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                                (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)) } }
+                   GHC.Types.True
+                   -> GHC.Base.Just
+                        @ (LinAlg.Vec3 a)
+                        (LinAlg.Vec3
+                           @ a
+                           (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                           (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                           (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)) } }) -}
+84efdd7fac3214d6bb78506aa9d90b34
+  $fCVectorVec3_$ccoord ::
+    GHC.Integer.Type.Integer -> LinAlg.Vec3 a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,1*U(U,U,U)>,
+     Unfolding: (\ @ a
+                   (ds :: GHC.Integer.Type.Integer)
+                   (ds1 :: LinAlg.Vec3 a) ->
+                 case GHC.Integer.Type.eqInteger#
+                        ds
+                        LinAlg.$fCVectorVec6 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             ds
+                             LinAlg.$fCVectorVec2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case GHC.Integer.Type.eqInteger#
+                                  ds
+                                  LinAlg.$fCVectorVec1 of wild4 { DEFAULT ->
+                           case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                             GHC.Types.False -> GHC.Base.Nothing @ a
+                             GHC.Types.True
+                             -> case ds1 of wild6 { LinAlg.Vec3 ds2 ds3 x ->
+                                GHC.Base.Just @ a x } } }
+                        GHC.Types.True
+                        -> case ds1 of wild4 { LinAlg.Vec3 ds2 x ds3 ->
+                           GHC.Base.Just @ a x } } }
+                   GHC.Types.True
+                   -> case ds1 of wild2 { LinAlg.Vec3 x ds2 ds3 ->
+                      GHC.Base.Just @ a x } } }) -}
+57014c35fe8bf8f8f344458c69521b43
+  $fCVectorVec3_$cmapCoord ::
+    GHC.Integer.Type.Integer
+    -> (a -> a) -> LinAlg.Vec3 a -> LinAlg.Vec3 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U><L,1*C1(U)><S,1*U(U,U,U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Integer.Type.Integer)
+                   (w1 :: a -> a)
+                   (w2 :: LinAlg.Vec3 a) ->
+                 case w2 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case GHC.Integer.Type.eqInteger#
+                        w
+                        LinAlg.$fCVectorVec6 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             w
+                             LinAlg.$fCVectorVec2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case GHC.Integer.Type.eqInteger#
+                                  w
+                                  LinAlg.$fCVectorVec1 of wild4 { DEFAULT ->
+                           case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                             GHC.Types.False -> LinAlg.Vec3 @ a ww1 ww2 ww3
+                             GHC.Types.True -> LinAlg.Vec3 @ a ww1 ww2 (w1 ww3) } }
+                        GHC.Types.True -> LinAlg.Vec3 @ a ww1 (w1 ww2) ww3 } }
+                   GHC.Types.True -> LinAlg.Vec3 @ a (w1 ww1) ww2 ww3 } } }) -}
+632d988dde31c54ea420ce37f717120b
+  $fCVectorVec4 :: LinAlg.CVector LinAlg.Vec4
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Vec4
+                  LinAlg.$fIPVectorVec4
+                  LinAlg.$fCVectorVec4_$cbasisVector
+                  LinAlg.$fCVectorVec4_$ccoord
+                  LinAlg.$fCVectorVec4_$cmapCoord -}
+674811b65e87df6b5c9258f654b2af60
+  $fCVectorVec4_$cbasisVector ::
+    GHC.Num.Num a =>
+    GHC.Integer.Type.Integer -> GHC.Base.Maybe (LinAlg.Vec4 a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,A,A,A,C(U))><S,U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.eqInteger#
+                        ds
+                        LinAlg.$fCVectorVec6 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             ds
+                             LinAlg.$fCVectorVec2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case GHC.Integer.Type.eqInteger#
+                                  ds
+                                  LinAlg.$fCVectorVec1 of wild4 { DEFAULT ->
+                           case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                             GHC.Types.False
+                             -> case GHC.Integer.Type.eqInteger#
+                                       ds
+                                       LinAlg.$fCVectorVec8 of wild6 { DEFAULT ->
+                                case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild6 of wild7 {
+                                  GHC.Types.False -> GHC.Base.Nothing @ (LinAlg.Vec4 a)
+                                  GHC.Types.True
+                                  -> GHC.Base.Just
+                                       @ (LinAlg.Vec4 a)
+                                       (LinAlg.Vec4
+                                          @ a
+                                          (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                          (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                          (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                          (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)) } }
+                             GHC.Types.True
+                             -> GHC.Base.Just
+                                  @ (LinAlg.Vec4 a)
+                                  (LinAlg.Vec4
+                                     @ a
+                                     (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                     (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                     (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                                     (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)) } }
+                        GHC.Types.True
+                        -> GHC.Base.Just
+                             @ (LinAlg.Vec4 a)
+                             (LinAlg.Vec4
+                                @ a
+                                (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                                (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                                (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)) } }
+                   GHC.Types.True
+                   -> GHC.Base.Just
+                        @ (LinAlg.Vec4 a)
+                        (LinAlg.Vec4
+                           @ a
+                           (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                           (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                           (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)
+                           (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7)) } }) -}
+d04cbd333b34042aacda068b8963fdfd
+  $fCVectorVec4_$ccoord ::
+    GHC.Integer.Type.Integer -> LinAlg.Vec4 a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,1*U(U,U,U,U)>,
+     Unfolding: (\ @ a
+                   (ds :: GHC.Integer.Type.Integer)
+                   (ds1 :: LinAlg.Vec4 a) ->
+                 case GHC.Integer.Type.eqInteger#
+                        ds
+                        LinAlg.$fCVectorVec6 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             ds
+                             LinAlg.$fCVectorVec2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case GHC.Integer.Type.eqInteger#
+                                  ds
+                                  LinAlg.$fCVectorVec1 of wild4 { DEFAULT ->
+                           case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                             GHC.Types.False
+                             -> case GHC.Integer.Type.eqInteger#
+                                       ds
+                                       LinAlg.$fCVectorVec8 of wild6 { DEFAULT ->
+                                case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild6 of wild7 {
+                                  GHC.Types.False -> GHC.Base.Nothing @ a
+                                  GHC.Types.True
+                                  -> case ds1 of wild8 { LinAlg.Vec4 ds2 ds3 ds4 x ->
+                                     GHC.Base.Just @ a x } } }
+                             GHC.Types.True
+                             -> case ds1 of wild6 { LinAlg.Vec4 ds2 ds3 x ds4 ->
+                                GHC.Base.Just @ a x } } }
+                        GHC.Types.True
+                        -> case ds1 of wild4 { LinAlg.Vec4 ds2 x ds3 ds4 ->
+                           GHC.Base.Just @ a x } } }
+                   GHC.Types.True
+                   -> case ds1 of wild2 { LinAlg.Vec4 x ds2 ds3 ds4 ->
+                      GHC.Base.Just @ a x } } }) -}
+c68bc9e9dfbf89016a3f6bf692e3beec
+  $fCVectorVec4_$cmapCoord ::
+    GHC.Integer.Type.Integer
+    -> (a -> a) -> LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U><L,1*C1(U)><S,1*U(U,U,U,U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Integer.Type.Integer)
+                   (w1 :: a -> a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w2 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case GHC.Integer.Type.eqInteger#
+                        w
+                        LinAlg.$fCVectorVec6 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             w
+                             LinAlg.$fCVectorVec2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case GHC.Integer.Type.eqInteger#
+                                  w
+                                  LinAlg.$fCVectorVec1 of wild4 { DEFAULT ->
+                           case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                             GHC.Types.False
+                             -> case GHC.Integer.Type.eqInteger#
+                                       w
+                                       LinAlg.$fCVectorVec8 of wild6 { DEFAULT ->
+                                case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild6 of wild7 {
+                                  GHC.Types.False -> LinAlg.Vec4 @ a ww1 ww2 ww3 ww4
+                                  GHC.Types.True -> LinAlg.Vec4 @ a ww1 ww2 ww3 (w1 ww4) } }
+                             GHC.Types.True -> LinAlg.Vec4 @ a ww1 ww2 (w1 ww3) ww4 } }
+                        GHC.Types.True -> LinAlg.Vec4 @ a ww1 (w1 ww2) ww3 ww4 } }
+                   GHC.Types.True -> LinAlg.Vec4 @ a (w1 ww1) ww2 ww3 ww4 } } }) -}
+3b2a5487a61815b446656a2d1dcb879f
+  $fCVectorVec6 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+237c4a8596ad658390e0a879b9ea9cb9
+  $fCVectorVec7 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+cb6c8c728eb9f62324c6ea1843c714b0
+  $fCVectorVec8 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (4) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fEqMat4 :: GHC.Classes.Eq a => GHC.Classes.Eq (LinAlg.Mat4 a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (LinAlg.Mat4 a)
+                  (LinAlg.$fEqMat4_$c== @ a $dEq)
+                  (LinAlg.$fEqMat4_$c/= @ a $dEq) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fEqMat4_$c/= ::
+    GHC.Classes.Eq a =>
+    LinAlg.Mat4 a -> LinAlg.Mat4 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: LinAlg.Mat4 a)
+                   (b :: LinAlg.Mat4 a) ->
+                 case LinAlg.$fEqMat4_$c== @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fEqMat4_$c== ::
+    GHC.Classes.Eq a =>
+    LinAlg.Mat4 a -> LinAlg.Mat4 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (ds :: LinAlg.Mat4 a)
+                   (ds1 :: LinAlg.Mat4 a) ->
+                 case ds of wild {
+                   LinAlg.Mat4 a1 a2 a3 a4
+                   -> case ds1 of wild1 {
+                        LinAlg.Mat4 b1 b2 b3 b4
+                        -> case a1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                           case b1 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                           case LinAlg.$w$c==
+                                  @ a
+                                  $dEq
+                                  ww1
+                                  ww2
+                                  ww3
+                                  ww4
+                                  ww6
+                                  ww7
+                                  ww8
+                                  ww9 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case a2 of ww10 { LinAlg.Vec4 ww11 ww12 ww13 ww14 ->
+                                case b2 of ww15 { LinAlg.Vec4 ww16 ww17 ww18 ww19 ->
+                                case LinAlg.$w$c==
+                                       @ a
+                                       $dEq
+                                       ww11
+                                       ww12
+                                       ww13
+                                       ww14
+                                       ww16
+                                       ww17
+                                       ww18
+                                       ww19 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case a3 of ww20 { LinAlg.Vec4 ww21 ww22 ww23 ww24 ->
+                                     case b3 of ww25 { LinAlg.Vec4 ww26 ww27 ww28 ww29 ->
+                                     case LinAlg.$w$c==
+                                            @ a
+                                            $dEq
+                                            ww21
+                                            ww22
+                                            ww23
+                                            ww24
+                                            ww26
+                                            ww27
+                                            ww28
+                                            ww29 of wild4 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True
+                                       -> LinAlg.$fEqMat4_$c==1 @ a $dEq a4 b4 } } } } } } } } }
+                        LinAlg.Diag4 ipv ipv1 ipv2 ipv3 -> GHC.Types.False }
+                   LinAlg.Diag4 a1 a2 a3 a4
+                   -> case ds1 of wild1 {
+                        LinAlg.Mat4 ipv ipv1 ipv2 ipv3 -> GHC.Types.False
+                        LinAlg.Diag4 b1 b2 b3 b4
+                        -> case GHC.Classes.== @ a $dEq a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Classes.== @ a $dEq a2 b2 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case GHC.Classes.== @ a $dEq a3 b3 of wild4 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True -> GHC.Classes.== @ a $dEq a4 b4 } } } } }) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fEqMat4_$c==1 ::
+    GHC.Classes.Eq a =>
+    LinAlg.Vec4 a -> LinAlg.Vec4 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case w2 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                 LinAlg.$w$c== @ a w ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }) -}
+cb5121f112964add8c441c87d877e1d0
+  $fEqPoint3 :: GHC.Classes.Eq a => GHC.Classes.Eq (LinAlg.Point3 a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (LinAlg.Point3 a)
+                  (LinAlg.$fEqPoint3_$c== @ a $dEq)
+                  (LinAlg.$fEqPoint3_$c/= @ a $dEq) -}
+cb5121f112964add8c441c87d877e1d0
+  $fEqPoint3_$c/= ::
+    GHC.Classes.Eq a =>
+    LinAlg.Point3 a -> LinAlg.Point3 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: LinAlg.Point3 a)
+                   (b :: LinAlg.Point3 a) ->
+                 case LinAlg.$fEqPoint3_$c== @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+cb5121f112964add8c441c87d877e1d0
+  $fEqPoint3_$c== ::
+    GHC.Classes.Eq a =>
+    LinAlg.Point3 a -> LinAlg.Point3 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: LinAlg.Point3 a)
+                   (w2 :: LinAlg.Point3 a) ->
+                 case w1 of ww { LinAlg.Point3 ww1 ww2 ww3 ->
+                 case w2 of ww4 { LinAlg.Point3 ww5 ww6 ww7 ->
+                 LinAlg.$w$c==1 @ a w ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fEqVec3 :: GHC.Classes.Eq a => GHC.Classes.Eq (LinAlg.Vec3 a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (LinAlg.Vec3 a)
+                  (LinAlg.$fEqVec3_$c== @ a $dEq)
+                  (LinAlg.$fEqVec3_$c/= @ a $dEq) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fEqVec3_$c/= ::
+    GHC.Classes.Eq a =>
+    LinAlg.Vec3 a -> LinAlg.Vec3 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: LinAlg.Vec3 a)
+                   (b :: LinAlg.Vec3 a) ->
+                 case LinAlg.$fEqVec3_$c== @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fEqVec3_$c== ::
+    GHC.Classes.Eq a =>
+    LinAlg.Vec3 a -> LinAlg.Vec3 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: LinAlg.Vec3 a)
+                   (w2 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case w2 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                 LinAlg.$w$c==2 @ a w ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fEqVec4 :: GHC.Classes.Eq a => GHC.Classes.Eq (LinAlg.Vec4 a)
+  DFunId
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dEq :: GHC.Classes.Eq a).
+                  @ (LinAlg.Vec4 a)
+                  (LinAlg.$fEqMat4_$c==1 @ a $dEq)
+                  (LinAlg.$fEqVec4_$c/= @ a $dEq) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fEqVec4_$c/= ::
+    GHC.Classes.Eq a =>
+    LinAlg.Vec4 a -> LinAlg.Vec4 a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   (a1 :: LinAlg.Vec4 a)
+                   (b :: LinAlg.Vec4 a) ->
+                 case LinAlg.$fEqMat4_$c==1 @ a $dEq a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+3c8060a56daf958d9a811416c8235a52
+  $fHomogenizablePoint3Vec4 ::
+    LinAlg.Homogenizable LinAlg.Point3 LinAlg.Vec4
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Point3
+                  @ LinAlg.Vec4
+                  LinAlg.$fVectorVec4
+                  LinAlg.$fHomogenizablePoint3Vec4_$chomogenize
+                  LinAlg.$fHomogenizablePoint3Vec4_$cdehomogenize -}
+53fb6350fc918d6eae4de90a2ba2bd15
+  $fHomogenizablePoint3Vec4_$cdehomogenize ::
+    (GHC.Classes.Eq a, GHC.Real.Fractional a) =>
+    LinAlg.Vec4 a -> GHC.Base.Maybe (LinAlg.Point3 a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,U(1*U(A,A,A,A,A,A,1*C1(U)),C(C1(U)),A,A)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Real.Fractional a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w2 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 LinAlg.$w$cdehomogenize @ a w w1 ww1 ww2 ww3 ww4 }) -}
+9b1aa783101be7016baabf3e37ae93b3
+  $fHomogenizablePoint3Vec4_$chomogenize ::
+    GHC.Num.Num a => LinAlg.Point3 a -> LinAlg.Vec4 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,1*C1(U))><S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (ds :: LinAlg.Point3 a) ->
+                 case ds of wild { LinAlg.Point3 x y z ->
+                 LinAlg.Vec4
+                   @ a
+                   x
+                   y
+                   z
+                   (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6) }) -}
+3c8060a56daf958d9a811416c8235a52
+  $fHomogenizableVec3Vec4 ::
+    LinAlg.Homogenizable LinAlg.Vec3 LinAlg.Vec4
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Vec3
+                  @ LinAlg.Vec4
+                  LinAlg.$fVectorVec4
+                  LinAlg.$fHomogenizableVec3Vec4_$chomogenize
+                  LinAlg.$fHomogenizableVec3Vec4_$cdehomogenize -}
+688ee13a6f1d1b644fc97dcdda373851
+  $fHomogenizableVec3Vec4_$cdehomogenize ::
+    (GHC.Classes.Eq a, GHC.Real.Fractional a) =>
+    LinAlg.Vec4 a -> GHC.Base.Maybe (LinAlg.Vec3 a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*U(A,A,A,A,A,A,1*C1(U)),A,A,A)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Real.Fractional a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w2 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 LinAlg.$w$cdehomogenize1 @ a w w1 ww1 ww2 ww3 ww4 }) -}
+3500c07fee7cb553a089919de9d107e9
+  $fHomogenizableVec3Vec4_$chomogenize ::
+    GHC.Num.Num a => LinAlg.Vec3 a -> LinAlg.Vec4 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,1*C1(U))><S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (ds :: LinAlg.Vec3 a) ->
+                 case ds of wild { LinAlg.Vec3 x y z ->
+                 LinAlg.Vec4
+                   @ a
+                   x
+                   y
+                   z
+                   (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec7) }) -}
+1b0ad2c7d0bce74d0ea950f1274f4ab1
+  $fIPVectorVec3 :: LinAlg.IPVector LinAlg.Vec3
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Vec3
+                  LinAlg.$fVectorVec3
+                  LinAlg.$fIPVectorVec3_$cdot
+                  LinAlg.$fIPVectorVec3_$c.#
+                  LinAlg.$fIPVectorVec3_$csqLen
+                  LinAlg.$fIPVectorVec3_$clen
+                  LinAlg.$fIPVectorVec3_$cnormalize
+                  LinAlg.$fIPVectorVec3_$cdistance
+                  LinAlg.$fIPVectorVec3_$ccos2Angle
+                  LinAlg.$fIPVectorVec3_$ccosAngle
+                  LinAlg.$fIPVectorVec3_$cangle -}
+a56ac0fdbf2d0d7cc5f6d994884ba481
+  $fIPVectorVec3_$c.# ::
+    GHC.Num.Num a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fIPVectorVec3_$cdot -}
+4162c18b09c0c5a8ea7f2f8cad98da0f
+  $fIPVectorVec3_$c/# ::
+    GHC.Real.Fractional a => LinAlg.Vec3 a -> a -> LinAlg.Vec3 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(1*U,1*C1(C1(U)),A,A)><S,1*U(U,U,U)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Real.Fractional a)
+                   (w1 :: LinAlg.Vec3 a)
+                   (w2 :: a) ->
+                 case w1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case LinAlg.$w$c/#
+                        @ a
+                        w
+                        ww1
+                        ww2
+                        ww3
+                        w2 of ww4 { (#,,#) ww5 ww6 ww7 ->
+                 LinAlg.Vec3 @ a ww5 ww6 ww7 } }) -}
+d1352b141e029785ff014ccb4f41e27c
+  $fIPVectorVec3_$cangle ::
+    GHC.Float.Floating a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLC(S)LLLLLLLLLLL),U(U,A,A,A,C(U),A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A)><L,U(U,U,U)><L,U(U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (u :: LinAlg.Vec3 a)
+                   (v :: LinAlg.Vec3 a) ->
+                 GHC.Float.acos
+                   @ a
+                   $dFloating
+                   (LinAlg.$fIPVectorVec3_$ccosAngle @ a $dFloating u v)) -}
+4df59d75e39c631d5b0b93a2e1e21a41
+  $fIPVectorVec3_$ccos2Angle ::
+    GHC.Real.Fractional a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LL),U(1*U,1*C1(C1(U)),A,A)><L,U(U,U,U)><L,U(U,U,U)>,
+     Unfolding: (\ @ a
+                   ($dFractional :: GHC.Real.Fractional a)
+                   (eta :: LinAlg.Vec3 a)
+                   (eta1 :: LinAlg.Vec3 a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 GHC.Real./
+                   @ a
+                   $dFractional
+                   (let {
+                      x :: a
+                      = case eta of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                        case eta1 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                        LinAlg.$w$cdot @ a $dNum ww1 ww2 ww3 ww5 ww6 ww7 } }
+                    } in
+                    GHC.Num.* @ a $dNum x x)
+                   (GHC.Num.*
+                      @ a
+                      $dNum
+                      (case eta of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                       LinAlg.$w$cdot @ a $dNum ww1 ww2 ww3 ww1 ww2 ww3 })
+                      (case eta1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                       LinAlg.$w$cdot @ a $dNum ww1 ww2 ww3 ww1 ww2 ww3 }))) -}
+cf0173355772bcf035e148625dc5a649
+  $fIPVectorVec3_$ccosAngle ::
+    GHC.Float.Floating a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLLLLLLLLLLLLLLLL),U(1*U,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U(U,U,U)><L,U(U,U,U)>,
+     Unfolding: (\ @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (eta :: LinAlg.Vec3 a)
+                   (eta1 :: LinAlg.Vec3 a) ->
+                 let {
+                   $dFractional :: GHC.Real.Fractional a
+                   = GHC.Float.$p1Floating @ a $dFloating
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 GHC.Real./
+                   @ a
+                   $dFractional
+                   (case eta of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                    case eta1 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                    LinAlg.$w$cdot @ a $dNum ww1 ww2 ww3 ww5 ww6 ww7 } })
+                   (GHC.Float.sqrt
+                      @ a
+                      $dFloating
+                      (GHC.Num.*
+                         @ a
+                         $dNum
+                         (case eta of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                          LinAlg.$w$cdot @ a $dNum ww1 ww2 ww3 ww1 ww2 ww3 })
+                         (case eta1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                          LinAlg.$w$cdot @ a $dNum ww1 ww2 ww3 ww1 ww2 ww3 })))) -}
+a503ebe8cca4cd6a9463e02da1eaff1f
+  $fIPVectorVec3_$cdistance ::
+    GHC.Float.Floating a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(U(U(C(C1(U)),C(C1(U)),C(C1(U)),A,A,A,A),A,A,A),A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,1*U(U,U,U)><L,1*U(U,U,U)>,
+     Unfolding: (\ @ a
+                   (eta :: GHC.Float.Floating a)
+                   (eta1 :: LinAlg.Vec3 a)
+                   (eta2 :: LinAlg.Vec3 a) ->
+                 LinAlg.$fIPVectorVec3_$clen
+                   @ a
+                   eta
+                   (case eta1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                    case eta2 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                    let {
+                      w :: GHC.Real.Fractional a = GHC.Float.$p1Floating @ a eta
+                    } in
+                    let {
+                      w1 :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a w
+                    } in
+                    LinAlg.Vec3
+                      @ a
+                      (GHC.Num.- @ a w1 ww1 ww5)
+                      (GHC.Num.- @ a w1 ww2 ww6)
+                      (GHC.Num.- @ a w1 ww3 ww7) } })) -}
+ce63bce8a9e3380cdb791bf7f6ef9604
+  $fIPVectorVec3_$cdot ::
+    GHC.Num.Num a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec3 a)
+                   (w2 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case w2 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                 LinAlg.$w$cdot @ a w ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
+e5e28ee46feec6ca9b774cfd8b64bcb0
+  $fIPVectorVec3_$clen :: GHC.Float.Floating a => LinAlg.Vec3 a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(1*U(1*U(C(C1(U)),A,C(C1(U)),A,A,A,A),A,A,A),A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U(U,U,U)>,
+     Unfolding: (\ @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (eta :: LinAlg.Vec3 a) ->
+                 GHC.Float.sqrt
+                   @ a
+                   $dFloating
+                   (case eta of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                    LinAlg.$w$cdot
+                      @ a
+                      (GHC.Real.$p1Fractional @ a (GHC.Float.$p1Floating @ a $dFloating))
+                      ww1
+                      ww2
+                      ww3
+                      ww1
+                      ww2
+                      ww3 })) -}
+996c3d0ae7d721b515375379af7357d8
+  $fIPVectorVec3_$cnormalize ::
+    GHC.Float.Floating a => LinAlg.Vec3 a -> LinAlg.Vec3 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U(U(U,U,U,U,U,U,U),1*C1(C1(U)),A,A),A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U(U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (eta :: GHC.Float.Floating a) (eta1 :: LinAlg.Vec3 a) ->
+                 LinAlg.$fIPVectorVec3_$c/#
+                   @ a
+                   (GHC.Float.$p1Floating @ a eta)
+                   eta1
+                   (LinAlg.$fIPVectorVec3_$clen @ a eta eta1)) -}
+4b59d35a8c03d6e13b95f315eb7b9e48
+  $fIPVectorVec3_$csqLen :: GHC.Num.Num a => LinAlg.Vec3 a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,U(U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (v :: LinAlg.Vec3 a) ->
+                 LinAlg.$fIPVectorVec3_$cdot @ a $dNum v v) -}
+1b0ad2c7d0bce74d0ea950f1274f4ab1
+  $fIPVectorVec4 :: LinAlg.IPVector LinAlg.Vec4
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Vec4
+                  LinAlg.$fVectorVec4
+                  LinAlg.$fIPVectorVec4_$cdot
+                  LinAlg.$fIPVectorVec4_$c.#
+                  LinAlg.$fIPVectorVec4_$csqLen
+                  LinAlg.$fIPVectorVec4_$clen
+                  LinAlg.$fIPVectorVec4_$cnormalize
+                  LinAlg.$fIPVectorVec4_$cdistance
+                  LinAlg.$fIPVectorVec4_$ccos2Angle
+                  LinAlg.$fIPVectorVec4_$ccosAngle
+                  LinAlg.$fIPVectorVec4_$cangle -}
+c38d39c30bdab872c8f92b5c0b3fc2cb
+  $fIPVectorVec4_$c.# ::
+    GHC.Num.Num a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fIPVectorVec4_$cdot -}
+3347d788e7c72d9f3c8745cbddb25905
+  $fIPVectorVec4_$c/# ::
+    GHC.Real.Fractional a => LinAlg.Vec4 a -> a -> LinAlg.Vec4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(1*U,1*C1(C1(U)),A,A)><S,1*U(U,U,U,U)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Real.Fractional a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: a) ->
+                 case w1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case LinAlg.$w$c/#1
+                        @ a
+                        w
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        w2 of ww5 { (#,,,#) ww6 ww7 ww8 ww9 ->
+                 LinAlg.Vec4 @ a ww6 ww7 ww8 ww9 } }) -}
+c4f4fecb36b1d78cbfe4ea794c0fbba9
+  $fIPVectorVec4_$cangle ::
+    GHC.Float.Floating a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLLLLC(S)LLLLLLLLLLL),U(U,A,A,A,C(U),A,A,A,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A)><L,U(U,U,U,U)><L,U(U,U,U,U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (u :: LinAlg.Vec4 a)
+                   (v :: LinAlg.Vec4 a) ->
+                 GHC.Float.acos
+                   @ a
+                   $dFloating
+                   (LinAlg.$fIPVectorVec4_$ccosAngle @ a $dFloating u v)) -}
+2118cddcfbed81a3b1ccebaec4d8e60a
+  $fIPVectorVec4_$ccos2Angle ::
+    GHC.Real.Fractional a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(C(S))LL),U(1*U,1*C1(C1(U)),A,A)><L,U(U,U,U,U)><L,U(U,U,U,U)>,
+     Unfolding: (\ @ a
+                   ($dFractional :: GHC.Real.Fractional a)
+                   (eta :: LinAlg.Vec4 a)
+                   (eta1 :: LinAlg.Vec4 a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 GHC.Real./
+                   @ a
+                   $dFractional
+                   (let {
+                      x :: a
+                      = case eta of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                        case eta1 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                        LinAlg.$w$cdot1 @ a $dNum ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }
+                    } in
+                    GHC.Num.* @ a $dNum x x)
+                   (GHC.Num.*
+                      @ a
+                      $dNum
+                      (case eta of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                       LinAlg.$w$cdot1 @ a $dNum ww1 ww2 ww3 ww4 ww1 ww2 ww3 ww4 })
+                      (case eta1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                       LinAlg.$w$cdot1 @ a $dNum ww1 ww2 ww3 ww4 ww1 ww2 ww3 ww4 }))) -}
+062dc4852b8ee9e56ab4284983db42ca
+  $fIPVectorVec4_$ccosAngle ::
+    GHC.Float.Floating a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLLLLLLLLLLLLLLLL),U(1*U,A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U(U,U,U,U)><L,U(U,U,U,U)>,
+     Unfolding: (\ @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (eta :: LinAlg.Vec4 a)
+                   (eta1 :: LinAlg.Vec4 a) ->
+                 let {
+                   $dFractional :: GHC.Real.Fractional a
+                   = GHC.Float.$p1Floating @ a $dFloating
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 GHC.Real./
+                   @ a
+                   $dFractional
+                   (case eta of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                    case eta1 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                    LinAlg.$w$cdot1 @ a $dNum ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } })
+                   (GHC.Float.sqrt
+                      @ a
+                      $dFloating
+                      (GHC.Num.*
+                         @ a
+                         $dNum
+                         (case eta of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                          LinAlg.$w$cdot1 @ a $dNum ww1 ww2 ww3 ww4 ww1 ww2 ww3 ww4 })
+                         (case eta1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                          LinAlg.$w$cdot1 @ a $dNum ww1 ww2 ww3 ww4 ww1 ww2 ww3 ww4 })))) -}
+5ebc18c7317bcf42f38de5c75c428f79
+  $fIPVectorVec4_$cdistance ::
+    GHC.Float.Floating a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(U(U(C(C1(U)),C(C1(U)),C(C1(U)),A,A,A,A),A,A,A),A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,1*U(U,U,U,U)><L,1*U(U,U,U,U)>,
+     Unfolding: (\ @ a
+                   (eta :: GHC.Float.Floating a)
+                   (eta1 :: LinAlg.Vec4 a)
+                   (eta2 :: LinAlg.Vec4 a) ->
+                 LinAlg.$fIPVectorVec4_$clen
+                   @ a
+                   eta
+                   (case eta1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                    case eta2 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                    let {
+                      w :: GHC.Real.Fractional a = GHC.Float.$p1Floating @ a eta
+                    } in
+                    let {
+                      w1 :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a w
+                    } in
+                    LinAlg.Vec4
+                      @ a
+                      (GHC.Num.- @ a w1 ww1 ww6)
+                      (GHC.Num.- @ a w1 ww2 ww7)
+                      (GHC.Num.- @ a w1 ww3 ww8)
+                      (GHC.Num.- @ a w1 ww4 ww9) } })) -}
+040ba5339ff9351b440eb6e3ad5f806a
+  $fIPVectorVec4_$cdot ::
+    GHC.Num.Num a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case w2 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                 LinAlg.$w$cdot1 @ a w ww1 ww2 ww3 ww4 ww6 ww7 ww8 ww9 } }) -}
+cc56095f7b6e1d7341e4b164d27163f9
+  $fIPVectorVec4_$clen :: GHC.Float.Floating a => LinAlg.Vec4 a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(1*U(1*U(C(C1(U)),A,C(C1(U)),A,A,A,A),A,A,A),A,A,A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U(U,U,U,U)>,
+     Unfolding: (\ @ a
+                   ($dFloating :: GHC.Float.Floating a)
+                   (eta :: LinAlg.Vec4 a) ->
+                 GHC.Float.sqrt
+                   @ a
+                   $dFloating
+                   (case eta of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                    LinAlg.$w$cdot1
+                      @ a
+                      (GHC.Real.$p1Fractional @ a (GHC.Float.$p1Floating @ a $dFloating))
+                      ww1
+                      ww2
+                      ww3
+                      ww4
+                      ww1
+                      ww2
+                      ww3
+                      ww4 })) -}
+4723625dbd60fa6108d20bfafa0dbf67
+  $fIPVectorVec4_$cnormalize ::
+    GHC.Float.Floating a => LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U(U(U,U,U,U,U,U,U),1*C1(C1(U)),A,A),A,A,A,C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U(U,U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (eta :: GHC.Float.Floating a) (eta1 :: LinAlg.Vec4 a) ->
+                 LinAlg.$fIPVectorVec4_$c/#
+                   @ a
+                   (GHC.Float.$p1Floating @ a eta)
+                   eta1
+                   (LinAlg.$fIPVectorVec4_$clen @ a eta eta1)) -}
+d96a7e8aa25aa2150e46403db9f8f225
+  $fIPVectorVec4_$csqLen :: GHC.Num.Num a => LinAlg.Vec4 a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,U(U,U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (v :: LinAlg.Vec4 a) ->
+                 LinAlg.$fIPVectorVec4_$cdot @ a $dNum v v) -}
+c3ebe63d60e92c42e8c1c06a467595be
+  $fMatrixMat4Vec1 :: LinAlg.Mat4 a
+  {- Strictness: x -}
+6eee6be2f7aca4d45a9076acea91daab
+  $fMatrixMat4Vec4 :: LinAlg.Matrix LinAlg.Mat4 LinAlg.Vec4
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Mat4
+                  @ LinAlg.Vec4
+                  LinAlg.$fVectorMat4
+                  LinAlg.$fVectorVec4
+                  LinAlg.$fMatrixMat4Vec4_$ctranspose
+                  LinAlg.$fMatrixMat4Vec4_$c*|
+                  LinAlg.$fMatrixMat4Vec4_$c|*
+                  LinAlg.$fMatrixMat4Vec4_$c*#* -}
+79c62ec6535a55d8ee35f8411aec3536
+  $fMatrixMat4Vec4_$c*#* ::
+    GHC.Num.Num a => LinAlg.Mat4 a -> LinAlg.Mat4 a -> LinAlg.Mat4 a
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,U><S,U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: LinAlg.Mat4 a)
+                   (ds1 :: LinAlg.Mat4 a) ->
+                 let {
+                   fail :: GHC.Prim.Void# -> LinAlg.Mat4 a
+                     {- Arity: 1, Strictness: <L,A> -}
+                   = \ (ds2 :: GHC.Prim.Void#)[OneShot] ->
+                     case ds1 of wild {
+                       LinAlg.Mat4 v1 v2 v3 v4
+                       -> LinAlg.Mat4
+                            @ a
+                            (LinAlg.$fMatrixMat4Vec4_$c*| @ a $dNum ds v1)
+                            (LinAlg.$fMatrixMat4Vec4_$c*| @ a $dNum ds v2)
+                            (LinAlg.$fMatrixMat4Vec4_$c*| @ a $dNum ds v3)
+                            (LinAlg.$fMatrixMat4Vec4_$c*| @ a $dNum ds v4)
+                       LinAlg.Diag4 ipv ipv1 ipv2 ipv3
+                       -> case ds of wild1 {
+                            LinAlg.Mat4 x y z w
+                            -> LinAlg.Mat4
+                                 @ a
+                                 (LinAlg.$fVectorVec4_$c*# @ a $dNum ipv x)
+                                 (LinAlg.$fVectorVec4_$c*# @ a $dNum ipv1 y)
+                                 (LinAlg.$fVectorVec4_$c*# @ a $dNum ipv2 z)
+                                 (LinAlg.$fVectorVec4_$c*# @ a $dNum ipv3 w)
+                            LinAlg.Diag4 ipv4 ipv5 ipv6 ipv7 -> LinAlg.$fMatrixMat4Vec1 @ a } }
+                 } in
+                 case ds of wild {
+                   LinAlg.Mat4 ipv ipv1 ipv2 ipv3 -> fail GHC.Prim.void#
+                   LinAlg.Diag4 x y z w
+                   -> case ds1 of wild1 {
+                        LinAlg.Mat4 ipv ipv1 ipv2 ipv3 -> fail GHC.Prim.void#
+                        LinAlg.Diag4 p q r s
+                        -> LinAlg.Diag4
+                             @ a
+                             (GHC.Num.* @ a $dNum x p)
+                             (GHC.Num.* @ a $dNum y q)
+                             (GHC.Num.* @ a $dNum z r)
+                             (GHC.Num.* @ a $dNum w s) } }) -}
+fd3b09a891cb200bd10d7a630cd1c3db
+  $fMatrixMat4Vec4_$c*| ::
+    GHC.Num.Num a => LinAlg.Mat4 a -> LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U><S,1*U(U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Mat4 a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w2 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case LinAlg.$w$c*|
+                        @ a
+                        w
+                        w1
+                        ww1
+                        ww2
+                        ww3
+                        ww4 of ww5 { (#,,,#) ww6 ww7 ww8 ww9 ->
+                 LinAlg.Vec4 @ a ww6 ww7 ww8 ww9 } }) -}
+505c86290e3c0f9d1cafc5ec7e7284a8
+  $fMatrixMat4Vec4_$ctranspose :: LinAlg.Mat4 a -> LinAlg.Mat4 a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: LinAlg.Mat4 a) ->
+                 case ds of wild {
+                   LinAlg.Mat4 ds1 ds2 ds3 ds4
+                   -> case ds1 of wild1 { LinAlg.Vec4 a11 a12 a13 a14 ->
+                      case ds2 of wild2 { LinAlg.Vec4 a21 a22 a23 a24 ->
+                      case ds3 of wild3 { LinAlg.Vec4 a31 a32 a33 a34 ->
+                      case ds4 of wild4 { LinAlg.Vec4 a41 a42 a43 a44 ->
+                      LinAlg.Mat4
+                        @ a
+                        (LinAlg.Vec4 @ a a11 a21 a31 a41)
+                        (LinAlg.Vec4 @ a a12 a22 a32 a42)
+                        (LinAlg.Vec4 @ a a13 a23 a33 a43)
+                        (LinAlg.Vec4 @ a a14 a24 a34 a44) } } } }
+                   LinAlg.Diag4 ipv ipv1 ipv2 ipv3 -> wild }) -}
+3bb71de4a31558ede94e67b2f69025ad
+  $fMatrixMat4Vec4_$c|* ::
+    GHC.Num.Num a => LinAlg.Vec4 a -> LinAlg.Mat4 a -> LinAlg.Vec4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U(U,U,U,U)><S,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Mat4 a) ->
+                 case LinAlg.$w$c|* @ a w w1 w2 of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                 LinAlg.Vec4 @ a ww1 ww2 ww3 ww4 }) -}
+2861c5e49b63edd1bcdf2d041d7beb17
+  $fPointPoint3Vec3 :: LinAlg.Point LinAlg.Point3 LinAlg.Vec3
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Point3
+                  @ LinAlg.Vec3
+                  LinAlg.$fVectorVec3
+                  LinAlg.$fPointPoint3Vec3_$cdifference
+                  LinAlg.$fPointPoint3Vec3_$ctranslatePoint
+                  LinAlg.$fPointPoint3Vec3_$corigin
+                  LinAlg.$fPointPoint3Vec3_$ctoVector
+                  LinAlg.$fPointPoint3Vec3_$cfromVector -}
+cc6e75246e06a06f7c47787e6f05b0db
+  $fPointPoint3Vec3_$cdifference ::
+    GHC.Num.Num a =>
+    LinAlg.Point3 a -> LinAlg.Point3 a -> LinAlg.Vec3 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A)><S,1*U(U,U,U)><S,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Point3 a)
+                   (w2 :: LinAlg.Point3 a) ->
+                 case w1 of ww { LinAlg.Point3 ww1 ww2 ww3 ->
+                 case w2 of ww4 { LinAlg.Point3 ww5 ww6 ww7 ->
+                 LinAlg.Vec3
+                   @ a
+                   (GHC.Num.- @ a w ww1 ww5)
+                   (GHC.Num.- @ a w ww2 ww6)
+                   (GHC.Num.- @ a w ww3 ww7) } }) -}
+21ae23886b0da5f07c9c0fe117813a80
+  $fPointPoint3Vec3_$cfromVector ::
+    GHC.Num.Num a => LinAlg.Vec3 a -> LinAlg.Point3 a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (ds :: LinAlg.Vec3 a) ->
+                 case ds of wild { LinAlg.Vec3 x y z ->
+                 LinAlg.Point3 @ a x y z }) -}
+2b5fcf24c5c4ec1716b5e4e9640a4808
+  $fPointPoint3Vec3_$corigin :: GHC.Num.Num a => LinAlg.Point3 a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(A,A,A,A,A,A,C(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (w :: GHC.Num.Num a) ->
+                 LinAlg.Point3
+                   @ a
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)) -}
+244e3977935d6217e6ea7095667180c3
+  $fPointPoint3Vec3_$ctoVector ::
+    GHC.Num.Num a => LinAlg.Point3 a -> LinAlg.Vec3 a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dNum :: GHC.Num.Num a) (ds :: LinAlg.Point3 a) ->
+                 case ds of wild { LinAlg.Point3 x y z ->
+                 LinAlg.Vec3 @ a x y z }) -}
+b59f9e4c579a3540300d76a6ec7d11eb
+  $fPointPoint3Vec3_$ctranslatePoint ::
+    GHC.Num.Num a =>
+    LinAlg.Point3 a -> LinAlg.Vec3 a -> LinAlg.Point3 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,A,A,A,A,A)><S,1*U(U,U,U)><S,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Point3 a)
+                   (w2 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { LinAlg.Point3 ww1 ww2 ww3 ->
+                 case w2 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                 LinAlg.Point3
+                   @ a
+                   (GHC.Num.+ @ a w ww1 ww5)
+                   (GHC.Num.+ @ a w ww2 ww6)
+                   (GHC.Num.+ @ a w ww3 ww7) } }) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fReadMat1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([LinAlg.Mat4 a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [LinAlg.Mat4 a] -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (LinAlg.Mat4 a)
+                   (LinAlg.$fReadMat2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <LinAlg.Mat4 a>_R))
+                   @ b
+                   eta1) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fReadMat2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (LinAlg.Mat4 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U> -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fReadMat4 :: GHC.Read.Read a => GHC.Read.Read (LinAlg.Mat4 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (LinAlg.Mat4 a)
+                  (LinAlg.$fReadMat4_$creadsPrec @ a $dRead)
+                  (LinAlg.$fReadMat4_$creadList @ a $dRead)
+                  (LinAlg.$fReadMat4_$creadPrec @ a $dRead)
+                  (LinAlg.$fReadMat4_$creadListPrec @ a $dRead) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fReadMat4_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [LinAlg.Mat4 a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [LinAlg.Mat4 a]
+                   (GHC.Read.$wlist
+                      @ (LinAlg.Mat4 a)
+                      (LinAlg.$fReadMat2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <LinAlg.Mat4 a>_R))
+                      @ [LinAlg.Mat4 a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [LinAlg.Mat4 a]))) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fReadMat4_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [LinAlg.Mat4 a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadMat1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[LinAlg.Mat4 a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[LinAlg.Mat4 a]>_R))) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fReadMat4_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (LinAlg.Mat4 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadMat2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <LinAlg.Mat4 a>_R)) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fReadMat4_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS (LinAlg.Mat4 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (LinAlg.Mat4 a)
+                   ((LinAlg.$fReadMat2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <LinAlg.Mat4 a>_R)
+                      @ (LinAlg.Mat4 a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (LinAlg.Mat4 a)))) -}
+cb5121f112964add8c441c87d877e1d0
+  $fReadPoint1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([LinAlg.Point3 a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [LinAlg.Point3 a] -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (LinAlg.Point3 a)
+                   (LinAlg.$fReadPoint2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <LinAlg.Point3 a>_R))
+                   @ b
+                   eta1) -}
+cb5121f112964add8c441c87d877e1d0
+  $fReadPoint2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (LinAlg.Point3 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec) ->
+                 let {
+                   ds :: Text.ParserCombinators.ReadPrec.ReadPrec a
+                   = GHC.Read.readPrec @ a $dRead
+                 } in
+                 GHC.Read.$fReadDouble10
+                   @ (LinAlg.Point3 a)
+                   (\ (c :: Text.ParserCombinators.ReadPrec.Prec)
+                      @ b
+                      (eta1 :: LinAlg.Point3 a -> Text.ParserCombinators.ReadP.P b) ->
+                    case c of wild { GHC.Types.I# x ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.<=# x 10#) of wild2 {
+                      GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                      GHC.Types.True
+                      -> let {
+                           lvl80 :: Text.ParserCombinators.ReadP.P b
+                           = let {
+                               lvl81 :: Text.ParserCombinators.ReadP.P b
+                               = (ds `cast` (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                    LinAlg.$fReadPoint5)
+                                   `cast`
+                                 (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                   @ b
+                                   (\ (a1 :: a) ->
+                                    (ds `cast` (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                       LinAlg.$fReadPoint5)
+                                      `cast`
+                                    (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                      @ b
+                                      (\ (a2 :: a) ->
+                                       (ds
+                                          `cast`
+                                        (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                          LinAlg.$fReadPoint5)
+                                         `cast`
+                                       (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                         @ b
+                                         (\ (a3 :: a) -> eta1 (LinAlg.Point3 @ a a1 a2 a3))))
+                             } in
+                             Text.Read.Lex.expect2
+                               @ b
+                               (\ (a1 :: Text.Read.Lex.Lexeme) ->
+                                case a1 of wild1 {
+                                  DEFAULT -> Text.ParserCombinators.ReadP.Fail @ b
+                                  Text.Read.Lex.Ident a2
+                                  -> case GHC.Base.eqString a2 LinAlg.$fReadPoint4 of wild3 {
+                                       GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                                       GHC.Types.True -> lvl81 } })
+                         } in
+                         let {
+                           k :: () -> Text.ParserCombinators.ReadP.P b
+                             {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+                                Unfolding: InlineRule (1, True, True) (\ (w4 :: ()) -> lvl80) -}
+                           = \ (w4 :: ()) -> lvl80
+                         } in
+                         Text.ParserCombinators.ReadP.Look
+                           @ b
+                           (\ (a1 :: GHC.Base.String) ->
+                            (Text.ParserCombinators.ReadP.skipSpaces_skip a1)
+                              `cast`
+                            (Text.ParserCombinators.ReadP.N:ReadP[0] <()>_R)
+                              @ b
+                              k) } })
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <LinAlg.Point3 a>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <LinAlg.Point3 a>_R)))
+                   eta) -}
+cb5121f112964add8c441c87d877e1d0
+  $fReadPoint3 :: GHC.Read.Read a => GHC.Read.Read (LinAlg.Point3 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (LinAlg.Point3 a)
+                  (LinAlg.$fReadPoint3_$creadsPrec @ a $dRead)
+                  (LinAlg.$fReadPoint3_$creadList @ a $dRead)
+                  (LinAlg.$fReadPoint3_$creadPrec @ a $dRead)
+                  (LinAlg.$fReadPoint3_$creadListPrec @ a $dRead) -}
+cb5121f112964add8c441c87d877e1d0
+  $fReadPoint3_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [LinAlg.Point3 a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [LinAlg.Point3 a]
+                   (GHC.Read.$wlist
+                      @ (LinAlg.Point3 a)
+                      (LinAlg.$fReadPoint2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <LinAlg.Point3 a>_R))
+                      @ [LinAlg.Point3 a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [LinAlg.Point3 a]))) -}
+cb5121f112964add8c441c87d877e1d0
+  $fReadPoint3_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [LinAlg.Point3 a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadPoint1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[LinAlg.Point3 a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[LinAlg.Point3 a]>_R))) -}
+cb5121f112964add8c441c87d877e1d0
+  $fReadPoint3_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (LinAlg.Point3 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadPoint2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <LinAlg.Point3 a>_R)) -}
+cb5121f112964add8c441c87d877e1d0
+  $fReadPoint3_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS (LinAlg.Point3 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (LinAlg.Point3 a)
+                   ((LinAlg.$fReadPoint2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <LinAlg.Point3 a>_R)
+                      @ (LinAlg.Point3 a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (LinAlg.Point3 a)))) -}
+6d2fa009e99b10b33987106ec5ba6b0f
+  $fReadPoint4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Point3"#) -}
+1429a3e28326d220e7d487096f7c0460
+  $fReadPoint5 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 11#) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fReadVec1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([LinAlg.Vec3 a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [LinAlg.Vec3 a] -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (LinAlg.Vec3 a)
+                   (LinAlg.$fReadVec2 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <LinAlg.Vec3 a>_R))
+                   @ b
+                   eta1) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fReadVec2 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (LinAlg.Vec3 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec) ->
+                 let {
+                   ds :: Text.ParserCombinators.ReadPrec.ReadPrec a
+                   = GHC.Read.readPrec @ a $dRead
+                 } in
+                 GHC.Read.$fReadDouble10
+                   @ (LinAlg.Vec3 a)
+                   (\ (c :: Text.ParserCombinators.ReadPrec.Prec)
+                      @ b
+                      (eta1 :: LinAlg.Vec3 a -> Text.ParserCombinators.ReadP.P b) ->
+                    case c of wild { GHC.Types.I# x ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.<=# x 10#) of wild2 {
+                      GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                      GHC.Types.True
+                      -> let {
+                           lvl80 :: Text.ParserCombinators.ReadP.P b
+                           = let {
+                               lvl81 :: Text.ParserCombinators.ReadP.P b
+                               = (ds `cast` (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                    LinAlg.$fReadPoint5)
+                                   `cast`
+                                 (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                   @ b
+                                   (\ (a1 :: a) ->
+                                    (ds `cast` (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                       LinAlg.$fReadPoint5)
+                                      `cast`
+                                    (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                      @ b
+                                      (\ (a2 :: a) ->
+                                       (ds
+                                          `cast`
+                                        (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                          LinAlg.$fReadPoint5)
+                                         `cast`
+                                       (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                         @ b
+                                         (\ (a3 :: a) -> eta1 (LinAlg.Vec3 @ a a1 a2 a3))))
+                             } in
+                             Text.Read.Lex.expect2
+                               @ b
+                               (\ (a1 :: Text.Read.Lex.Lexeme) ->
+                                case a1 of wild1 {
+                                  DEFAULT -> Text.ParserCombinators.ReadP.Fail @ b
+                                  Text.Read.Lex.Ident a2
+                                  -> case GHC.Base.eqString a2 LinAlg.$fReadVec6 of wild3 {
+                                       GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                                       GHC.Types.True -> lvl81 } })
+                         } in
+                         let {
+                           k :: () -> Text.ParserCombinators.ReadP.P b
+                             {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+                                Unfolding: InlineRule (1, True, True) (\ (w4 :: ()) -> lvl80) -}
+                           = \ (w4 :: ()) -> lvl80
+                         } in
+                         Text.ParserCombinators.ReadP.Look
+                           @ b
+                           (\ (a1 :: GHC.Base.String) ->
+                            (Text.ParserCombinators.ReadP.skipSpaces_skip a1)
+                              `cast`
+                            (Text.ParserCombinators.ReadP.N:ReadP[0] <()>_R)
+                              @ b
+                              k) } })
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <LinAlg.Vec3 a>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <LinAlg.Vec3 a>_R)))
+                   eta) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fReadVec3 :: GHC.Read.Read a => GHC.Read.Read (LinAlg.Vec3 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (LinAlg.Vec3 a)
+                  (LinAlg.$fReadVec3_$creadsPrec @ a $dRead)
+                  (LinAlg.$fReadVec3_$creadList @ a $dRead)
+                  (LinAlg.$fReadVec3_$creadPrec @ a $dRead)
+                  (LinAlg.$fReadVec3_$creadListPrec @ a $dRead) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fReadVec3_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [LinAlg.Vec3 a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [LinAlg.Vec3 a]
+                   (GHC.Read.$wlist
+                      @ (LinAlg.Vec3 a)
+                      (LinAlg.$fReadVec2 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <LinAlg.Vec3 a>_R))
+                      @ [LinAlg.Vec3 a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [LinAlg.Vec3 a]))) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fReadVec3_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [LinAlg.Vec3 a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadVec1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[LinAlg.Vec3 a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[LinAlg.Vec3 a]>_R))) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fReadVec3_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (LinAlg.Vec3 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadVec2
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <LinAlg.Vec3 a>_R)) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fReadVec3_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS (LinAlg.Vec3 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (LinAlg.Vec3 a)
+                   ((LinAlg.$fReadVec2 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <LinAlg.Vec3 a>_R)
+                      @ (LinAlg.Vec3 a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (LinAlg.Vec3 a)))) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fReadVec4 :: GHC.Read.Read a => GHC.Read.Read (LinAlg.Vec4 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dRead :: GHC.Read.Read a).
+                  @ (LinAlg.Vec4 a)
+                  (LinAlg.$fReadVec4_$creadsPrec @ a $dRead)
+                  (LinAlg.$fReadVec4_$creadList @ a $dRead)
+                  (LinAlg.$fReadVec4_$creadPrec @ a $dRead)
+                  (LinAlg.$fReadVec4_$creadListPrec @ a $dRead) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fReadVec4_$creadList ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadP.ReadS [LinAlg.Vec4 a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [LinAlg.Vec4 a]
+                   (GHC.Read.$wlist
+                      @ (LinAlg.Vec4 a)
+                      (LinAlg.$fReadVec8 @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <LinAlg.Vec4 a>_R))
+                      @ [LinAlg.Vec4 a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ [LinAlg.Vec4 a]))) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fReadVec4_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [LinAlg.Vec4 a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadVec7
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <[LinAlg.Vec4 a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <[LinAlg.Vec4 a]>_R))) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fReadVec4_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (LinAlg.Vec4 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                LinAlg.$fReadVec8
+                  `cast`
+                (forall (a :: <*>_N).
+                 <GHC.Read.Read a>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <LinAlg.Vec4 a>_R)) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fReadVec4_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS (LinAlg.Vec4 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dRead :: GHC.Read.Read a) (eta :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (LinAlg.Vec4 a)
+                   ((LinAlg.$fReadVec8 @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.N:ReadP[0] <LinAlg.Vec4 a>_R)
+                      @ (LinAlg.Vec4 a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ (LinAlg.Vec4 a)))) -}
+a59e5e2530f2ada00392bf80e2335f75
+  $fReadVec6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vec3"#) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fReadVec7 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([LinAlg.Vec4 a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (eta1 :: [LinAlg.Vec4 a] -> Text.ParserCombinators.ReadP.P b) ->
+                 GHC.Read.$wlist
+                   @ (LinAlg.Vec4 a)
+                   (LinAlg.$fReadVec8 @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <LinAlg.Vec4 a>_R))
+                   @ b
+                   eta1) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fReadVec8 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (LinAlg.Vec4 a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: (\ @ a
+                   ($dRead :: GHC.Read.Read a)
+                   (eta :: Text.ParserCombinators.ReadPrec.Prec) ->
+                 let {
+                   ds :: Text.ParserCombinators.ReadPrec.ReadPrec a
+                   = GHC.Read.readPrec @ a $dRead
+                 } in
+                 GHC.Read.$fReadDouble10
+                   @ (LinAlg.Vec4 a)
+                   (\ (c :: Text.ParserCombinators.ReadPrec.Prec)
+                      @ b
+                      (eta1 :: LinAlg.Vec4 a -> Text.ParserCombinators.ReadP.P b) ->
+                    case c of wild { GHC.Types.I# x ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.<=# x 10#) of wild2 {
+                      GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                      GHC.Types.True
+                      -> let {
+                           lvl80 :: Text.ParserCombinators.ReadP.P b
+                           = let {
+                               lvl81 :: Text.ParserCombinators.ReadP.P b
+                               = (ds `cast` (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                    LinAlg.$fReadPoint5)
+                                   `cast`
+                                 (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                   @ b
+                                   (\ (a1 :: a) ->
+                                    (ds `cast` (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                       LinAlg.$fReadPoint5)
+                                      `cast`
+                                    (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                      @ b
+                                      (\ (a2 :: a) ->
+                                       (ds
+                                          `cast`
+                                        (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                          LinAlg.$fReadPoint5)
+                                         `cast`
+                                       (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                         @ b
+                                         (\ (a3 :: a) ->
+                                          (ds
+                                             `cast`
+                                           (Text.ParserCombinators.ReadPrec.N:ReadPrec[0] <a>_R)
+                                             LinAlg.$fReadPoint5)
+                                            `cast`
+                                          (Text.ParserCombinators.ReadP.N:ReadP[0] <a>_R)
+                                            @ b
+                                            (\ (a4 :: a) -> eta1 (LinAlg.Vec4 @ a a1 a2 a3 a4)))))
+                             } in
+                             Text.Read.Lex.expect2
+                               @ b
+                               (\ (a1 :: Text.Read.Lex.Lexeme) ->
+                                case a1 of wild1 {
+                                  DEFAULT -> Text.ParserCombinators.ReadP.Fail @ b
+                                  Text.Read.Lex.Ident a2
+                                  -> case GHC.Base.eqString a2 LinAlg.$fReadVec9 of wild3 {
+                                       GHC.Types.False -> Text.ParserCombinators.ReadP.Fail @ b
+                                       GHC.Types.True -> lvl81 } })
+                         } in
+                         let {
+                           k :: () -> Text.ParserCombinators.ReadP.P b
+                             {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+                                Unfolding: InlineRule (1, True, True) (\ (w4 :: ()) -> lvl80) -}
+                           = \ (w4 :: ()) -> lvl80
+                         } in
+                         Text.ParserCombinators.ReadP.Look
+                           @ b
+                           (\ (a1 :: GHC.Base.String) ->
+                            (Text.ParserCombinators.ReadP.skipSpaces_skip a1)
+                              `cast`
+                            (Text.ParserCombinators.ReadP.N:ReadP[0] <()>_R)
+                              @ b
+                              k) } })
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <LinAlg.Vec4 a>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <LinAlg.Vec4 a>_R)))
+                   eta) -}
+0c60825146f9823763ce994c31573fd1
+  $fReadVec9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vec4"#) -}
+c7f77ef9f06f91b21fa921ad73dfbf44
+  $fShowMat1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fShowMat4 :: GHC.Show.Show a => GHC.Show.Show (LinAlg.Mat4 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (LinAlg.Mat4 a)
+                  (LinAlg.$fShowMat4_$cshowsPrec @ a $dShow)
+                  (LinAlg.$fShowMat4_$cshow @ a $dShow)
+                  (LinAlg.$fShowMat4_$cshowList @ a $dShow) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fShowMat4_$cshow ::
+    GHC.Show.Show a => LinAlg.Mat4 a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dShow :: GHC.Show.Show a) (x :: LinAlg.Mat4 a) ->
+                 LinAlg.$fShowMat4_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fShowMat4_$cshowList ::
+    GHC.Show.Show a => [LinAlg.Mat4 a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [LinAlg.Mat4 a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (LinAlg.Mat4 a)
+                   (LinAlg.$fShowMat4_$cshowsPrec @ a $dShow LinAlg.$fShowMat1)
+                   eta
+                   eta1) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $fShowMat4_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> LinAlg.Mat4 a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: LinAlg.Mat4 a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 LinAlg.$w$cshowsPrec @ a w ww1 w2 }) -}
+4e8c2af6e867e90fc48577f6dfe6cef1
+  $fShowPoint1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Point3 "#) -}
+cb5121f112964add8c441c87d877e1d0
+  $fShowPoint3 :: GHC.Show.Show a => GHC.Show.Show (LinAlg.Point3 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (LinAlg.Point3 a)
+                  (LinAlg.$fShowPoint3_$cshowsPrec @ a $dShow)
+                  (LinAlg.$fShowPoint3_$cshow @ a $dShow)
+                  (LinAlg.$fShowPoint3_$cshowList @ a $dShow) -}
+cb5121f112964add8c441c87d877e1d0
+  $fShowPoint3_$cshow ::
+    GHC.Show.Show a => LinAlg.Point3 a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dShow :: GHC.Show.Show a) (x :: LinAlg.Point3 a) ->
+                 LinAlg.$fShowPoint3_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+cb5121f112964add8c441c87d877e1d0
+  $fShowPoint3_$cshowList ::
+    GHC.Show.Show a => [LinAlg.Point3 a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [LinAlg.Point3 a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (LinAlg.Point3 a)
+                   (LinAlg.$fShowPoint3_$cshowsPrec @ a $dShow LinAlg.$fShowMat1)
+                   eta
+                   eta1) -}
+cb5121f112964add8c441c87d877e1d0
+  $fShowPoint3_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> LinAlg.Point3 a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: LinAlg.Point3 a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { LinAlg.Point3 ww3 ww4 ww5 ->
+                 LinAlg.$w$cshowsPrec1 @ a w ww1 ww3 ww4 ww5 } }) -}
+5aef80c97cd022200b2a52b2091e8af1
+  $fShowVec1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vec3 "#) -}
+e66da201d01a43bde6e3f9c7d180b4b1
+  $fShowVec2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vec4 "#) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fShowVec3 :: GHC.Show.Show a => GHC.Show.Show (LinAlg.Vec3 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (LinAlg.Vec3 a)
+                  (LinAlg.$fShowVec3_$cshowsPrec @ a $dShow)
+                  (LinAlg.$fShowVec3_$cshow @ a $dShow)
+                  (LinAlg.$fShowVec3_$cshowList @ a $dShow) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fShowVec3_$cshow ::
+    GHC.Show.Show a => LinAlg.Vec3 a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dShow :: GHC.Show.Show a) (x :: LinAlg.Vec3 a) ->
+                 LinAlg.$fShowVec3_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fShowVec3_$cshowList ::
+    GHC.Show.Show a => [LinAlg.Vec3 a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [LinAlg.Vec3 a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (LinAlg.Vec3 a)
+                   (LinAlg.$fShowVec3_$cshowsPrec @ a $dShow LinAlg.$fShowMat1)
+                   eta
+                   eta1) -}
+af0264ef4c5439016c6b5a03ae914a6c
+  $fShowVec3_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> LinAlg.Vec3 a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { LinAlg.Vec3 ww3 ww4 ww5 ->
+                 LinAlg.$w$cshowsPrec2 @ a w ww1 ww3 ww4 ww5 } }) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fShowVec4 :: GHC.Show.Show a => GHC.Show.Show (LinAlg.Vec4 a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (LinAlg.Vec4 a)
+                  (LinAlg.$fShowVec4_$cshowsPrec @ a $dShow)
+                  (LinAlg.$fShowVec4_$cshow @ a $dShow)
+                  (LinAlg.$fShowVec4_$cshowList @ a $dShow) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fShowVec4_$cshow ::
+    GHC.Show.Show a => LinAlg.Vec4 a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dShow :: GHC.Show.Show a) (x :: LinAlg.Vec4 a) ->
+                 LinAlg.$fShowVec4_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fShowVec4_$cshowList ::
+    GHC.Show.Show a => [LinAlg.Vec4 a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [LinAlg.Vec4 a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (LinAlg.Vec4 a)
+                   (LinAlg.$fShowVec4_$cshowsPrec @ a $dShow LinAlg.$fShowMat1)
+                   eta
+                   eta1) -}
+4e967cd2124bf4a10865b8598081d4bf
+  $fShowVec4_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> LinAlg.Vec4 a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { LinAlg.Vec4 ww3 ww4 ww5 ww6 ->
+                 LinAlg.$w$cshowsPrec3 @ a w ww1 ww3 ww4 ww5 ww6 } }) -}
+42642a2b597a21e968f1a749a3f25793
+  $fVectorMat1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (16) -}
+dd34f128a5c6115f3d52551270e5b9a4
+  $fVectorMat4 :: LinAlg.Vector LinAlg.Mat4
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Mat4
+                  LinAlg.$fVectorMat4_$czero'
+                  LinAlg.$fVectorMat4_$cdimension
+                  LinAlg.$fVectorMat4_$c+#
+                  LinAlg.$fVectorMat4_$c-#
+                  LinAlg.$fVectorMat4_$c*#
+                  LinAlg.$fVectorMat4_$c/#
+                  LinAlg.$fVectorMat4_$cnegate'
+                  LinAlg.$fVectorMat4_$clcomb
+                  LinAlg.$fVectorMat4_$clcombG -}
+b92b40fd4a245e8d5e733698fe9c21b3
+  $fVectorMat4_$c*# ::
+    GHC.Num.Num a => a -> LinAlg.Mat4 a -> LinAlg.Mat4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),A,A,A,A)><L,U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (a1 :: a)
+                   (ds :: LinAlg.Mat4 a) ->
+                 case ds of wild {
+                   LinAlg.Mat4 e f g h
+                   -> LinAlg.Mat4
+                        @ a
+                        (LinAlg.$fVectorVec4_$c*# @ a $dNum a1 e)
+                        (LinAlg.$fVectorVec4_$c*# @ a $dNum a1 f)
+                        (LinAlg.$fVectorVec4_$c*# @ a $dNum a1 g)
+                        (LinAlg.$fVectorVec4_$c*# @ a $dNum a1 h)
+                   LinAlg.Diag4 x y z w
+                   -> LinAlg.Diag4
+                        @ a
+                        (GHC.Num.* @ a $dNum a1 x)
+                        (GHC.Num.* @ a $dNum a1 y)
+                        (GHC.Num.* @ a $dNum a1 z)
+                        (GHC.Num.* @ a $dNum a1 w) }) -}
+80f688822843d566df2512289a9004b3
+  $fVectorMat4_$c+# ::
+    GHC.Num.Num a => LinAlg.Mat4 a -> LinAlg.Mat4 a -> LinAlg.Mat4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,A,A,A,A,A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: LinAlg.Mat4 a)
+                   (ds1 :: LinAlg.Mat4 a) ->
+                 case ds of wild {
+                   LinAlg.Mat4 a1 b c d
+                   -> case ds1 of wild1 {
+                        LinAlg.Mat4 e f g h
+                        -> LinAlg.Mat4
+                             @ a
+                             (LinAlg.$fVectorVec4_$c+# @ a $dNum a1 e)
+                             (LinAlg.$fVectorVec4_$c+# @ a $dNum b f)
+                             (LinAlg.$fVectorVec4_$c+# @ a $dNum c g)
+                             (LinAlg.$fVectorVec4_$c+# @ a $dNum d h)
+                        LinAlg.Diag4 ipv ipv1 ipv2 ipv3
+                        -> case a1 of wild2 { LinAlg.Vec4 a11 a21 a31 a41 ->
+                           case b of wild3 { LinAlg.Vec4 a12 a22 a32 a42 ->
+                           case c of wild4 { LinAlg.Vec4 a13 a23 a33 a43 ->
+                           case d of wild5 { LinAlg.Vec4 a14 a24 a34 a44 ->
+                           LinAlg.Mat4
+                             @ a
+                             (LinAlg.Vec4 @ a (GHC.Num.+ @ a $dNum a11 ipv) a21 a31 a41)
+                             (LinAlg.Vec4 @ a a12 (GHC.Num.+ @ a $dNum a22 ipv1) a32 a42)
+                             (LinAlg.Vec4 @ a a13 a23 (GHC.Num.+ @ a $dNum a33 ipv2) a43)
+                             (LinAlg.Vec4
+                                @ a
+                                a14
+                                a24
+                                a34
+                                (GHC.Num.+ @ a $dNum a44 ipv3)) } } } } }
+                   LinAlg.Diag4 x y z w
+                   -> case ds1 of wild1 {
+                        LinAlg.Mat4 ds2 ds3 ds4 ds5
+                        -> case ds2 of wild2 { LinAlg.Vec4 a11 a21 a31 a41 ->
+                           case ds3 of wild3 { LinAlg.Vec4 a12 a22 a32 a42 ->
+                           case ds4 of wild4 { LinAlg.Vec4 a13 a23 a33 a43 ->
+                           case ds5 of wild5 { LinAlg.Vec4 a14 a24 a34 a44 ->
+                           LinAlg.Mat4
+                             @ a
+                             (LinAlg.Vec4 @ a (GHC.Num.+ @ a $dNum x a11) a21 a31 a41)
+                             (LinAlg.Vec4 @ a a12 (GHC.Num.+ @ a $dNum y a22) a32 a42)
+                             (LinAlg.Vec4 @ a a13 a23 (GHC.Num.+ @ a $dNum z a33) a43)
+                             (LinAlg.Vec4 @ a a14 a24 a34 (GHC.Num.+ @ a $dNum w a44)) } } } }
+                        LinAlg.Diag4 e f g h
+                        -> LinAlg.Diag4
+                             @ a
+                             (GHC.Num.+ @ a $dNum x e)
+                             (GHC.Num.+ @ a $dNum y f)
+                             (GHC.Num.+ @ a $dNum z g)
+                             (GHC.Num.+ @ a $dNum w h) } }) -}
+9c8032af629d408af07f339d0d45c923
+  $fVectorMat4_$c-# ::
+    GHC.Num.Num a => LinAlg.Mat4 a -> LinAlg.Mat4 a -> LinAlg.Mat4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: LinAlg.Mat4 a)
+                   (ds1 :: LinAlg.Mat4 a) ->
+                 case ds of wild {
+                   LinAlg.Mat4 a1 b c d
+                   -> case ds1 of wild1 {
+                        LinAlg.Mat4 e f g h
+                        -> LinAlg.Mat4
+                             @ a
+                             (LinAlg.$fVectorVec4_$c-# @ a $dNum a1 e)
+                             (LinAlg.$fVectorVec4_$c-# @ a $dNum b f)
+                             (LinAlg.$fVectorVec4_$c-# @ a $dNum c g)
+                             (LinAlg.$fVectorVec4_$c-# @ a $dNum d h)
+                        LinAlg.Diag4 ipv ipv1 ipv2 ipv3
+                        -> case a1 of wild2 { LinAlg.Vec4 a11 a21 a31 a41 ->
+                           case b of wild3 { LinAlg.Vec4 a12 a22 a32 a42 ->
+                           case c of wild4 { LinAlg.Vec4 a13 a23 a33 a43 ->
+                           case d of wild5 { LinAlg.Vec4 a14 a24 a34 a44 ->
+                           LinAlg.Mat4
+                             @ a
+                             (LinAlg.Vec4 @ a (GHC.Num.- @ a $dNum a11 ipv) a21 a31 a41)
+                             (LinAlg.Vec4 @ a a12 (GHC.Num.- @ a $dNum a22 ipv1) a32 a42)
+                             (LinAlg.Vec4 @ a a13 a23 (GHC.Num.- @ a $dNum a33 ipv2) a43)
+                             (LinAlg.Vec4
+                                @ a
+                                a14
+                                a24
+                                a34
+                                (GHC.Num.- @ a $dNum a44 ipv3)) } } } } }
+                   LinAlg.Diag4 x y z w
+                   -> case ds1 of wild1 {
+                        LinAlg.Mat4 ds2 ds3 ds4 ds5
+                        -> case ds2 of wild2 { LinAlg.Vec4 a11 a21 a31 a41 ->
+                           case ds3 of wild3 { LinAlg.Vec4 a12 a22 a32 a42 ->
+                           case ds4 of wild4 { LinAlg.Vec4 a13 a23 a33 a43 ->
+                           case ds5 of wild5 { LinAlg.Vec4 a14 a24 a34 a44 ->
+                           LinAlg.Mat4
+                             @ a
+                             (LinAlg.Vec4 @ a (GHC.Num.- @ a $dNum x a11) a21 a31 a41)
+                             (LinAlg.Vec4 @ a a12 (GHC.Num.- @ a $dNum y a22) a32 a42)
+                             (LinAlg.Vec4 @ a a13 a23 (GHC.Num.- @ a $dNum z a33) a43)
+                             (LinAlg.Vec4 @ a a14 a24 a34 (GHC.Num.- @ a $dNum w a44)) } } } }
+                        LinAlg.Diag4 e f g h
+                        -> LinAlg.Diag4
+                             @ a
+                             (GHC.Num.- @ a $dNum x e)
+                             (GHC.Num.- @ a $dNum y f)
+                             (GHC.Num.- @ a $dNum z g)
+                             (GHC.Num.- @ a $dNum w h) } }) -}
+7446376b35f1cab91a706f56d0b551d8
+  $fVectorMat4_$c/# ::
+    GHC.Real.Fractional a => LinAlg.Mat4 a -> a -> LinAlg.Mat4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(1*U,1*C1(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: (\ @ a
+                   ($dFractional :: GHC.Real.Fractional a)
+                   (eta :: LinAlg.Mat4 a)
+                   (eta1 :: a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                 } in
+                 LinAlg.$fVectorMat4_$c*#
+                   @ a
+                   $dNum
+                   (GHC.Real./
+                      @ a
+                      $dFractional
+                      (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                      eta1)
+                   eta) -}
+bdd63d37a80bc1629f7014910a8d01ae
+  $fVectorMat4_$cdimension :: GHC.Num.Num a => LinAlg.Mat4 a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a ($dNum :: GHC.Num.Num a) (ds :: LinAlg.Mat4 a) ->
+                 GHC.Num.fromInteger @ a $dNum LinAlg.$fVectorMat1) -}
+3f12f8f15ca44cd8f7b8b21b1066154c
+  $fVectorMat4_$clcomb ::
+    GHC.Num.Num a =>
+    a -> LinAlg.Mat4 a -> a -> LinAlg.Mat4 a -> LinAlg.Mat4 a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U><S,1*U><L,U><S,1*U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (a1 :: a)
+                   (u :: LinAlg.Mat4 a)
+                   (b :: a)
+                   (v :: LinAlg.Mat4 a) ->
+                 LinAlg.$fVectorMat4_$c+#
+                   @ a
+                   $dNum
+                   (LinAlg.$fVectorMat4_$c*# @ a $dNum a1 u)
+                   (LinAlg.$fVectorMat4_$c*# @ a $dNum b v)) -}
+1dc5bf7ac2583cd02102283e1db10bb8
+  $fVectorMat4_$clcombG ::
+    GHC.Num.Num a => [(a, LinAlg.Mat4 a)] -> LinAlg.Mat4 a
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,C(U))>,
+     Unfolding: (\ @ a ($dNum :: GHC.Num.Num a) ->
+                 Utils.foldl'
+                   @ (LinAlg.Mat4 a)
+                   @ (a, LinAlg.Mat4 a)
+                   (\ (res :: LinAlg.Mat4 a) (ds :: (a, LinAlg.Mat4 a))[OneShot] ->
+                    case ds of wild { (,) a1 v ->
+                    LinAlg.$fVectorMat4_$c+#
+                      @ a
+                      $dNum
+                      res
+                      (LinAlg.$fVectorMat4_$c*# @ a $dNum a1 v) })
+                   (LinAlg.$fVectorMat4_$czero' @ a $dNum)) -}
+52ffe0f9c29eb8c7431cb6f3401b0b5f
+  $fVectorMat4_$cnegate' ::
+    GHC.Num.Num a => LinAlg.Mat4 a -> LinAlg.Mat4 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),1*C1(U),A,A,1*C1(U))><S,1*U>,
+     Unfolding: (\ @ a ($dNum :: GHC.Num.Num a) (v :: LinAlg.Mat4 a) ->
+                 LinAlg.$fVectorMat4_$c*#
+                   @ a
+                   $dNum
+                   (GHC.Num.negate
+                      @ a
+                      $dNum
+                      (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6))
+                   v) -}
+c082d7ee27d1d5937d355b982c07624f
+  $fVectorMat4_$czero' :: GHC.Num.Num a => LinAlg.Mat4 a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(A,A,A,A,A,A,C(U))>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (w :: GHC.Num.Num a) ->
+                 LinAlg.Diag4
+                   @ a
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)) -}
+dd34f128a5c6115f3d52551270e5b9a4
+  $fVectorVec3 :: LinAlg.Vector LinAlg.Vec3
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Vec3
+                  LinAlg.$fVectorVec3_$czero'
+                  LinAlg.$fVectorVec3_$cdimension
+                  LinAlg.$fVectorVec3_$c+#
+                  LinAlg.$fVectorVec3_$c-#
+                  LinAlg.$fVectorVec3_$c*#
+                  LinAlg.$fIPVectorVec3_$c/#
+                  LinAlg.$fVectorVec3_$cnegate'
+                  LinAlg.$fVectorVec3_$clcomb
+                  LinAlg.$fVectorVec3_$clcombG -}
+ace25e5d72a7786567606ff00d1934b3
+  $fVectorVec3_$c*# ::
+    GHC.Num.Num a => a -> LinAlg.Vec3 a -> LinAlg.Vec3 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),A,A,A,A)><L,U><S,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (w :: GHC.Num.Num a) (w1 :: a) (w2 :: LinAlg.Vec3 a) ->
+                 case w2 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 LinAlg.Vec3
+                   @ a
+                   (GHC.Num.* @ a w w1 ww1)
+                   (GHC.Num.* @ a w w1 ww2)
+                   (GHC.Num.* @ a w w1 ww3) }) -}
+f4c753aee8605b29902ea223fa69d506
+  $fVectorVec3_$c+# ::
+    GHC.Num.Num a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> LinAlg.Vec3 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,A,A,A,A,A)><S,1*U(U,U,U)><S,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec3 a)
+                   (w2 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case w2 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                 LinAlg.Vec3
+                   @ a
+                   (GHC.Num.+ @ a w ww1 ww5)
+                   (GHC.Num.+ @ a w ww2 ww6)
+                   (GHC.Num.+ @ a w ww3 ww7) } }) -}
+ffbd77713a29bee05fae49ee83b2ac15
+  $fVectorVec3_$c-# ::
+    GHC.Num.Num a => LinAlg.Vec3 a -> LinAlg.Vec3 a -> LinAlg.Vec3 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A)><S,1*U(U,U,U)><S,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec3 a)
+                   (w2 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case w2 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                 LinAlg.Vec3
+                   @ a
+                   (GHC.Num.- @ a w ww1 ww5)
+                   (GHC.Num.- @ a w ww2 ww6)
+                   (GHC.Num.- @ a w ww3 ww7) } }) -}
+2bab19b3a1c05b0331787a9f4a3435c4
+  $fVectorVec3_$cdimension :: GHC.Num.Num a => LinAlg.Vec3 a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a ($dNum :: GHC.Num.Num a) (ds :: LinAlg.Vec3 a) ->
+                 GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec1) -}
+3662263d68397e4fac9434801665d7ed
+  $fVectorVec3_$clcomb ::
+    GHC.Num.Num a =>
+    a -> LinAlg.Vec3 a -> a -> LinAlg.Vec3 a -> LinAlg.Vec3 a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U><S,1*U(U,U,U)><L,U><S,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: a)
+                   (w2 :: LinAlg.Vec3 a)
+                   (w3 :: a)
+                   (w4 :: LinAlg.Vec3 a) ->
+                 case w2 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case w4 of ww4 { LinAlg.Vec3 ww5 ww6 ww7 ->
+                 case LinAlg.$w$clcomb
+                        @ a
+                        w
+                        w1
+                        ww1
+                        ww2
+                        ww3
+                        w3
+                        ww5
+                        ww6
+                        ww7 of ww8 { (#,,#) ww9 ww10 ww11 ->
+                 LinAlg.Vec3 @ a ww9 ww10 ww11 } } }) -}
+a55d28588ab2987fdc89441021c6f2fa
+  $fVectorVec3_$clcombG ::
+    GHC.Num.Num a => [(a, LinAlg.Vec3 a)] -> LinAlg.Vec3 a
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,C(U))>,
+     Unfolding: (\ @ a ($dNum :: GHC.Num.Num a) ->
+                 Utils.foldl'
+                   @ (LinAlg.Vec3 a)
+                   @ (a, LinAlg.Vec3 a)
+                   (\ (res :: LinAlg.Vec3 a) (ds :: (a, LinAlg.Vec3 a))[OneShot] ->
+                    case ds of wild { (,) a1 v ->
+                    case res of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                    case v of wild1 { LinAlg.Vec3 e f g ->
+                    LinAlg.Vec3
+                      @ a
+                      (GHC.Num.+ @ a $dNum ww1 (GHC.Num.* @ a $dNum a1 e))
+                      (GHC.Num.+ @ a $dNum ww2 (GHC.Num.* @ a $dNum a1 f))
+                      (GHC.Num.+ @ a $dNum ww3 (GHC.Num.* @ a $dNum a1 g)) } } })
+                   (LinAlg.$fVectorVec3_$czero' @ a $dNum)) -}
+531cec50c5a2ed0db2ebe3b602fcf23a
+  $fVectorVec3_$cnegate' ::
+    GHC.Num.Num a => LinAlg.Vec3 a -> LinAlg.Vec3 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),1*C1(U),A,A,1*C1(U))><S,1*U(U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: GHC.Num.Num a) (w1 :: LinAlg.Vec3 a) ->
+                 case w1 of ww { LinAlg.Vec3 ww1 ww2 ww3 ->
+                 case LinAlg.$w$cnegate'
+                        @ a
+                        w
+                        ww1
+                        ww2
+                        ww3 of ww4 { (#,,#) ww5 ww6 ww7 ->
+                 LinAlg.Vec3 @ a ww5 ww6 ww7 } }) -}
+e8ec0a7e8a68b187eb38937328d17c5c
+  $fVectorVec3_$czero' :: GHC.Num.Num a => LinAlg.Vec3 a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(A,A,A,A,A,A,C(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (w :: GHC.Num.Num a) ->
+                 LinAlg.Vec3
+                   @ a
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)) -}
+dd34f128a5c6115f3d52551270e5b9a4
+  $fVectorVec4 :: LinAlg.Vector LinAlg.Vec4
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ LinAlg.Vec4
+                  LinAlg.$fVectorVec4_$czero'
+                  LinAlg.$fVectorVec4_$cdimension
+                  LinAlg.$fVectorVec4_$c+#
+                  LinAlg.$fVectorVec4_$c-#
+                  LinAlg.$fVectorVec4_$c*#
+                  LinAlg.$fIPVectorVec4_$c/#
+                  LinAlg.$fVectorVec4_$cnegate'
+                  LinAlg.$fVectorVec4_$clcomb
+                  LinAlg.$fVectorVec4_$clcombG -}
+692eb5ee6667ea9269878dbb4106aa90
+  $fVectorVec4_$c*# ::
+    GHC.Num.Num a => a -> LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),A,A,A,A)><L,U><S,1*U(U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (w :: GHC.Num.Num a) (w1 :: a) (w2 :: LinAlg.Vec4 a) ->
+                 case w2 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 LinAlg.Vec4
+                   @ a
+                   (GHC.Num.* @ a w w1 ww1)
+                   (GHC.Num.* @ a w w1 ww2)
+                   (GHC.Num.* @ a w w1 ww3)
+                   (GHC.Num.* @ a w w1 ww4) }) -}
+c390fbd458204a46004628fa57dfc867
+  $fVectorVec4_$c+# ::
+    GHC.Num.Num a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,A,A,A,A,A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case w2 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                 LinAlg.Vec4
+                   @ a
+                   (GHC.Num.+ @ a w ww1 ww6)
+                   (GHC.Num.+ @ a w ww2 ww7)
+                   (GHC.Num.+ @ a w ww3 ww8)
+                   (GHC.Num.+ @ a w ww4 ww9) } }) -}
+2d8db5920fad434ad3c8ecb93a013cb7
+  $fVectorVec4_$c-# ::
+    GHC.Num.Num a => LinAlg.Vec4 a -> LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A)><S,1*U(U,U,U,U)><S,1*U(U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Vec4 a) ->
+                 case w1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case w2 of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                 LinAlg.Vec4
+                   @ a
+                   (GHC.Num.- @ a w ww1 ww6)
+                   (GHC.Num.- @ a w ww2 ww7)
+                   (GHC.Num.- @ a w ww3 ww8)
+                   (GHC.Num.- @ a w ww4 ww9) } }) -}
+9913c8a0ab8a5975810f7730552671b4
+  $fVectorVec4_$cdimension :: GHC.Num.Num a => LinAlg.Vec4 a -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a ($dNum :: GHC.Num.Num a) (ds :: LinAlg.Vec4 a) ->
+                 GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec8) -}
+5a4d41c91938d2e1dafba9426b152324
+  $fVectorVec4_$clcomb ::
+    GHC.Num.Num a =>
+    a -> LinAlg.Vec4 a -> a -> LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U><S,1*U(U,U,U,U)><L,U><S,1*U(U,U,U,U)>m,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (a1 :: a)
+                   (u :: LinAlg.Vec4 a)
+                   (b :: a)
+                   (v :: LinAlg.Vec4 a) ->
+                 LinAlg.$fVectorVec4_$c+#
+                   @ a
+                   $dNum
+                   (LinAlg.$fVectorVec4_$c*# @ a $dNum a1 u)
+                   (LinAlg.$fVectorVec4_$c*# @ a $dNum b v)) -}
+d55276baf1c68849fb0435002112ca25
+  $fVectorVec4_$clcombG ::
+    GHC.Num.Num a => [(a, LinAlg.Vec4 a)] -> LinAlg.Vec4 a
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,C(U))>,
+     Unfolding: (\ @ a ($dNum :: GHC.Num.Num a) ->
+                 Utils.foldl'
+                   @ (LinAlg.Vec4 a)
+                   @ (a, LinAlg.Vec4 a)
+                   (\ (res :: LinAlg.Vec4 a) (ds :: (a, LinAlg.Vec4 a))[OneShot] ->
+                    case ds of wild { (,) a1 v ->
+                    case res of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                    case v of ww5 { LinAlg.Vec4 ww6 ww7 ww8 ww9 ->
+                    LinAlg.Vec4
+                      @ a
+                      (GHC.Num.+ @ a $dNum ww1 (GHC.Num.* @ a $dNum a1 ww6))
+                      (GHC.Num.+ @ a $dNum ww2 (GHC.Num.* @ a $dNum a1 ww7))
+                      (GHC.Num.+ @ a $dNum ww3 (GHC.Num.* @ a $dNum a1 ww8))
+                      (GHC.Num.+ @ a $dNum ww4 (GHC.Num.* @ a $dNum a1 ww9)) } } })
+                   (LinAlg.$fVectorVec4_$czero' @ a $dNum)) -}
+bd6c2da873b88387e69bd983c7f79225
+  $fVectorVec4_$cnegate' ::
+    GHC.Num.Num a => LinAlg.Vec4 a -> LinAlg.Vec4 a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),1*C1(U),A,A,1*C1(U))><S,1*U(U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: GHC.Num.Num a) (w1 :: LinAlg.Vec4 a) ->
+                 case w1 of ww { LinAlg.Vec4 ww1 ww2 ww3 ww4 ->
+                 case LinAlg.$w$cnegate'1
+                        @ a
+                        w
+                        ww1
+                        ww2
+                        ww3
+                        ww4 of ww5 { (#,,,#) ww6 ww7 ww8 ww9 ->
+                 LinAlg.Vec4 @ a ww6 ww7 ww8 ww9 } }) -}
+e84d89d48237cfe50988bca272634f86
+  $fVectorVec4_$czero' :: GHC.Num.Num a => LinAlg.Vec4 a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(A,A,A,A,A,A,C(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (w :: GHC.Num.Num a) ->
+                 LinAlg.Vec4
+                   @ a
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)
+                   (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec7)) -}
+0c433ae7aed3d6ea2e504de73d1475a2
+  $tc'C:CVector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14538834681240373415##
+                   11478854320322855124##
+                   LinAlg.$trModule
+                   LinAlg.$tc'C:CVector1) -}
+25849937acc6ec90bc75fbef5b53e51c
+  $tc'C:CVector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:CVector"#) -}
+bc1c828a3d313d8e9e86988af28e9844
+  $tc'C:Homogenizable :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3968096226819102604##
+                   5510386117336533062##
+                   LinAlg.$trModule
+                   LinAlg.$tc'C:Homogenizable1) -}
+5774fc241bb703f8e24750e99e5658d1
+  $tc'C:Homogenizable1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Homogenizable"#) -}
+5cdae547ab5eaaecf6d0112981183f96
+  $tc'C:IPVector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16278604173116851453##
+                   11475099046974181287##
+                   LinAlg.$trModule
+                   LinAlg.$tc'C:IPVector1) -}
+ba608f5c052116b5d445159fd04c561e
+  $tc'C:IPVector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:IPVector"#) -}
+034b46aa7c3b6a57e319fa054b4980bd
+  $tc'C:Matrix :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6783391125467497584##
+                   10170080678076632584##
+                   LinAlg.$trModule
+                   LinAlg.$tc'C:Matrix1) -}
+24be79f747424a9dfd8c0a82f7f20fda
+  $tc'C:Matrix1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Matrix"#) -}
+efa3ae1dd3e060e95e66e65d836258d9
+  $tc'C:Point :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6815831942389475969##
+                   12488500216903259745##
+                   LinAlg.$trModule
+                   LinAlg.$tc'C:Point1) -}
+e77e5d30ce7b8037a445a08185b37bfc
+  $tc'C:Point1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Point"#) -}
+c7c0507c396100437714647079a6c811
+  $tc'C:Vector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2750083004230208705##
+                   13926542914428324110##
+                   LinAlg.$trModule
+                   LinAlg.$tc'C:Vector1) -}
+febe0330da77cc0d8d4d2d06dd5fa5d7
+  $tc'C:Vector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'C:Vector"#) -}
+73938a3e0294ee3e19e782c50283e247
+  $tc'Diag1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Diag4"#) -}
+805ddcfe2598cf27228c88ffc2cc6e47
+  $tc'Diag4 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7105263221239744939##
+                   7720987521107120601##
+                   LinAlg.$trModule
+                   LinAlg.$tc'Diag1) -}
+1d8e0beb6023eda149c67a84fdafbd03
+  $tc'Mat1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Mat4"#) -}
+19141f389fd18166826f7ee2bb2cac11
+  $tc'Mat4 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10118277441627882123##
+                   7734998813557877808##
+                   LinAlg.$trModule
+                   LinAlg.$tc'Mat1) -}
+04c79d2f058c529a3cd4d6704589e337
+  $tc'Point1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Point3"#) -}
+a3cb90f48cda6b9db7f894d7ac6974f4
+  $tc'Point3 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3412894181768690659##
+                   16830165341211713915##
+                   LinAlg.$trModule
+                   LinAlg.$tc'Point1) -}
+e2b36185be0cade97cec35b6e2caab2a
+  $tc'Vec1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Vec3"#) -}
+712eeebd239fda66b811c16da88e7204
+  $tc'Vec2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Vec4"#) -}
+34a2c09090569f63f51cbf5c651e8c53
+  $tc'Vec3 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7833662472612108024##
+                   7288524889356288410##
+                   LinAlg.$trModule
+                   LinAlg.$tc'Vec1) -}
+364a148b5926711b31bb2284a7515547
+  $tc'Vec4 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18277142284216963050##
+                   12446755202815406021##
+                   LinAlg.$trModule
+                   LinAlg.$tc'Vec2) -}
+d4ef17c49440b8423a24df698cf5b0e0
+  $tcCVector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12816828019318317964##
+                   4279828676957395974##
+                   LinAlg.$trModule
+                   LinAlg.$tcCVector1) -}
+87482e12dbc6840e9e641799e7317feb
+  $tcCVector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "CVector"#) -}
+604dc6a597ab19cb291e4d55aa975e17
+  $tcHomogenizable :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4851766588843371272##
+                   6860271380539962987##
+                   LinAlg.$trModule
+                   LinAlg.$tcHomogenizable1) -}
+42f4d2e4c59fe3458479029d1bdc467e
+  $tcHomogenizable1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Homogenizable"#) -}
+ca4a257ade31304d0ee15dd135aab726
+  $tcIPVector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9805196404693665651##
+                   16299206114186408707##
+                   LinAlg.$trModule
+                   LinAlg.$tcIPVector1) -}
+836ef7bf6f5876c91c594205a1839a5d
+  $tcIPVector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "IPVector"#) -}
+dbc4f8844460d3caa872ce0ec1a9e923
+  $tcMat1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Mat4"#) -}
+67be1e7076ce86a711e2f26e8ff34b6c
+  $tcMat4 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12289745393569433419##
+                   1522992215920004673##
+                   LinAlg.$trModule
+                   LinAlg.$tcMat1) -}
+7eaed0e8cba1cd88c3386ed177200b69
+  $tcMatrix :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16953827722527462553##
+                   8114606956621892618##
+                   LinAlg.$trModule
+                   LinAlg.$tcMatrix1) -}
+564f47be0a6e98fc546d89129699615c
+  $tcMatrix1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Matrix"#) -}
+708616aa3bcf34c0a5ffb29c0c7a64f1
+  $tcPoint :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1821523878749241150##
+                   16874092694212767359##
+                   LinAlg.$trModule
+                   LinAlg.$tcPoint1) -}
+89c7e854a2fe004dfa7296ab32aad5f9
+  $tcPoint1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Point"#) -}
+531be55aceb9c4b4c18dbc2c145ab071
+  $tcPoint2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Point3"#) -}
+7dee4cec47ea01fdece04797e5d0ed49
+  $tcPoint3 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15974562324897718126##
+                   11888371461276343876##
+                   LinAlg.$trModule
+                   LinAlg.$tcPoint2) -}
+e73bf2e30739bd3fa778fe5e35e684d3
+  $tcVec1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Vec3"#) -}
+90ee1575243b9b8dbf725b392679bce6
+  $tcVec2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Vec4"#) -}
+bad9623445e01ef0dec2484264aa85e3
+  $tcVec3 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1973195127093410249##
+                   5341212396405265481##
+                   LinAlg.$trModule
+                   LinAlg.$tcVec1) -}
+ecb22032f39a2252c46f7ac90ae14168
+  $tcVec4 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6358960248125474144##
+                   17284141091503543780##
+                   LinAlg.$trModule
+                   LinAlg.$tcVec2) -}
+fee29f6918069873ec83f0560ae7a625
+  $tcVector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1391828591729994937##
+                   13856717166284477794##
+                   LinAlg.$trModule
+                   LinAlg.$tcVector1) -}
+40e2d2eb49692e6928a3236f121919eb
+  $tcVector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Vector"#) -}
+da045e45cce043bb6908a11bbbfab37c
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   LinAlg.$trModule2
+                   LinAlg.$trModule1) -}
+ba905e35c7dd74142654c1309b7d3511
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "LinAlg"#) -}
+10531dd6e74142e10e090fda1c6f47c9
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "gllib-0.1.0.0-7vgdlXxVJwD1kkF9yyXzwT"#) -}
+54c13969ddaafa483f8e83048a032694
+  $w$c*| ::
+    GHC.Num.Num a =>
+    LinAlg.Mat4 a -> a -> a -> a -> a -> (# a, a, a, a #)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U><L,U><L,U><L,U><L,U>,
+     Inline: [0] -}
+58388d5da355842a535fc4851f888d74
+  $w$c/# ::
+    GHC.Real.Fractional a => a -> a -> a -> a -> (# a, a, a #)
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(1*U,1*C1(C1(U)),A,A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Real.Fractional a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (w1 :: a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a w
+                 } in
+                 let {
+                   w2 :: a
+                   = GHC.Real./
+                       @ a
+                       w
+                       (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                       w1
+                 } in
+                 (# GHC.Num.* @ a $dNum w2 ww, GHC.Num.* @ a $dNum w2 ww1,
+                    GHC.Num.* @ a $dNum w2 ww2 #)) -}
+062da9b7a06c292243af770d29611c31
+  $w$c/#1 ::
+    GHC.Real.Fractional a => a -> a -> a -> a -> a -> (# a, a, a, a #)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U(1*U,1*C1(C1(U)),A,A)><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Real.Fractional a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (w1 :: a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a w
+                 } in
+                 let {
+                   w2 :: a
+                   = GHC.Real./
+                       @ a
+                       w
+                       (GHC.Num.fromInteger @ a $dNum LinAlg.$fCVectorVec6)
+                       w1
+                 } in
+                 (# GHC.Num.* @ a $dNum w2 ww, GHC.Num.* @ a $dNum w2 ww1,
+                    GHC.Num.* @ a $dNum w2 ww2, GHC.Num.* @ a $dNum w2 ww3 #)) -}
+85dda618b3b166fb7753c42f741e2210
+  $w$c== ::
+    GHC.Classes.Eq a =>
+    a -> a -> a -> a -> a -> a -> a -> a -> GHC.Types.Bool
+  {- Arity: 9, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a)
+                   (ww5 :: a)
+                   (ww6 :: a)
+                   (ww7 :: a) ->
+                 case GHC.Classes.== @ a w ww ww4 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ a w ww1 ww5 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case GHC.Classes.== @ a w ww2 ww6 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.== @ a w ww3 ww7 } } }) -}
+f583eaf22153cad5ef5fb3cb0a88761a
+  $w$c==1 ::
+    GHC.Classes.Eq a => a -> a -> a -> a -> a -> a -> GHC.Types.Bool
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a)
+                   (ww5 :: a) ->
+                 case GHC.Classes.== @ a w ww ww3 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ a w ww1 ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True -> GHC.Classes.== @ a w ww2 ww5 } }) -}
+cd6db8a2ae6c42865ac119ae7635ff82
+  $w$c==2 ::
+    GHC.Classes.Eq a => a -> a -> a -> a -> a -> a -> GHC.Types.Bool
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),U(C(C1(U)),A)><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a)
+                   (ww5 :: a) ->
+                 case GHC.Classes.== @ a w ww ww3 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Classes.== @ a w ww1 ww4 of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True -> GHC.Classes.== @ a w ww2 ww5 } }) -}
+45d02f37dc4c584036d17ccd19a0e055
+  $w$cdehomogenize ::
+    (GHC.Classes.Eq a, GHC.Real.Fractional a) =>
+    a -> a -> a -> a -> GHC.Base.Maybe (LinAlg.Point3 a)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,U(1*U(A,A,A,A,A,A,1*C1(U)),C(C1(U)),A,A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Real.Fractional a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 case GHC.Classes.==
+                        @ a
+                        w
+                        ww3
+                        (GHC.Num.fromInteger
+                           @ a
+                           (GHC.Real.$p1Fractional @ a w1)
+                           LinAlg.$fCVectorVec7) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.Just
+                        @ (LinAlg.Point3 a)
+                        (LinAlg.Point3
+                           @ a
+                           (GHC.Real./ @ a w1 ww ww3)
+                           (GHC.Real./ @ a w1 ww1 ww3)
+                           (GHC.Real./ @ a w1 ww2 ww3))
+                   GHC.Types.True -> GHC.Base.Nothing @ (LinAlg.Point3 a) }) -}
+a8def9406993489a8a47b22e10db7105
+  $w$cdehomogenize1 ::
+    (GHC.Classes.Eq a, GHC.Real.Fractional a) =>
+    a -> a -> a -> a -> GHC.Base.Maybe (LinAlg.Vec3 a)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S(C(C(S))L),1*U(1*C1(C1(U)),A)><L,1*U(1*U(A,A,A,A,A,A,1*C1(U)),A,A,A)><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Real.Fractional a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 case GHC.Classes.==
+                        @ a
+                        w
+                        ww3
+                        (GHC.Num.fromInteger
+                           @ a
+                           (GHC.Real.$p1Fractional @ a w1)
+                           LinAlg.$fCVectorVec7) of wild {
+                   GHC.Types.False -> GHC.Base.Nothing @ (LinAlg.Vec3 a)
+                   GHC.Types.True
+                   -> GHC.Base.Just
+                        @ (LinAlg.Vec3 a)
+                        (LinAlg.Vec3 @ a ww ww1 ww2) }) -}
+5b551d88d5988d155939672f2d1d0816
+  $w$cdot :: GHC.Num.Num a => a -> a -> a -> a -> a -> a -> a
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a)
+                   (ww5 :: a) ->
+                 GHC.Num.+
+                   @ a
+                   w
+                   (GHC.Num.+
+                      @ a
+                      w
+                      (GHC.Num.* @ a w ww ww3)
+                      (GHC.Num.* @ a w ww1 ww4))
+                   (GHC.Num.* @ a w ww2 ww5)) -}
+306e8b834dd24c03000b7abaaaec2e64
+  $w$cdot1 ::
+    GHC.Num.Num a => a -> a -> a -> a -> a -> a -> a -> a -> a
+  {- Arity: 9, HasNoCafRefs,
+     Strictness: <S(C(C(S))LLLLLL),U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a)
+                   (ww5 :: a)
+                   (ww6 :: a)
+                   (ww7 :: a) ->
+                 GHC.Num.+
+                   @ a
+                   w
+                   (GHC.Num.+
+                      @ a
+                      w
+                      (GHC.Num.+
+                         @ a
+                         w
+                         (GHC.Num.* @ a w ww ww4)
+                         (GHC.Num.* @ a w ww1 ww5))
+                      (GHC.Num.* @ a w ww2 ww6))
+                   (GHC.Num.* @ a w ww3 ww7)) -}
+c846efaf688d0fa05017c6a3516d0658
+  $w$clcomb ::
+    GHC.Num.Num a =>
+    a -> a -> a -> a -> a -> a -> a -> a -> (# a, a, a #)
+  {- Arity: 9, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (w2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a)
+                   (ww5 :: a) ->
+                 (# GHC.Num.+
+                      @ a
+                      w
+                      (GHC.Num.* @ a w w1 ww)
+                      (GHC.Num.* @ a w w2 ww3),
+                    GHC.Num.+ @ a w (GHC.Num.* @ a w w1 ww1) (GHC.Num.* @ a w w2 ww4),
+                    GHC.Num.+
+                      @ a
+                      w
+                      (GHC.Num.* @ a w w1 ww2)
+                      (GHC.Num.* @ a w w2 ww5) #)) -}
+7a567ef37ab1156864c2c6d2258de65a
+  $w$cnegate' :: GHC.Num.Num a => a -> a -> a -> (# a, a, a #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),1*C1(U),A,A,1*C1(U))><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a) ->
+                 let {
+                   w1 :: a
+                   = GHC.Num.negate
+                       @ a
+                       w
+                       (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec6)
+                 } in
+                 (# GHC.Num.* @ a w w1 ww, GHC.Num.* @ a w w1 ww1,
+                    GHC.Num.* @ a w w1 ww2 #)) -}
+abf40cd9a4ab993ab54beec08451439c
+  $w$cnegate'1 ::
+    GHC.Num.Num a => a -> a -> a -> a -> (# a, a, a, a #)
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),1*C1(U),A,A,1*C1(U))><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (ww :: a)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 let {
+                   w1 :: a
+                   = GHC.Num.negate
+                       @ a
+                       w
+                       (GHC.Num.fromInteger @ a w LinAlg.$fCVectorVec6)
+                 } in
+                 (# GHC.Num.* @ a w w1 ww, GHC.Num.* @ a w w1 ww1,
+                    GHC.Num.* @ a w w1 ww2, GHC.Num.* @ a w w1 ww3 #)) -}
+f48d9ee945d73f4a5f68d747f3967607
+  $w$cshowsPrec ::
+    GHC.Show.Show a => GHC.Prim.Int# -> LinAlg.Mat4 a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,U><S,1*U>,
+     Inline: [0] -}
+a412414b857ba4d1dc32f69758dfe8e1
+  $w$cshowsPrec1 ::
+    GHC.Show.Show a => GHC.Prim.Int# -> a -> a -> a -> GHC.Show.ShowS
+  {- Arity: 5, Strictness: <L,U(C(C1(U)),A,A)><S,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww2
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww3
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       LinAlg.$fShowPoint1
+                       (f (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.showSpace1
+                             (f1 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+46014465ef54ead859ec708083bd815a
+  $w$cshowsPrec2 ::
+    GHC.Show.Show a => GHC.Prim.Int# -> a -> a -> a -> GHC.Show.ShowS
+  {- Arity: 5, Strictness: <L,U(C(C1(U)),A,A)><S,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww2
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww3
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       LinAlg.$fShowVec1
+                       (f (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.showSpace1
+                             (f1 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+f4a90f707bf0c6e3fb0237977ec94093
+  $w$cshowsPrec3 ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int# -> a -> a -> a -> a -> GHC.Show.ShowS
+  {- Arity: 6,
+     Strictness: <L,U(C(C1(U)),A,A)><S,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: a)
+                   (ww2 :: a)
+                   (ww3 :: a)
+                   (ww4 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww1
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww2
+                 } in
+                 let {
+                   f2 :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww3
+                 } in
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w LinAlg.$fReadPoint5 ww4
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       LinAlg.$fShowVec2
+                       (f (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.showSpace1
+                             (f1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.showSpace1
+                                   (f2 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x)) }) -}
+2f71593a5943ce9700d9e83032a89499
+  $w$c|* ::
+    GHC.Num.Num a => LinAlg.Vec4 a -> LinAlg.Mat4 a -> (# a, a, a, a #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A,C(C1(U)),A,A,A,A)><L,U(U,U,U,U)><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: LinAlg.Vec4 a)
+                   (w2 :: LinAlg.Mat4 a) ->
+                 case w2 of wild {
+                   LinAlg.Mat4 v1 v2 v3 v4
+                   -> (# LinAlg.$fIPVectorVec4_$cdot @ a w w1 v1,
+                         LinAlg.$fIPVectorVec4_$cdot @ a w w1 v2,
+                         LinAlg.$fIPVectorVec4_$cdot @ a w w1 v3,
+                         LinAlg.$fIPVectorVec4_$cdot @ a w w1 v4 #)
+                   LinAlg.Diag4 ipv ipv1 ipv2 ipv3
+                   -> case w1 of wild1 { LinAlg.Vec4 x y z w3 ->
+                      (# GHC.Num.* @ a w x ipv, GHC.Num.* @ a w y ipv1,
+                         GHC.Num.* @ a w z ipv2, GHC.Num.* @ a w w3 ipv3 #) } }) -}
+632d988dde31c54ea420ce37f717120b
+  class LinAlg.IPVector v => CVector (v :: * -> *) where
+    basisVector :: GHC.Num.Num a =>
+                   GHC.Integer.Type.Integer -> GHC.Base.Maybe (v a)
+    coord :: GHC.Integer.Type.Integer -> v a -> GHC.Base.Maybe a
+    mapCoord :: GHC.Integer.Type.Integer -> (a -> a) -> v a -> v a
+    {-# MINIMAL basisVector, coord, mapCoord #-}
+3c8060a56daf958d9a811416c8235a52
+  class LinAlg.Vector v =>
+        Homogenizable (t :: * -> *) (v :: * -> *) | t -> v where
+    homogenize :: GHC.Num.Num a => t a -> v a
+    dehomogenize :: (GHC.Classes.Eq a, GHC.Real.Fractional a) =>
+                    v a -> GHC.Base.Maybe (t a)
+    {-# MINIMAL homogenize, dehomogenize #-}
+1b0ad2c7d0bce74d0ea950f1274f4ab1
+  class LinAlg.Vector v => IPVector (v :: * -> *) where
+    dot :: GHC.Num.Num a => v a -> v a -> a
+    (.#) :: GHC.Num.Num a => v a -> v a -> a
+    sqLen :: GHC.Num.Num a => v a -> a
+    len :: GHC.Float.Floating a => v a -> a
+    normalize :: GHC.Float.Floating a => v a -> v a
+    distance :: GHC.Float.Floating a => v a -> v a -> a
+    cos2Angle :: GHC.Real.Fractional a => v a -> v a -> a
+    cosAngle :: GHC.Float.Floating a => v a -> v a -> a
+    angle :: GHC.Float.Floating a => v a -> v a -> a
+    {-# MINIMAL dot #-}
+f48d9ee945d73f4a5f68d747f3967607
+  data Mat4 a
+    = Mat4 (LinAlg.Vec4 a)
+           (LinAlg.Vec4 a)
+           (LinAlg.Vec4 a)
+           (LinAlg.Vec4 a)
+    | Diag4 a a a a
+6eee6be2f7aca4d45a9076acea91daab
+  class (LinAlg.Vector m, LinAlg.Vector v) =>
+        Matrix (m :: * -> *) (v :: * -> *) | m -> v where
+    transpose :: m a -> m a
+    (*|) :: GHC.Num.Num a => m a -> v a -> v a
+    (|*) :: GHC.Num.Num a => v a -> m a -> v a
+    (*#*) :: GHC.Num.Num a => m a -> m a -> m a
+    {-# MINIMAL transpose, (*#*) #-}
+2861c5e49b63edd1bcdf2d041d7beb17
+  class LinAlg.Vector v =>
+        Point (p :: * -> *) (v :: * -> *) | p -> v where
+    difference :: GHC.Num.Num a => p a -> p a -> v a
+    translatePoint :: GHC.Num.Num a => p a -> v a -> p a
+    origin :: GHC.Num.Num a => p a
+    toVector :: GHC.Num.Num a => p a -> v a
+    fromVector :: GHC.Num.Num a => v a -> p a
+    {-# MINIMAL difference, translatePoint, origin #-}
+cb5121f112964add8c441c87d877e1d0
+  data Point3 a = Point3 a a a
+af0264ef4c5439016c6b5a03ae914a6c
+  data Vec3 a = Vec3 a a a
+4e967cd2124bf4a10865b8598081d4bf
+  data Vec4 a = Vec4 a a a a
+dd34f128a5c6115f3d52551270e5b9a4
+  class Vector (v :: * -> *) where
+    zero' :: GHC.Num.Num a => v a
+    dimension :: GHC.Num.Num a => v a -> a
+    (+#) :: GHC.Num.Num a => v a -> v a -> v a
+    (-#) :: GHC.Num.Num a => v a -> v a -> v a
+    (*#) :: GHC.Num.Num a => a -> v a -> v a
+    (/#) :: GHC.Real.Fractional a => v a -> a -> v a
+    negate' :: GHC.Num.Num a => v a -> v a
+    lcomb :: GHC.Num.Num a => a -> v a -> a -> v a -> v a
+    lcombG :: GHC.Num.Num a => [(a, v a)] -> v a
+    {-# MINIMAL zero', dimension #-}
+9b9fb6a1add350a914a4039ab33c7725
+  basicMat4 ::
+    LinAlg.Vec4 a
+    -> LinAlg.Vec4 a -> LinAlg.Vec4 a -> LinAlg.Vec4 a -> LinAlg.Mat4 a
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,U><L,U><L,U>m1,
+     Unfolding: InlineRule (0, True, True) LinAlg.Mat4 -}
+4d331cb36ad364d192bfd6a206fc519f
+  diagMat4 :: a -> a -> a -> a -> LinAlg.Mat4 a
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,U><L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True) LinAlg.Diag4 -}
+instance [safe] LinAlg.CVector [LinAlg.Vec3] = LinAlg.$fCVectorVec3
+instance [safe] LinAlg.CVector [LinAlg.Vec4] = LinAlg.$fCVectorVec4
+instance [safe] GHC.Classes.Eq [LinAlg.Mat4] = LinAlg.$fEqMat4
+instance [safe] GHC.Classes.Eq [LinAlg.Point3] = LinAlg.$fEqPoint3
+instance [safe] GHC.Classes.Eq [LinAlg.Vec3] = LinAlg.$fEqVec3
+instance [safe] GHC.Classes.Eq [LinAlg.Vec4] = LinAlg.$fEqVec4
+instance [safe] LinAlg.Homogenizable [LinAlg.Point3, LinAlg.Vec4]
+  = LinAlg.$fHomogenizablePoint3Vec4
+instance [safe] LinAlg.Homogenizable [LinAlg.Vec3, LinAlg.Vec4]
+  = LinAlg.$fHomogenizableVec3Vec4
+instance [safe] LinAlg.IPVector [LinAlg.Vec3]
+  = LinAlg.$fIPVectorVec3
+instance [safe] LinAlg.IPVector [LinAlg.Vec4]
+  = LinAlg.$fIPVectorVec4
+instance [safe] LinAlg.Matrix [LinAlg.Mat4, LinAlg.Vec4]
+  = LinAlg.$fMatrixMat4Vec4
+instance [safe] LinAlg.Point [LinAlg.Point3, LinAlg.Vec3]
+  = LinAlg.$fPointPoint3Vec3
+instance [safe] GHC.Read.Read [LinAlg.Mat4] = LinAlg.$fReadMat4
+instance [safe] GHC.Read.Read [LinAlg.Point3] = LinAlg.$fReadPoint3
+instance [safe] GHC.Read.Read [LinAlg.Vec3] = LinAlg.$fReadVec3
+instance [safe] GHC.Read.Read [LinAlg.Vec4] = LinAlg.$fReadVec4
+instance [safe] GHC.Show.Show [LinAlg.Mat4] = LinAlg.$fShowMat4
+instance [safe] GHC.Show.Show [LinAlg.Point3] = LinAlg.$fShowPoint3
+instance [safe] GHC.Show.Show [LinAlg.Vec3] = LinAlg.$fShowVec3
+instance [safe] GHC.Show.Show [LinAlg.Vec4] = LinAlg.$fShowVec4
+instance [safe] LinAlg.Vector [LinAlg.Mat4] = LinAlg.$fVectorMat4
+instance [safe] LinAlg.Vector [LinAlg.Vec3] = LinAlg.$fVectorVec3
+instance [safe] LinAlg.Vector [LinAlg.Vec4] = LinAlg.$fVectorVec4
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
