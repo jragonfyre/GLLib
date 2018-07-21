@@ -1,0 +1,2 @@
+# GLLib
+Haskell GL library
